@@ -12,10 +12,10 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
+  - XRI_LeftInteractor
+  - XRI_RightInteractor
+  - XRI_Interactable
+  - XRI_PlayerLayer
   - 
   - 
   - 
