@@ -20,14 +20,16 @@ namespace JW.FiveGuys.Core
         [SerializeField] private Vector3 headOffset = new Vector3(0, 0.7f, 0);
         [SerializeField] private float maxDistance = 25f;
         [SerializeField] private bool isAiming = false;
-        [SerializeField] private LineRenderer lineRenderer;
         [SerializeField] private LayerMask teleportLayer;
 
         [Header("Previews")]
-        [SerializeField] private GameObject telePoint;
         [SerializeField] private ParticleSystem preview;
         [SerializeField] private GameEvent onAimStart;
         [SerializeField] private GameEvent onAimStop;
+
+        [Header("Teleport Points")]
+        [SerializeField] private GameObject telePoint; // The one we are aiming at
+        [SerializeField] private GameObject currentPoint; // The one we are standing on
 
         [Header("Debugging")]
         [SerializeField] private KeyCode teleportKey = KeyCode.G;
@@ -35,7 +37,7 @@ namespace JW.FiveGuys.Core
         // Start is called before the first frame update
         void Start()
         {
-            lineRenderer.SetPosition(0, head.transform.position - headOffset);
+
         }
 
         // Update is called once per frame
@@ -44,13 +46,18 @@ namespace JW.FiveGuys.Core
             if (Input.GetKeyDown(teleportKey)){
                 isAiming = true;
 
-                lineRenderer.SetPosition(0, head.transform.position);
-                lineRenderer.SetPosition(0, head.transform.position - headOffset);
-
                 onAimStart.Raise();
             }
             if (Input.GetKeyUp(teleportKey)){
                 isAiming = false;
+
+                if (telePoint != null) // Teleport to the selected telePoint if there is one
+                {
+                    currentPoint.SetActive(true); // Activate the point we starrted on
+                    transform.position = telePoint.transform.position; // Move our position to the new point
+                    currentPoint = telePoint; // Update our point
+                    currentPoint.SetActive(false); // Disable the point we are now standing on
+                }
 
                 telePoint = null;
                 if (preview != null)
@@ -71,8 +78,6 @@ namespace JW.FiveGuys.Core
                 //        if hit object == telePoint => play particle system if not already playing
                 //        el telePoint = hit object & play particle system
                 //      el telePoint = hit object & play particle system
-
-                lineRenderer.SetPosition(1, (head.transform.position - headOffset) + (head.transform.forward * maxDistance));
 
                 var gazeHit = Physics.Raycast(head.transform.position - headOffset, head.transform.forward, out RaycastHit hitInfo, maxDistance, teleportLayer);
                 if (gazeHit) // We hit something
