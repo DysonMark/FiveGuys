@@ -387,9 +387,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1264,7 +1261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16897127
+      value: 0.16897129
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1272,7 +1269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.058441944
+      value: 0.058441952
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1560,7 +1557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12720345
+      value: 0.12720343
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1568,7 +1565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.039716348
+      value: -0.039716344
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: e1e4d19745953a04389ae805c9f465d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

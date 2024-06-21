@@ -310,11 +310,27 @@ InputManager:
     axis: 8
     joyNum: 0
   - serializedVersion: 3
+    m_Name: XRI_Left_Trigger
+    descriptiveName: Device trigger axis
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: z
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 8
+    joyNum: 0
+  - serializedVersion: 3
     m_Name: XRI_Left_Grip
     descriptiveName: Device grip axis
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: x
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -323,6 +339,22 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
+    axis: 10
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: XRI_Left_Grip
+    descriptiveName: Device grip axis
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: x
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 0
+    dead: 0
+    sensitivity: 1
+    snap: 0
+    invert: 0
+    type: 0
     axis: 10
     joyNum: 0
   - serializedVersion: 3
@@ -364,7 +396,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 4
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: x
     gravity: 0
     dead: 0
     sensitivity: 0.1
@@ -380,7 +412,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 14
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: z
     gravity: 0
     dead: 0
     sensitivity: 0.1
