@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c7b4709871409180683f8f0ca82e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand: 1
+  hand: -1
   config: {fileID: 11400000, guid: a98f0f16ca30a4ce2a4102435d346e0c, type: 2}
   handModel: {fileID: 5750447519049928060}
 --- !u!1 &6669150320575249259
