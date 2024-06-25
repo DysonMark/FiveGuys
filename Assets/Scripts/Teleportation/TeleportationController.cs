@@ -11,7 +11,7 @@ namespace JW.FiveGuys.Core
     /// Attaches to the CameraRig game object and will be responsible for teleporting to specified locations
     /// 
     /// TODO:
-    /// [] Make teleport points have a cylinder object that gets enabled when you start aiming, then disabled when not
+    /// [x] Make teleport points have a cylinder object that gets enabled when you start aiming, then disabled when not
     /// </summary>
     public class TeleportationController : MonoBehaviour
     {
