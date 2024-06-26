@@ -8,17 +8,24 @@ public class ElectricOrb : MonoBehaviour
     [SerializeField] private float lifetime;
     [SerializeField] private bool insideWire;
     [SerializeField] private GameObject electricOrbs;
+    [SerializeField] private float spawnRate;
+    [SerializeField] private float speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        insideWire = true;
+        insideWire = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        Vector3 pos = transform.position;
+        pos.x += speed * Time.deltaTime;
+        transform.position = pos;
+
         if (insideWire)
         {
             //do nothing
@@ -30,7 +37,7 @@ public class ElectricOrb : MonoBehaviour
 
         if (lifetime <= 0f)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         //every quarter of a second spawn electric orbs on the left and right of it
@@ -41,25 +48,24 @@ public class ElectricOrb : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        Debug.Log("found something");
         if (other.CompareTag("Wire"))
         {
-            //do nothing
-            //or turn the lifetime bool to false
+            insideWire = true;
         }
         else
         {
-            //deduct lifetime
+            
             insideWire = false;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        Debug.Log("exit something");
         if (other.CompareTag("Wire"))
-        {
-            //deduct lifetime
-            insideWire = false;
-        }
+        insideWire = false;
     }
 
 }
