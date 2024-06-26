@@ -23,7 +23,7 @@ namespace JW.FiveGuys.Core
         [SerializeField] private LayerMask teleportLayer;
 
         [Header("Previews")]
-        [SerializeField] private ParticleSystem preview;
+        [SerializeField] private ParticleSystem preview; // Remove later
         [SerializeField] private GameEvent onAimStart;
         [SerializeField] private GameEvent onAimStop;
 
@@ -32,7 +32,7 @@ namespace JW.FiveGuys.Core
         [SerializeField] private GameObject currentPoint; // The one we are standing on
 
         [Header("Debugging")]
-        [SerializeField] private KeyCode teleportKey = KeyCode.G;
+        [SerializeField] private KeyCode teleportKey = KeyCode.G; // For keyboard debugging
 
         // Start is called before the first frame update
         void Start()
