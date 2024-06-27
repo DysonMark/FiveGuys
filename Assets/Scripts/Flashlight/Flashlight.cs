@@ -1,3 +1,4 @@
+using Kandooz.ScriptableSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +12,13 @@ namespace JW.FiveGuys.LightMoth
     public class Flashlight : MonoBehaviour
     {
         [Header("Moth")]
-        [SerializeField] private GameObject moth;
+        [SerializeField] private LineRenderer moth;
 
         [Header("Flashlight")]
         [SerializeField] private float rayDistance = 20f;
         [SerializeField] private Vector3 rayDirection = Vector3.forward;
         [SerializeField] private Vector3 rayOffset = Vector3.zero;
-        [SerializeField] private Vector3 rayPoint;
+        [SerializeField] private JW_Vect3Variable rayPoint;
         [SerializeField] private bool isOn = false;
 
         /// <summary>
@@ -49,11 +50,15 @@ namespace JW.FiveGuys.LightMoth
         {
             if (isOn)
             {
-                var lightHit = Physics.Raycast(transform.position + rayOffset, rayDirection, out RaycastHit hitInfo, rayDistance);
+                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.forward, out RaycastHit hitInfo, rayDistance);
 
                 if (lightHit)
                 {
-                    rayPoint = hitInfo.point;
+                    rayPoint.Value = hitInfo.point;
+                    Debug.Log(rayPoint.Value);
+
+                    moth.SetPosition(0, transform.position);
+                    moth.SetPosition(1, rayPoint.Value);
                 }
             }
         }
@@ -61,6 +66,9 @@ namespace JW.FiveGuys.LightMoth
         private void OnDrawGizmosSelected()
         {
             Debug.DrawRay(transform.position + rayOffset, rayDirection, Color.red, rayDistance);
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(rayPoint.Value, 0.1f);
         }
     } 
 }

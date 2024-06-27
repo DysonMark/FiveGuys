@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 497935cb149398447bbd3b091f571650
+guid: 4ae8236d201034b448a0228a9add819f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - moth: {instanceID: 0}
-  - rayPoint: {fileID: 11400000, guid: a4e71914ac1db1a41b0851cc83326433, type: 2}
+  - lightPoint: {fileID: 11400000, guid: a4e71914ac1db1a41b0851cc83326433, type: 2}
+  - rb: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
