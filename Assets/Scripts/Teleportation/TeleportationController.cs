@@ -43,12 +43,14 @@ namespace JW.FiveGuys.Core
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(teleportKey)){
+            Debug.Log(Input.GetAxis("XRI_Left_Trigger"));
+            if (Input.GetAxis("XRI_Left_Trigger")>=1){
                 isAiming = true;
 
                 onAimStart.Raise();
             }
-            if (Input.GetKeyUp(teleportKey)){
+            if (Input.GetAxis("XRI_Left_Trigger") <= 0 && isAiming)
+            {
                 isAiming = false;
 
                 if (telePoint != null) // Teleport to the selected telePoint if there is one
