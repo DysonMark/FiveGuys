@@ -47,7 +47,7 @@ namespace JW.FiveGuys.LightMoth
         {
             if (isOn)
             {
-                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.up, out RaycastHit hitInfo, rayDistance);
+                var lightHit = Physics.Raycast(transform.position + rayOffset, -transform.up, out RaycastHit hitInfo, rayDistance);
 
                 if (lightHit)
                 {
