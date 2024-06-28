@@ -19,7 +19,8 @@ namespace JW.FiveGuys.LightMoth
 
         private void FixedUpdate()
         {
-            transform.position = Vector3.MoveTowards(transform.position, lightPoint.Value, moveSpeed);
+            //transform.position = Vector3.MoveTowards(transform.position, lightPoint.Value, moveSpeed);
+            rb.velocity = (lightPoint.Value - transform.position).normalized * moveSpeed;
         }
     } 
 }

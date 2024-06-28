@@ -11,9 +11,6 @@ namespace JW.FiveGuys.LightMoth
     /// </summary>
     public class Flashlight : MonoBehaviour
     {
-        [Header("Moth")]
-        [SerializeField] private LineRenderer moth;
-
         [Header("Flashlight")]
         [SerializeField] private float rayDistance = 20f;
         [SerializeField] private Vector3 rayDirection = Vector3.forward;
@@ -50,22 +47,18 @@ namespace JW.FiveGuys.LightMoth
         {
             if (isOn)
             {
-                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.forward, out RaycastHit hitInfo, rayDistance);
+                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.up, out RaycastHit hitInfo, rayDistance);
 
                 if (lightHit)
                 {
                     rayPoint.Value = hitInfo.point;
-                    Debug.Log(rayPoint.Value);
-
-                    moth.SetPosition(0, transform.position);
-                    moth.SetPosition(1, rayPoint.Value);
                 }
             }
         }
 
         private void OnDrawGizmosSelected()
         {
-            Debug.DrawRay(transform.position + rayOffset, rayDirection, Color.red, rayDistance);
+            Debug.DrawRay(transform.position + rayOffset, transform.up, Color.red, rayDistance);
 
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(rayPoint.Value, 0.1f);
