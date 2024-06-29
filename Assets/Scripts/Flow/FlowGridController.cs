@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Kandooz.ScriptableSystem;
 
 namespace JW.FiveGuys.Flow
 {
@@ -13,7 +14,7 @@ namespace JW.FiveGuys.Flow
         [SerializeField] private Vector2Int gridSize = Vector2Int.one;
 
         [Header("Grid")]
-        [SerializeField] private List<GameObject> grid = new List<GameObject>();
+        [SerializeField] private JW_L_GOVariable grid;
 
 
         public void SpawnGrid()
@@ -27,7 +28,7 @@ namespace JW.FiveGuys.Flow
                         0, 
                         tileSize.y * row
                         ), Quaternion.identity);
-                    grid.Add(tile);
+                    grid.Value = tile;
                 }
             }
 
@@ -36,13 +37,13 @@ namespace JW.FiveGuys.Flow
 
         public void DestroyGrid()
         {
-            if (grid.Count > 0)
+            if (grid.Values.Count > 0)
             {
-                for (int i = grid.Count - 1; i >= 0; i--)
+                for (int i = grid.Values.Count - 1; i >= 0; i--)
                 {
-                    DestroyImmediate(grid[i]);
+                    DestroyImmediate(grid.Values[i]);
                 }
-                grid.Clear();
+                grid.Values.Clear();
             }
 
             isSpawned = false;

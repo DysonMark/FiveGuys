@@ -810,6 +810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954640286}
   - component: {fileID: 954640287}
+  - component: {fileID: 954640288}
   m_Layer: 0
   m_Name: Flow
   m_TagString: Untagged
@@ -848,7 +849,20 @@ MonoBehaviour:
   gridTile: {fileID: 8987163983543140843, guid: 1664c49800082bc469b2fb413dc5a2e0, type: 3}
   tileSize: {x: 1, y: 1}
   gridSize: {x: 5, y: 3}
-  grid: []
+  grid: {fileID: 11400000, guid: 4d3144cab6ae764488949ddb26608faa, type: 2}
+--- !u!114 &954640288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954640285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc78e7e11be5f34e89b340b43a5e1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 11400000, guid: 4d3144cab6ae764488949ddb26608faa, type: 2}
 --- !u!1001 &1170504484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
