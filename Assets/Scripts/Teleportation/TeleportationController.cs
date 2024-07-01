@@ -23,7 +23,7 @@ namespace JW.FiveGuys.Core
         [SerializeField] private LayerMask teleportLayer;
 
         [Header("Previews")]
-        [SerializeField] private ParticleSystem preview;
+        [SerializeField] private ParticleSystem preview; // Remove later
         [SerializeField] private GameEvent onAimStart;
         [SerializeField] private GameEvent onAimStop;
 
@@ -32,7 +32,7 @@ namespace JW.FiveGuys.Core
         [SerializeField] private GameObject currentPoint; // The one we are standing on
 
         [Header("Debugging")]
-        [SerializeField] private KeyCode teleportKey = KeyCode.G;
+        [SerializeField] private KeyCode teleportKey = KeyCode.G; // For keyboard debugging
 
         // Start is called before the first frame update
         void Start()
@@ -43,12 +43,14 @@ namespace JW.FiveGuys.Core
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(teleportKey)){
+            //Debug.Log(Input.GetAxis("XRI_Left_Trigger"));
+            if (Input.GetAxis("XRI_Left_Trigger")>=1){
                 isAiming = true;
 
                 onAimStart.Raise();
             }
-            if (Input.GetKeyUp(teleportKey)){
+            if (Input.GetAxis("XRI_Left_Trigger") <= 0 && isAiming)
+            {
                 isAiming = false;
 
                 if (telePoint != null) // Teleport to the selected telePoint if there is one
