@@ -295,7 +295,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1061744959}
+        m_TargetAssemblyTypeName: Leonardo.RythmRadioPuzzle.RythmRadioPuzzle, Assembly-CSharp
+        m_MethodName: GreenButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 1086472880}
   normalPosition: {x: 0, y: 0.5, z: 0}
   pressedPosition: {x: 0, y: 0.2, z: 0}
@@ -551,7 +563,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1061744959}
+        m_TargetAssemblyTypeName: Leonardo.RythmRadioPuzzle.RythmRadioPuzzle, Assembly-CSharp
+        m_MethodName: YellowButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 892071957}
   normalPosition: {x: 0, y: 0.5, z: 0}
   pressedPosition: {x: 0, y: 0.2, z: 0}
@@ -714,6 +738,10 @@ MonoBehaviour:
   yellowButtonPressed: 0
   greenButtonPressed: 0
   redButtonPressed: 0
+  audioSource: {fileID: 0}
+  incorrectButtonSFX: []
+  winParticleFX: {fileID: 0}
+  buttonsTimesPressed: 0
 --- !u!1 &1086472879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,7 +1601,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1061744959}
+        m_TargetAssemblyTypeName: Leonardo.RythmRadioPuzzle.RythmRadioPuzzle, Assembly-CSharp
+        m_MethodName: BlueButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 1715207401}
   normalPosition: {x: 0, y: 0.5, z: 0}
   pressedPosition: {x: 0, y: 0.2, z: 0}
@@ -1936,7 +1976,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1061744959}
+        m_TargetAssemblyTypeName: Leonardo.RythmRadioPuzzle.RythmRadioPuzzle, Assembly-CSharp
+        m_MethodName: RedButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 1640632111}
   normalPosition: {x: 0, y: 0.5, z: 0}
   pressedPosition: {x: 0, y: 0.2, z: 0}
