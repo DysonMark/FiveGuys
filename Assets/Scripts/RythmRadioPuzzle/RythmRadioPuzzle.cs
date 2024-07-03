@@ -15,12 +15,22 @@ namespace Leonardo.RythmRadioPuzzle
         [SerializeField] private bool redButtonPressed = false;
 
         private int buttonsTimesPressed = 0; // Counter of the times the buttons were pressed.
-
+        
+        
+        
         private void Update()
         {
-            // Check 
+            
         }
 
+        private void PressCheck()
+        {
+            if (buttonsTimesPressed == 0)
+            {
+                
+            }
+        }
+        
         public void BlueButtonPressed()
         {
             buttonsTimesPressed++;
