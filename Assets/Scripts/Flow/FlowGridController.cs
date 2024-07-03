@@ -24,10 +24,10 @@ namespace JW.FiveGuys.Flow
                 for (int col = 0; col < gridSize.x; col++)
                 {
                     var tile = Instantiate(gridTile, transform.position + new Vector3(
-                        tileSize.x * col, 
                         0, 
+                        tileSize.x * col, 
                         tileSize.y * row
-                        ), Quaternion.identity);
+                        ), gridTile.transform.rotation, gameObject.transform);
                     grid.Value = tile;
                 }
             }

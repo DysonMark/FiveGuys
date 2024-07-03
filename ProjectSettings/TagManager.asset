@@ -37,7 +37,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - FlowCollider
   - TelePoint
   m_SortingLayers:
   - name: Default

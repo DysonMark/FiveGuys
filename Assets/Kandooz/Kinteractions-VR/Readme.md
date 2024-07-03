@@ -3,7 +3,7 @@
 ### Add OpenXR package
 * Go to `Window-> Package manager`
 * Install The OpenXR package by following the steps in the picture below
-![InstallOpenXR.png](Documentation%2FInstallOpenXR.png) 
+![InstallOpenXR.png](Documentation%2FInstallOpenXR.png)
 ### Configure OpenXR package
 
 * Go To `Edit-> Project Settings`
@@ -38,7 +38,7 @@ The config file contains the following properties
 ## Creating Interactable Objects
 There are multiple types of Interactables you can use:
 - **Grabable** : Grabable objects can be grabbed by the player but when the player stops grabbing they hover on space.
-- **Throwable** : Throwables are just like grabables but can be tossed around with physics. 
+- **Throwable** : Throwables are just like grabables but can be tossed around with physics.
 - **Button** : can be pressed with finger tips, or any colliders in the hand.
 - **Linerarly Constrained** :  Can be grabbed to only move in one direction between two points.
 - **Lever** : Can only be rotated in one direction.
@@ -52,8 +52,8 @@ this component inherts from `Interactable Base` which means that like every othe
 ![Grabable.png](Documentation%2FGrabable.png)
 - **Interaction Hand**: Defines which hand can interact with this object it can be Left, Right or Both
 - **Selection Button**: Defines which button will grab the object, it can either be Trigger or Grip
-- **Unity Events**: 
-  - **On Selected**: is called when the object is grabbed 
+- **Unity Events**:
+  - **On Selected**: is called when the object is grabbed
   - **OnDeslected**: is called when the user leaves the object
   - **OnHoverStart**: is called when the hand starts hovering over the object
   - **OnHoverEnd**: is caleed when the hand stops hovering over the object
@@ -101,9 +101,7 @@ Create The Hand Pose Prefabs
 
 Then you create a Hand Data asset:
  - Go to `Create Asset -> Kandooz -> Interaction System -> Hand Data`
- - Drag the left hand right hand prefabs you just create into the asset properties 
+ - Drag the left hand right hand prefabs you just create into the asset properties
  - Create Avatar Masks for Each finger and add drag them to the correct fields
  - Add two poses representing the hand fully closed and fully open
 ![HandData.png](Documentation%2FHandData.png)
-
-   
