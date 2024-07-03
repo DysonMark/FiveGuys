@@ -24,18 +24,28 @@ public class Wires : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.CompareTag("Wire"))
+
+        Debug.Log(other.tag);
+
+        if (other.CompareTag("ElectricOrb"))
         {
-            isConnected = true;
+            return;
         }
-        
-            if (!isRotated)
+        else
+        {
+            if (other.CompareTag("Wire"))
+            {
+                isConnected = true;
+            }
+
+            if (!isRotated && !other.CompareTag("ElectricOrb"))
             {
                 //transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, ;
                 transform.Rotate(0f, 0f, 90f);
                 isRotated = true;
             }
+
+        }
         
     }
 

@@ -11,11 +11,13 @@ public class ElectricOrb : MonoBehaviour
     [SerializeField] private float spawnRate;
     [SerializeField] private float speed;
 
+    private float sR;
+
     // Start is called before the first frame update
     void Start()
     {
         insideWire = false;
-
+        sR = spawnRate;
     }
 
     // Update is called once per frame
@@ -38,6 +40,15 @@ public class ElectricOrb : MonoBehaviour
         if (lifetime <= 0f)
         {
             Destroy(gameObject);
+        }
+
+        sR -= Time.deltaTime;
+
+        if (sR <= 0)
+        {
+            sR = spawnRate;
+            Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 90f));
+            Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f));
         }
 
         //every quarter of a second spawn electric orbs on the left and right of it
