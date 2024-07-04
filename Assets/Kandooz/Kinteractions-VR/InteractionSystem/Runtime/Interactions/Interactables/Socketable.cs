@@ -12,6 +12,7 @@ namespace Kandooz.InteractionSystem.Interactions
         [SerializeField] private Transform end;
         [SerializeField] private float radius = .1f;
         [SerializeField] private LayerMask mask;
+        [SerializeField] private bool notSocketable;
         [ReadOnly] [SerializeField] private Socket socket;
 
         private Transform defaultPivot;
@@ -58,9 +59,9 @@ namespace Kandooz.InteractionSystem.Interactions
 
         private void Update()
         {
-            DebugInput();
+             DebugInput();
                 
-            if (socketed) return;
+            if (socketed|| notSocketable) return;
             var count = Physics.OverlapCapsuleNonAlloc(start.position, end.position, radius, collider, mask);
             if (count == 0)
             {
@@ -82,7 +83,7 @@ namespace Kandooz.InteractionSystem.Interactions
 
         private void OnDrawGizmosSelected()
         {
-            Gizmos.color = new Color(1, 0, 0, .2f);
+            Gizmos.color = new Color(1, 0, 0, .5f);
             Gizmos.DrawWireSphere(start.position, radius);
             Gizmos.DrawWireSphere(end.position, radius);
             

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 497935cb149398447bbd3b091f571650
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - moth: {instanceID: 0}
+  - rayPoint: {fileID: 11400000, guid: a4e71914ac1db1a41b0851cc83326433, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
