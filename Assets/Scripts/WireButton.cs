@@ -23,10 +23,16 @@ public class WireButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Hand"))
-        {
-            Instantiate(electricOrb, location.transform.position, Quaternion.identity);
-        }
+        
+            //Instantiate(electricOrb, location.transform.position, Quaternion.identity);
+        
+    }
+
+    public void SpawnOrb()
+    {
+
+        Instantiate(electricOrb, location.transform.position, Quaternion.identity);
+
     }
 
 }

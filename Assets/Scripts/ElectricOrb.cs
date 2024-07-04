@@ -10,6 +10,9 @@ public class ElectricOrb : MonoBehaviour
     [SerializeField] private GameObject electricOrbs;
     [SerializeField] private float spawnRate;
     [SerializeField] private float speed;
+    [SerializeField] private Vector3 location;
+    [SerializeField] private float distance;
+    //[SerializeField] private Transform location;
 
     private float sR;
 
@@ -18,11 +21,14 @@ public class ElectricOrb : MonoBehaviour
     {
         insideWire = false;
         sR = spawnRate;
+        location = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(Mathf.Abs(Mathf.Abs(transform.position.magnitude) - Mathf.Abs(location.magnitude)));
 
         Vector3 pos = transform.position;
         pos.x += speed * Time.deltaTime;
@@ -42,13 +48,22 @@ public class ElectricOrb : MonoBehaviour
             Destroy(gameObject);
         }
 
-        sR -= Time.deltaTime;
+        //sR -= Time.deltaTime;  //do it magnitude based
 
-        if (sR <= 0)
+        //if (sR <= 0)
+        //{
+        //    sR = spawnRate;
+        //    Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 90f));
+        //    Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f));
+        //}
+
+        if (Mathf.Abs(Mathf.Abs(transform.position.magnitude) - Mathf.Abs(location.magnitude)) >= distance)
         {
-            sR = spawnRate;
+            location = transform.position;
             Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 90f));
             Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f));
+            Debug.Log("that happened");
+
         }
 
         //every quarter of a second spawn electric orbs on the left and right of it
@@ -64,6 +79,7 @@ public class ElectricOrb : MonoBehaviour
         if (other.CompareTag("Wire"))
         {
             insideWire = true;
+            Debug.Log("found wire");
         }
         else
         {
@@ -76,7 +92,10 @@ public class ElectricOrb : MonoBehaviour
     {
         Debug.Log("exit something");
         if (other.CompareTag("Wire"))
-        insideWire = false;
+        {
+            insideWire = false;
+            Debug.Log("exit wire");
+        }
     }
 
 }
