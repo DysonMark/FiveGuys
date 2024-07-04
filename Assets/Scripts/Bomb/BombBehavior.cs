@@ -11,7 +11,7 @@ namespace SAE.FiveGuys.Bomb
         void Start()
         {
             bomb = GameObject.Find("Bomb");
-            Invoke("ChangeBombColor", 3);
+            Invoke("ChangeBombColor", 600);
         }
 
         void ChangeBombColor()
