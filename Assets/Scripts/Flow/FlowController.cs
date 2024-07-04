@@ -27,69 +27,69 @@ public class FlowController : MonoBehaviour
 
     public void TilePressed()
     {
-        if (isSolved) return;
+        if (isSolved) return; // Don't do anything if solved
         else
         {
-            if (previousTile.Value != null)
+            if (previousTile.Value != null) // The previous tile is the new tile. If it exists
             {
-                if (currentTile.Value == null)
+                if (currentTile.Value == null) // And we do not yet have a current tile, 
                 {
-                    currentTile.Value = previousTile.Value;
+                    currentTile.Value = previousTile.Value; // It becomes the current tile as well
                 }
 
+                // Get the tile controllers for tile info
                 TileController previous = previousTile.Value.GetComponent<TileController>();
                 TileController current = currentTile.Value.GetComponent<TileController>();
 
-                if (previous.Type == "start") varient = previous.Varient;
+                if (previous.Type == "start") varient = previous.Varient; // if our tile is a starting tile, set our variant to its
 
-                if ((previous.Varient == current.Varient) && (current.IsPathable && previous.IsPathable))
+                // If we are the same varient and new tile is pathable (less than 2 paths on it)
+                if ((previous.Varient == current.Varient) && (previous.IsPathable)) 
                 {
+                    // Show the correct path on the new and old tile
                     if (previousTile.Value.transform.position.z > currentTile.Value.transform.position.z)
-                    {
-                        previous.TogglePath("left", true);
-                        previous.TogglePath("middle", true);
-
-                        current.TogglePath("right", true);
-                        current.TogglePath("middle", true);
-
-                        Debug.Log("Went Right");
-                    }
-                    else if (previousTile.Value.transform.position.z < currentTile.Value.transform.position.z)
                     {
                         previous.TogglePath("right", true);
                         previous.TogglePath("middle", true);
 
                         current.TogglePath("left", true);
                         current.TogglePath("middle", true);
+                        Debug.Log("Went Right");
+                    }
+                    else if (previousTile.Value.transform.position.z < currentTile.Value.transform.position.z)
+                    {
+                        previous.TogglePath("left", true);
+                        previous.TogglePath("middle", true);
+
+                        current.TogglePath("right", true);
+                        current.TogglePath("middle", true);
                         Debug.Log("Went Left");
                     }
                     else if (previousTile.Value.transform.position.y > currentTile.Value.transform.position.y)
-                    {
-                        previous.TogglePath("up", true);
-                        previous.TogglePath("middle", true);
-
-                        current.TogglePath("down", true);
-                        current.TogglePath("middle", true);
-                        Debug.Log("Went Up");
-                    }
-                    else if (previousTile.Value.transform.position.y < currentTile.Value.transform.position.y)
                     {
                         previous.TogglePath("down", true);
                         previous.TogglePath("middle", true);
 
                         current.TogglePath("up", true);
                         current.TogglePath("middle", true);
+                        Debug.Log("Went Up");
+                    }
+                    else if (previousTile.Value.transform.position.y < currentTile.Value.transform.position.y)
+                    {
+                        previous.TogglePath("up", true);
+                        previous.TogglePath("middle", true);
+
+                        current.TogglePath("down", true);
+                        current.TogglePath("middle", true);
                         Debug.Log("Went Down");
                     }
                 }
-                currentTile.Value = previousTile.Value;
-            }
-            else
-            {
+
+                // Set the current tile to the one we just hit
                 currentTile.Value = previousTile.Value;
             }
 
-            isSolved = !CheckWin();
+            isSolved = !CheckWin(); // Check if everything is solved
         }
     }
 
@@ -98,7 +98,6 @@ public class FlowController : MonoBehaviour
     {
         previousTile.Value = secondTile;
         currentTile.Value = startTile;
-        if (previousTile.Value != null) { currentTile.Value = previousTile.Value; }
     }
     
     // Update is called once per frame
