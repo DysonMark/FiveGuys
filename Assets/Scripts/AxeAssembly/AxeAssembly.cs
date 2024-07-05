@@ -39,6 +39,12 @@ namespace Leonardo.AxeAssembly
             {
                 StartAxeAssembly();
             }
+            
+            // DEBUG - DELETE LATER ___________________________________________________________________
+            if (Input.GetKeyUp(KeyCode.G))
+            {
+                StartAxeAssembly();
+            }
         }
         // If the two pieces are "Socketed" in the Workstation, create the Axe GameObject
         private void StartAxeAssembly()
@@ -60,6 +66,7 @@ namespace Leonardo.AxeAssembly
             Destroy(axeHeadGameObject);
             particleEffects.SetActive(false);
             Instantiate(axeGameObject, axeInstantiationPos);
+            Debug.Log("Axe instantiated");
         }
         
         // The "Pieces Within Range" counter goes UP each time a piece is within range.
