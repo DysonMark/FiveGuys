@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Kandooz.ScriptableSystem;
-
 namespace SAE.FiveGuys.Bomb
 {
     public class BombCountdown : MonoBehaviour
