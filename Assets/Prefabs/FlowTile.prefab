@@ -123,7 +123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5101196588582500752
 Transform:
   m_ObjectHideFlags: 0
@@ -885,7 +885,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8987163983543140843}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: -0.49999854, y: 0.49999854, z: 0.5000015, w: 0.5000015}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
   m_ConstrainProportionsScale: 1
@@ -900,7 +900,7 @@ Transform:
   - {fileID: 6087215389655817236}
   - {fileID: 6712108495287295968}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!33 &3893492622833512602
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -991,3 +991,7 @@ MonoBehaviour:
   mPath: {fileID: 4273560612298078370}
   scriptableTile: {fileID: 11400000, guid: 07dbcc2a939a7d441a966a14bb349e68, type: 2}
   tilePressed: {fileID: 11400000, guid: 34133026cee584140909b1fbb2a32661, type: 2}
+  type: tile
+  varient: 0
+  isPathable: 1
+  pathCount: 0

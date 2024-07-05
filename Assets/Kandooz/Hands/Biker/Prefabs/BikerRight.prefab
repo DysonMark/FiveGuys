@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1384564089154146057}
   - component: {fileID: 2898047469105797322}
   - component: {fileID: 3961624386789434994}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FlowCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122827566454051027}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
