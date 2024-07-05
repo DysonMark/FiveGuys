@@ -87,6 +87,6 @@ namespace Kandooz.InteractionSystem.Interactions
             Gizmos.DrawWireSphere(start.position, radius);
             Gizmos.DrawWireSphere(end.position, radius);
             
-        }
+        }   
     }
 }
