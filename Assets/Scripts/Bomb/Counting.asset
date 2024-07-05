@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea36bc960193cd649b22c29b7e987600, type: 3}
-  m_Name: CheckRow
+  m_Script: {fileID: 11500000, guid: 5fcd4fd87e8849feb6b01d6751d5ff3d, type: 3}
+  m_Name: Counting
   m_EditorClassIdentifier: 
+  onRaised:
+    m_PersistentCalls:
+      m_Calls: []
+  value: 600

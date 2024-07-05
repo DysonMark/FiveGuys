@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using JW.Project3.Events;
+//using JW.Project3.Events;
 using UnityEngine.UIElements;
 
 /// <summary>
 /// Author: JW
 /// Custom inspector for GameEventListeners to be able to easily add listeners in the inspector at editor time
 /// </summary>
+
+/*
 [CustomEditor(typeof(GameEventListener))]
 public class GameEventListenerEditor : Editor
 {
@@ -66,3 +68,4 @@ public class GameEventListenerEditor : Editor
     }
     #endregion
 }
+*/
