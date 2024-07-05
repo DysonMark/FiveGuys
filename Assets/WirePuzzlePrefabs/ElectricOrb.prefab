@@ -51,9 +51,8 @@ MonoBehaviour:
   insideWire: 0
   electricOrbs: {fileID: 169404230745122119}
   spawnRate: 1
-  speed: 0.6
-  location: {x: 0, y: 0, z: 0}
-  distance: 0.17
+  speed: 0.4
+  _rb: {fileID: 2433066775674415277}
 --- !u!65 &6337440789906483465
 BoxCollider:
   m_ObjectHideFlags: 0

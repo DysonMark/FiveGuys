@@ -10,33 +10,42 @@ public class ElectricOrb : MonoBehaviour
     [SerializeField] private GameObject electricOrbs;
     [SerializeField] private float spawnRate;
     [SerializeField] private float speed;
-    [SerializeField] private Vector3 location;
-    [SerializeField] private float distance;
-    //[SerializeField] private Transform location;
+    [SerializeField] private Rigidbody _rb;
 
     private float sR;
+    private float lifetimeStore;
 
     // Start is called before the first frame update
     void Start()
     {
+        lifetimeStore = lifetime;
         insideWire = false;
         sR = spawnRate;
-        location = transform.position;
+        _rb.GetComponent<Rigidbody>();
+
+    }
+
+    private void FixedUpdate()
+    {
+        _rb.velocity = new Vector3(0.4f, 0f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        Debug.Log(Mathf.Abs(Mathf.Abs(transform.position.magnitude) - Mathf.Abs(location.magnitude)));
+        _rb.MoveRotation(Quaternion.Euler(0f, 0f, 90f));
+        //Vector3 pos = transform.position;
+        //pos.x += speed * Time.deltaTime;
+        //transform.position = pos;
 
-        Vector3 pos = transform.position;
-        pos.x += speed * Time.deltaTime;
-        transform.position = pos;
+
 
         if (insideWire)
         {
             //do nothing
+            //or set the value to it
+            lifetime = lifetimeStore;
         }
         else
         {
@@ -48,27 +57,21 @@ public class ElectricOrb : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //sR -= Time.deltaTime;  //do it magnitude based
+        sR -= Time.deltaTime;
 
-        //if (sR <= 0)
-        //{
-        //    sR = spawnRate;
-        //    Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 90f));
-        //    Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f));
-        //}
-
-        if (Mathf.Abs(Mathf.Abs(transform.position.magnitude) - Mathf.Abs(location.magnitude)) >= distance)
+        if (sR <= 0f)
         {
-            location = transform.position;
-            Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + 90f));
-            Instantiate(electricOrbs, transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z - 90f));
-            Debug.Log("that happened");
-
+            sR = spawnRate;
+            GameObject test = Instantiate(electricOrbs, transform.position, Quaternion.Euler(0f, 0f, -90f));
+            //Instantiate(electricOrbs, transform.position, Quaternion.Euler(0f, 0f, -90f));
+            var _t = test.GetComponent<Rigidbody>();
+            _t.MoveRotation(Quaternion.Euler(0f, 0f, 90f));
+            GameObject test2 = Instantiate(electricOrbs, transform.position, Quaternion.Euler(0f, 0f, 90f));
+            var _t2 = test2.GetComponent<Rigidbody>();
+            _t2.MoveRotation(Quaternion.Euler(0f, 0f, -90f));
         }
 
-        //every quarter of a second spawn electric orbs on the left and right of it
-        //also it goes in the positive direction of where it was instantiated
-        //relative to the power generator
+        
 
     }
 
@@ -86,6 +89,19 @@ public class ElectricOrb : MonoBehaviour
             
             insideWire = false;
         }
+        
+        //if the collided object is a turnerL or turnerR
+        //turn it in that direction
+        if (other.CompareTag("TurnerL"))
+        {
+            transform.Rotate(0, 0, 90f, Space.Self);
+            Debug.Log("turning left");
+        }
+        if (other.CompareTag("TurnerR"))
+        {
+            transform.Rotate(0, 0, 90f, Space.Self);
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
