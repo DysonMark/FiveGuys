@@ -4844,6 +4844,7 @@ GameObject:
   - component: {fileID: 8542524808365623728}
   - component: {fileID: 1127028540372448346}
   - component: {fileID: 1865725463751600258}
+  - component: {fileID: 7824100008947287}
   m_Layer: 31
   m_Name: TelePoint
   m_TagString: Untagged
@@ -4994,3 +4995,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7824100008947287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967541994137918465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe5f33f6deb306428ae1ee11b6596fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnHoverStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHoverEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTeleportTo:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTeleportFrom:
+    m_PersistentCalls:
+      m_Calls: []
