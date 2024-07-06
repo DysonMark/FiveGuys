@@ -58,7 +58,11 @@ namespace JW.FiveGuys.Flow
             set { varient = value; }
         }
         public bool IsPathable { get { return isPathable; } }
-        public int  PathCount  { get { return pathCount;  } }
+        public int  PathCount  
+        { 
+            get { return pathCount ; } 
+            set { pathCount = value; }
+        }
 
         private void OnEnable()
         {
@@ -145,7 +149,7 @@ namespace JW.FiveGuys.Flow
         public void SetDefaults()
         {
             // The tile's type at the start
-            type = defaultType;
+            defaultType = type;
             defaultVarient = varient;
             // Pathway states at the start
             defaultPathable = isPathable;

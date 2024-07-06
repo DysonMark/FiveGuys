@@ -270,6 +270,10 @@ namespace JW.FiveGuys.Flow
 
             // Set cursor position to current tile
             cursor.transform.position = currentTile.transform.position;
+
+            // Toggle cursor drawing twice, canceling each other out and remaining in the same state regardless. This is done to correctly display whether we are drawing or not on the button
+            ToggleCursor();
+            ToggleCursor();
         }
 
         private void ResetToDefaults()

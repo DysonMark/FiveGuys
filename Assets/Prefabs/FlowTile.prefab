@@ -758,7 +758,6 @@ GameObject:
   - component: {fileID: 4679293324322581902}
   - component: {fileID: 3893492622833512602}
   - component: {fileID: 3362745011480653891}
-  - component: {fileID: 7395200617576150457}
   - component: {fileID: 7358083332985510845}
   m_Layer: 0
   m_Name: FlowTile
@@ -841,27 +840,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7395200617576150457
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8987163983543140843}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 1073742208
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 2147489335
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8, y: 3, z: 8}
-  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!114 &7358083332985510845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,14 +852,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c22d6bc237a0ed47a2d62f85ab17ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: a9fb85f96ddadf54082822958853942f, type: 2}
+  - {fileID: 2100000, guid: 533cf1a78976b344fa78fff1134e3b4e, type: 2}
+  - {fileID: 2100000, guid: a0ee763ab4b51be42877da3d2b5872df, type: 2}
+  - {fileID: 2100000, guid: b9643dd5b713eb64089b9636272e5edb, type: 2}
   uPath: {fileID: 3994321394706314160}
   dPath: {fileID: 3373107718913660733}
   lPath: {fileID: 8214766223188917014}
   rPath: {fileID: 8671977631198475843}
   mPath: {fileID: 4273560612298078370}
-  scriptableTile: {fileID: 11400000, guid: 07dbcc2a939a7d441a966a14bb349e68, type: 2}
-  tilePressed: {fileID: 11400000, guid: 34133026cee584140909b1fbb2a32661, type: 2}
-  type: tile
+  type: 0
   varient: 0
   isPathable: 1
   pathCount: 0
+  defaultPathable: 0
+  defaultPathCount: 0
+  defaultType: 0
+  defaultVarient: 0
+  uDefault: 0
+  dDefault: 0
+  lDefault: 0
+  rDefault: 0
+  mDefault: 0
