@@ -25,9 +25,10 @@ namespace JW.FiveGuys.Flow
                 {
                     var tile = Instantiate(gridTile, transform.position + new Vector3(
                         0, 
-                        tileSize.x * col, 
-                        tileSize.y * row
+                        tileSize.x * row, 
+                        tileSize.y * col
                         ), gridTile.transform.rotation, gameObject.transform);
+                    tile.name = $"Tile({col},{row})";
                     grid.Value = tile;
                 }
             }
@@ -47,16 +48,6 @@ namespace JW.FiveGuys.Flow
             }
 
             isSpawned = false;
-        }
-
-        private void OnEnable()
-        {
-            if (!isSpawned) SpawnGrid();
-        }
-
-        private void OnDisable()
-        {
-            if (isSpawned) DestroyGrid();
         }
     } 
 }

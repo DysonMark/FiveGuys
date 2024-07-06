@@ -3,106 +3,113 @@ using System.Collections.Generic;
 using UnityEngine;
 using Kandooz.ScriptableSystem;
 
-public class FlowController : MonoBehaviour
+namespace JW.FiveGuys.Flow
 {
-    [Header("Grid")]
-    [SerializeField] private GameObject startTile;
-    [SerializeField] private GameObject secondTile;
-    [SerializeField] private List<TileController> ends = new List<TileController>();
-    [SerializeField] private bool isSolved = false;
-    [SerializeField] private JW_GOVariable previousTile;
-    [SerializeField] private JW_GOVariable currentTile;
-    [SerializeField] private int varient = 0;
-
-    public bool CheckWin()
+    public class FlowController : MonoBehaviour
     {
-        List<bool> endConditions = new List<bool>();
-        foreach (var item in ends)
-        {
-            endConditions.Add(item.PathCount >= 1);
-        }
+        [Header("Grid")]
+        [SerializeField] private GameObject startTile;
+        [SerializeField] private GameObject secondTile;
+        [SerializeField] private List<TileController> ends = new List<TileController>();
+        [SerializeField] private bool isSolved = false;
+        [SerializeField] private TileController currentTile;
+        [SerializeField] private int varient = 0;
+        [SerializeField] private JW_L_GOVariable grid;
 
-        return endConditions.Contains(false);
-    }
+        [Header("Movement")]
+        [SerializeField] private Vector2Int currentPosition = Vector2Int.zero;
 
-    public void TilePressed()
-    {
-        if (isSolved) return; // Don't do anything if solved
-        else
+        public bool CheckWin()
         {
-            if (previousTile.Value != null) // The previous tile is the new tile. If it exists
+            List<bool> endConditions = new List<bool>();
+            foreach (var item in ends)
             {
-                if (currentTile.Value == null) // And we do not yet have a current tile, 
-                {
-                    currentTile.Value = previousTile.Value; // It becomes the current tile as well
-                }
-
-                // Get the tile controllers for tile info
-                TileController previous = previousTile.Value.GetComponent<TileController>();
-                TileController current = currentTile.Value.GetComponent<TileController>();
-
-                if (previous.Type == "start") varient = previous.Varient; // if our tile is a starting tile, set our variant to its
-
-                // If we are the same varient and new tile is pathable (less than 2 paths on it)
-                if ((previous.Varient == current.Varient) && (previous.IsPathable)) 
-                {
-                    // Show the correct path on the new and old tile
-                    if (previousTile.Value.transform.position.z > currentTile.Value.transform.position.z)
-                    {
-                        previous.TogglePath("right", true);
-                        previous.TogglePath("middle", true);
-
-                        current.TogglePath("left", true);
-                        current.TogglePath("middle", true);
-                        Debug.Log("Went Right");
-                    }
-                    else if (previousTile.Value.transform.position.z < currentTile.Value.transform.position.z)
-                    {
-                        previous.TogglePath("left", true);
-                        previous.TogglePath("middle", true);
-
-                        current.TogglePath("right", true);
-                        current.TogglePath("middle", true);
-                        Debug.Log("Went Left");
-                    }
-                    else if (previousTile.Value.transform.position.y > currentTile.Value.transform.position.y)
-                    {
-                        previous.TogglePath("down", true);
-                        previous.TogglePath("middle", true);
-
-                        current.TogglePath("up", true);
-                        current.TogglePath("middle", true);
-                        Debug.Log("Went Up");
-                    }
-                    else if (previousTile.Value.transform.position.y < currentTile.Value.transform.position.y)
-                    {
-                        previous.TogglePath("up", true);
-                        previous.TogglePath("middle", true);
-
-                        current.TogglePath("down", true);
-                        current.TogglePath("middle", true);
-                        Debug.Log("Went Down");
-                    }
-                }
-
-                // Set the current tile to the one we just hit
-                currentTile.Value = previousTile.Value;
+                endConditions.Add(item.PathCount >= 1);
             }
 
-            isSolved = !CheckWin(); // Check if everything is solved
+            return endConditions.Contains(false);
         }
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        previousTile.Value = secondTile;
-        currentTile.Value = startTile;
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        public void TilePressed()
+        {
+            // 
+        }
+
+        public void MovePosition(Vector2Int moveBy)
+        {
+            // on the current tile, draw the line in the direction of the move
+            TileController.directions drawDirection = DirectionFromVector(moveBy);
+            currentTile.TogglePath(drawDirection, true);
+            
+            // get the new position
+            currentPosition += moveBy;
+
+            // get the tile in the new position
+            currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>();
+
+            // draw the connecting line on the new tile
+            drawDirection = DirectionFromVector(-moveBy);
+            currentTile.TogglePath(drawDirection, true);
+        }
+
+        private int GetIndex(Vector2Int vector, int cols)
+        {
+            int index = (vector.y * cols) + vector.x;
+            return index;
+        }
+
+        private TileController.directions DirectionFromVector(Vector2Int vector)
+        {
+            if (vector == Vector2Int.down)
+            {
+                return TileController.directions.down;
+            }
+            else if (vector == Vector2Int.up)
+            {
+                return TileController.directions.up;
+            }
+            else if (vector == Vector2Int.right)
+            {
+                return TileController.directions.right;
+            }
+            else if (vector == Vector2Int.left)
+            {
+                return TileController.directions.left;
+            }
+            else
+            {
+                return TileController.directions.middle;
+            }
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                MovePosition(new Vector2Int(0, 1));
+                Debug.Log($"Coord: ({currentPosition.x},{currentPosition.y}) | Index: {GetIndex(currentPosition, 3)}");
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                MovePosition(new Vector2Int(0, -1));
+                Debug.Log($"Coord: ({currentPosition.x},{currentPosition.y}) | Index: {GetIndex(currentPosition, 3)}");
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                MovePosition(new Vector2Int(-1, 0));
+                Debug.Log($"Coord: ({currentPosition.x},{currentPosition.y}) | Index: {GetIndex(currentPosition, 3)}");
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                MovePosition(new Vector2Int(1, 0));
+                Debug.Log($"Coord: ({currentPosition.x},{currentPosition.y}) | Index: {GetIndex(currentPosition, 3)}");
+            }
+        }
+    } 
 }
