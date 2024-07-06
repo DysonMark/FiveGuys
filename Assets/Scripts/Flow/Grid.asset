@@ -15,14 +15,5 @@ MonoBehaviour:
   clearOn: 0
   defaultOn: 0
   defaultClearFirst: 1
-  list:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  list: []
   defaults: []
