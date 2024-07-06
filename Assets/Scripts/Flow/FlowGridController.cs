@@ -30,6 +30,7 @@ namespace JW.FiveGuys.Flow
                         ), gridTile.transform.rotation, gameObject.transform);
                     tile.name = $"Tile({col},{row})";
                     grid.Value = tile;
+                    tile.GetComponent<TileController>().SetDefaults();
                 }
             }
 

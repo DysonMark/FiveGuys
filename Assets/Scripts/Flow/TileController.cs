@@ -24,6 +24,7 @@ namespace JW.FiveGuys.Flow
             end
         }
         [Header("Pathways")]
+        [SerializeField] private List<Material> materials;
         [SerializeField] private GameObject uPath;
         [SerializeField] private GameObject dPath;
         [SerializeField] private GameObject lPath;
@@ -52,10 +53,6 @@ namespace JW.FiveGuys.Flow
             get { return type;  }
             set { type = value; }
         }
-        public TileType DefaultType
-        {
-            get { return defaultType; }
-        }
         public int Varient
         {
             get { return varient;  }
@@ -79,6 +76,7 @@ namespace JW.FiveGuys.Flow
                     if (!uPath.activeSelf)
                     {
                         uPath.SetActive(state);
+                        uPath.GetComponent<Renderer>().material = materials[varient];
                         pathCount++;
                     }
                     break;
@@ -86,6 +84,7 @@ namespace JW.FiveGuys.Flow
                     if (!dPath.activeSelf)
                     {
                         dPath.SetActive(state);
+                        dPath.GetComponent<Renderer>().material = materials[varient];
                         pathCount++;
                     }
                     break;
@@ -93,6 +92,7 @@ namespace JW.FiveGuys.Flow
                     if (!lPath.activeSelf)
                     {
                         lPath.SetActive(state);
+                        lPath.GetComponent<Renderer>().material = materials[varient];
                         pathCount++;
                     }
                     break;
@@ -100,11 +100,13 @@ namespace JW.FiveGuys.Flow
                     if (!rPath.activeSelf)
                     {
                         rPath.SetActive(state);
+                        rPath.GetComponent<Renderer>().material = materials[varient];
                         pathCount++;
                     }
                     break;
                 case Directions.middle:
                     mPath.SetActive(state);
+                    mPath.GetComponent<Renderer>().material = materials[varient];
                     break;
                 default:
                     break;
@@ -130,6 +132,13 @@ namespace JW.FiveGuys.Flow
             rPath.SetActive(rDefault);
             mPath.SetActive(mDefault);
 
+            uPath.GetComponent<Renderer>().material = materials[varient];
+            dPath.GetComponent<Renderer>().material = materials[varient];
+            lPath.GetComponent<Renderer>().material = materials[varient];
+            rPath.GetComponent<Renderer>().material = materials[varient];
+            mPath.GetComponent<Renderer>().material = materials[varient];
+
+
             isPathable = defaultPathable;
             pathCount = defaultPathCount;
         }
@@ -138,16 +147,20 @@ namespace JW.FiveGuys.Flow
         {
             // The tile's type at the start
             type = defaultType;
+            defaultVarient = varient;
             // Pathway states at the start
+            defaultPathable = isPathable;
+            defaultPathCount = pathCount;
             uDefault = uPath.activeSelf;
             dDefault = dPath.activeSelf;
             lDefault = lPath.activeSelf;
             rDefault = rPath.activeSelf;
             mDefault = mPath.activeSelf;
-            defaultPathable = isPathable;
-            defaultPathCount = pathCount;
-            // The tile's varient
-            defaultVarient = varient;
+            uPath.GetComponent<Renderer>().material = materials[varient];
+            dPath.GetComponent<Renderer>().material = materials[varient];
+            lPath.GetComponent<Renderer>().material = materials[varient];
+            rPath.GetComponent<Renderer>().material = materials[varient];
+            mPath.GetComponent<Renderer>().material = materials[varient];
         }
     } 
 }

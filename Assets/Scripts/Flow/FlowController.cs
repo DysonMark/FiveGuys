@@ -11,10 +11,13 @@ namespace JW.FiveGuys.Flow
         [Header("Grid")]
         [SerializeField] private int varient = 0;
         [SerializeField] private JW_L_GOVariable grid;
+        [SerializeField] private GameObject cursor;
 
         [Header("Movement")]
         [SerializeField] private Vector2Int currentPosition = Vector2Int.zero;
+        private Vector2Int startPosition = Vector2Int.zero;
         [SerializeField] private TileController currentTile;
+        [SerializeField] private bool isDrawing = false;
 
         [Header("Puzzle")]
         [SerializeField] private bool isSolved = false;
@@ -49,24 +52,59 @@ namespace JW.FiveGuys.Flow
         {
             if (CheckValidMove(moveBy)) // Only proceed to move the tile when the move is valid
             {
-                Debug.LogError("Position moved");
-                // on the current tile, draw the line in the direction of the move
+                // Get the enum direction we moved in
                 TileController.Directions drawDirection = DirectionFromVector(moveBy);
-                currentTile.TogglePath(drawDirection, true);
+
+                // If we are drawing, draw the line on the grid
+                if (isDrawing)
+                {
+                    currentTile.TogglePath(drawDirection, true);
+                }
 
                 // get the new position
+                Debug.LogError("Position moved");
                 currentPosition += moveBy;
 
                 // get the tile in the new position
                 currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>();
 
-                // draw the connecting line on the new tile
-                drawDirection = DirectionFromVector(-moveBy);
-                currentTile.TogglePath(drawDirection, true);
+                // Update cursor position
+                cursor.transform.position = currentTile.transform.position;
 
-                // Check if we are at the end
-                isSolved = CheckWin();
-                if (isSolved) { onSolve?.Invoke(); } // Invoke the events to be excecuted when the puzzle is solved
+                if (isDrawing)
+                {
+                    // Set it to our current varient
+                    currentTile.Varient = varient;
+
+                    // draw the connecting line on the new tile
+                    drawDirection = DirectionFromVector(-moveBy);
+                    currentTile.TogglePath(drawDirection, true);
+
+                    // Check if we are at the end
+                    isSolved = CheckWin();
+                    if (isSolved) { onSolve?.Invoke(); } // Invoke the events to be excecuted when the puzzle is solved
+                }
+            }
+        }
+
+        public void ButtonPressed(int index)
+        {
+            switch (index)
+            {
+                case 1:
+                    MovePosition(Vector2Int.up); break;
+                case 2:
+                    MovePosition(Vector2Int.right); break;
+                case 3:
+                    MovePosition(Vector2Int.down); break;
+                case 4:
+                    MovePosition(Vector2Int.left); break;
+                case -1:
+                    ResetToDefaults(); break;
+                case -2:
+                    ToggleCursor(); break;
+                default:
+                    break;
             }
         }
 
@@ -150,32 +188,91 @@ namespace JW.FiveGuys.Flow
             // Tile checks
             else
             {
-                TileController checkTile = grid.Values[GetIndex(currentPosition+moveBy, 3)].GetComponent<TileController>();
+                if (isDrawing)
+                {
+                    TileController checkTile = grid.Values[GetIndex(currentPosition + moveBy, 3)].GetComponent<TileController>();
 
-                if (checkTile == null) // Does the tile exist?
-                {
-                    Debug.LogWarning("Tile does not exist");
-                    return false;
-                }
-                else // Yes it does
-                {
-                    if (!checkTile.IsPathable) // Is the tile full yet?
+                    if (checkTile == null) // Does the tile exist?
                     {
-                        Debug.LogWarning("Tile is not pathable");
+                        Debug.LogWarning("Tile does not exist");
                         return false;
                     }
-                    else // No errors up to this point, so it must be a valid move!
+                    else // Yes it does
                     {
-                        Debug.Log("Move is valid");
-                        return true;
+                        if (!checkTile.IsPathable) // Is the tile full yet?
+                        {
+                            Debug.LogWarning("Tile is not pathable");
+                            return false;
+                        }
+                        else // Tile is pathable
+                        {
+                            // Tile varient is not 0 (0 is used as a default that can be changed, all the other numbers need to be the same to be a valid move)
+                            if (checkTile.Varient != 0 && checkTile.Varient != varient)
+                            {
+                                Debug.LogWarning("Tile is not a default varient or of the same varient");
+                                return false;
+                            }
+                            else
+                            {
+                                // Report move as valid
+                                Debug.Log("Move is valid");
+                                return true;
+                            }
+                        }
                     }
+                }
+                else
+                {
+                    return true; // We don't check for tile validity when drawing so we just say it would work
                 }
             }
         }
 
-        // Start is called before the first frame update
-        void Start()
+        private void ToggleCursor()
         {
+            if (currentTile.Type == TileController.TileType.start || currentTile.Type == TileController.TileType.end)
+            {
+                isDrawing = !isDrawing;
+                varient = currentTile.Varient;
+            }
+            else
+            {
+                isDrawing = false;
+            }
+        }
+
+        private void SetDefaults()
+        {
+            startPosition = currentPosition; // Set the current position as the default
+
+            // Set the current tile to the one at the current position
+            currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>();
+
+            // Set cursor position to current tile
+            cursor.transform.position = currentTile.transform.position;
+        }
+
+        private void ResetToDefaults()
+        {
+            if (isSolved) return; // Don't allow reseting the puzzle once it is solved
+
+            currentPosition = startPosition; // Reset the cursor position to what we started at
+
+            foreach (var item in grid.Values) // Go through all the tiles and reset them to their defaults
+            {
+                TileController tile = item.GetComponent<TileController>();
+                tile.SetToDefaults();
+            }
+
+            currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>(); // Set the current tile back to the one we are now currently on
+
+            // Reset cursor position to the starting tile
+            cursor.transform.position = currentTile.transform.position;
+        }
+
+        private void OnEnable()
+        {
+            SetDefaults();
         }
 
         // Update is called once per frame
@@ -200,6 +297,14 @@ namespace JW.FiveGuys.Flow
             {
                 MovePosition(new Vector2Int(1, 0));
                 Debug.Log($"Coord: ({currentPosition.x},{currentPosition.y}) | Index: {GetIndex(currentPosition, 3)}");
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ResetToDefaults();
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                ToggleCursor();
             }
         }
     } 
