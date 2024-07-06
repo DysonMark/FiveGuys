@@ -20,8 +20,7 @@ namespace JW.FiveGuys.Flow
         {
             blank,
             ocupied,
-            start,
-            end
+            point
         }
         [Header("Pathways")]
         [SerializeField] private List<Material> materials;

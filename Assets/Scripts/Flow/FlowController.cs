@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Kandooz.ScriptableSystem;
 using UnityEngine.Events;
+using TMPro;
 
 namespace JW.FiveGuys.Flow
 {
@@ -18,6 +19,7 @@ namespace JW.FiveGuys.Flow
         private Vector2Int startPosition = Vector2Int.zero;
         [SerializeField] private TileController currentTile;
         [SerializeField] private bool isDrawing = false;
+        [SerializeField] private TMP_Text drawingButton;
 
         [Header("Puzzle")]
         [SerializeField] private bool isSolved = false;
@@ -33,7 +35,7 @@ namespace JW.FiveGuys.Flow
             foreach (var item in grid.Values) // Go through all the tiles
             {
                 TileController tile = item.GetComponent<TileController>(); // Get the tile information
-                if (tile.Type == TileController.TileType.end) endConditions.Add(tile.IsPathable); // Add the tile if it is an end type
+                if (tile.Type == TileController.TileType.point) endConditions.Add(tile.IsPathable); // Add the tile if it is an end type
             }
 
             return !endConditions.Contains(true); // Check if any of the tiles are still pathable, ie. not visited yet
@@ -201,8 +203,17 @@ namespace JW.FiveGuys.Flow
                     {
                         if (!checkTile.IsPathable) // Is the tile full yet?
                         {
-                            Debug.LogWarning("Tile is not pathable");
-                            return false;
+                            if (checkTile.Type == TileController.TileType.point && checkTile.PathCount <= 1) // Yes, but is it a start tile with 1 or fewer paths?
+                            {
+                                // Report move as valid
+                                Debug.Log("Move is valid");
+                                return true;
+                            }
+                            else // No, so it is not valid
+                            {
+                                Debug.LogWarning("Tile is not pathable");
+                                return false;
+                            }
                         }
                         else // Tile is pathable
                         {
@@ -230,7 +241,7 @@ namespace JW.FiveGuys.Flow
 
         private void ToggleCursor()
         {
-            if (currentTile.Type == TileController.TileType.start || currentTile.Type == TileController.TileType.end)
+            if (currentTile.Type == TileController.TileType.point)
             {
                 isDrawing = !isDrawing;
                 varient = currentTile.Varient;
@@ -238,6 +249,15 @@ namespace JW.FiveGuys.Flow
             else
             {
                 isDrawing = false;
+            }
+            
+            if (isDrawing)
+            {
+                drawingButton.text = "Drawing";
+            }
+            else
+            {
+                drawingButton.text = "Not Drawing";
             }
         }
 
