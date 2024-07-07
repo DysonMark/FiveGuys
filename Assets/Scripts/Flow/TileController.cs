@@ -6,6 +6,10 @@ using static UnityEditorInternal.ReorderableList;
 
 namespace JW.FiveGuys.Flow
 {
+    /// <summary>
+    /// Author: JW
+    /// The script attached to the tile GameObject for the Flow puzzle
+    /// </summary>
     public class TileController : MonoBehaviour
     {
         public enum Directions
@@ -70,6 +74,11 @@ namespace JW.FiveGuys.Flow
             SetDefaults();
         }
 
+        /// <summary>
+        /// Sets the given direction's GameObject to enabled to draw the path. Also set its material to the current varient and handles updating whether the tile is "pathable" or not
+        /// </summary>
+        /// <param name="path">The direction to draw in using the direction enum</param>
+        /// <param name="state">Whether to enable or disable that direction's GameObject</param>
         public void TogglePath(Directions path, bool state)
         {
             type = TileType.ocupied;
@@ -115,6 +124,7 @@ namespace JW.FiveGuys.Flow
                     break;
             }
 
+            // Update the tile's pathable state if it is more than or equal to 1. A tile is considered full if it has more than 2 paths on it, but we can still draw a path when leaving a now "full" tile. Also makes it so we can easily set the correct state for "point" tiles to be full with only 1 connection, preventing different colors on the same tile
             if (pathCount >= 1) 
             { 
                 isPathable = false;
@@ -126,32 +136,38 @@ namespace JW.FiveGuys.Flow
         /// </summary>
         public void SetToDefaults()
         {
+            // Type and varient
             type = defaultType;
             varient = defaultVarient;
 
+            // Path GameObjects
             uPath.SetActive(uDefault);
             dPath.SetActive(dDefault);
             lPath.SetActive(lDefault);
             rPath.SetActive(rDefault);
             mPath.SetActive(mDefault);
 
+            // Tile's color
             uPath.GetComponent<Renderer>().material = materials[varient];
             dPath.GetComponent<Renderer>().material = materials[varient];
             lPath.GetComponent<Renderer>().material = materials[varient];
             rPath.GetComponent<Renderer>().material = materials[varient];
             mPath.GetComponent<Renderer>().material = materials[varient];
 
-
+            // Pathable state and path count
             isPathable = defaultPathable;
             pathCount = defaultPathCount;
         }
 
+        /// <summary>
+        /// Sets the default values to what that variable's value is currently
+        /// </summary>
         public void SetDefaults()
         {
             // The tile's type at the start
             defaultType = type;
             defaultVarient = varient;
-            // Pathway states at the start
+            // Pathway states and color at the start
             defaultPathable = isPathable;
             defaultPathCount = pathCount;
             uDefault = uPath.activeSelf;

@@ -4,14 +4,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Kandooz.ScriptableSystem;
 
-namespace JW.FiveGuys.Core
+namespace JW.FiveGuys.Teleportation
 {
     /// <summary>
     /// Author: JW
     /// Attaches to the CameraRig game object and will be responsible for teleporting to specified locations
-    /// 
-    /// TODO:
-    /// [x] Make teleport points have a cylinder object that gets enabled when you start aiming, then disabled when not
     /// </summary>
     public class TeleportationController : MonoBehaviour
     {
@@ -23,7 +20,7 @@ namespace JW.FiveGuys.Core
         [SerializeField] private LayerMask teleportLayer;
 
         [Header("Previews")]
-        [SerializeField] private ParticleSystem preview; // Remove later
+        [SerializeField] private ParticleSystem preview; 
         [SerializeField] private GameEvent onAimStart;
         [SerializeField] private GameEvent onAimStop;
 
