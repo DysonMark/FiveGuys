@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Anchor
+  - FlowTile
   layers:
   - Default
   - TransparentFX
@@ -17,6 +19,7 @@ TagManager:
   - XRI_Interactable
   - XRI_PlayerLayer
   - 
+  - FlashLightSockets
   - 
   - 
   - 
@@ -25,6 +28,8 @@ TagManager:
   - 
   - 
   - 
+  - AxeHandleSocket
+  - AxeHeadSocket
   - 
   - 
   - 
@@ -32,11 +37,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - FlowCollider
+  - TelePoint
   m_SortingLayers:
   - name: Default
     uniqueID: 0

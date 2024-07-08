@@ -409,9 +409,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: {fileID: 881232650}
   bombObject: {fileID: 1205602074}
-  counting: 0
-  holdCounting: 600
-  subtract: 1
 --- !u!1 &913886253
 GameObject:
   m_ObjectHideFlags: 0
