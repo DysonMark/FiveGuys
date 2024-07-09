@@ -17,6 +17,8 @@ namespace SAE.FiveGuys.Bomb
         private bool greenPass = false;
 
         public bool bombHasBeenDefused = false;
+
+        public bool bombHasExploded = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -36,15 +38,18 @@ namespace SAE.FiveGuys.Bomb
             if (whichWire == null)
             {
                 Debug.Log("Bomb Exploded");
+                bombHasExploded = true;
             }
             else if (whichWire[0] != 1)
             {
                 Debug.Log("Bomb Exploded");
+                bombHasExploded = true;
             }
             else
             {
                 Debug.Log("Blue in right position!");
                 bluePass = true;
+                bombHasExploded = true;
             }
         }
 
@@ -56,6 +61,7 @@ namespace SAE.FiveGuys.Bomb
             if (whichWire.Count < 2)
             {
                 Debug.Log("Bomb Exploded");
+                bombHasExploded = true;
             }
             else
             {
@@ -71,10 +77,12 @@ namespace SAE.FiveGuys.Bomb
             if (whichWire.Count < 3)
             {
                 Debug.Log("Bomb Exploded");
+                bombHasExploded = true;
             }
             else if (whichWire[2] != 3)
             {
                 Debug.Log("Bomb Exploded");
+                bombHasExploded = true;
             }
             else
             {
@@ -90,10 +98,12 @@ namespace SAE.FiveGuys.Bomb
             if (whichWire.Count < 4)
             {
                 Debug.Log("Bomb Exploded");
+                bombHasExploded = true;
             }
             else if (whichWire[3] != 4)
             {
                 Debug.Log("Bomb Exploded");
+                bombHasExploded = true;
             }
             else
             {
