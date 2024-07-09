@@ -15,6 +15,8 @@ namespace SAE.FiveGuys.Bomb
         private bool yellowPass = false;
 
         private bool greenPass = false;
+
+        public bool bombHasBeenDefused = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -110,8 +112,8 @@ namespace SAE.FiveGuys.Bomb
             if (bluePass == true && redPass == true && yellowPass == true && greenPass == true)
             {
                 Debug.Log("Bomb defused");
+                bombHasBeenDefused = true;
             }
-           
         }
 
     }
