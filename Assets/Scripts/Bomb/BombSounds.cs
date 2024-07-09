@@ -10,7 +10,8 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private AudioSource bombTicking;
 
         [SerializeField] private AudioSource bombDefused;
-        
+
+        [SerializeField] private AudioSource bombExplosion;
         public DefuseTheBomb bombDefusedCheck;
         
         // Start is called before the first frame update
@@ -35,6 +36,16 @@ namespace SAE.FiveGuys.Bomb
             {
                 bombTicking.Pause();
                 Invoke("PlayBombDefusedSound", 1);
+            }
+
+            if (bombDefusedCheck.bombHasExploded == false)
+            {
+                bombExplosion.Pause();
+            }
+            else if (bombDefusedCheck.bombHasExploded == true)
+            {
+                bombTicking.Pause();
+                bombExplosion.UnPause();
             }
         }
         
