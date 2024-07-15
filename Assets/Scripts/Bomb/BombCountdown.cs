@@ -13,6 +13,9 @@ namespace SAE.FiveGuys.Bomb
         private int counting;
         private float holdCounting = 600;
         private float subtract = 1;
+        public int bombChecker = 0;
+
+        public DefuseTheBomb bombOff;
 
         // Start is called before the first frame update
         void Start()
@@ -26,6 +29,7 @@ namespace SAE.FiveGuys.Bomb
         {
             TextToInt();
             NumbersGoingDown();
+            DeleteTextOnBomb();
         }
 
         private void TextToInt()
@@ -40,6 +44,26 @@ namespace SAE.FiveGuys.Bomb
             counting = (int)holdCounting;
             countdown.text = ((int)counting).ToString();
             Debug.Log(counting);
+        }
+
+        private void DeleteTextOnBomb()
+        {
+            if (bombOff.bombHasBeenDefused == true)
+            {
+                bombChecker = 1;
+                countdown.text = "OFF";
+                counting = 0;
+                holdCounting = 0;
+            }
+            else if (bombOff.bombHasExploded == true)
+            {
+                bombChecker = 2;
+                countdown.text = "WRONG";
+            }
+            else
+            {
+                bombChecker = 0;
+            }
         }
     }
 }
