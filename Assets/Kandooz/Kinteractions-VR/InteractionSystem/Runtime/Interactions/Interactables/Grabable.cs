@@ -8,6 +8,7 @@ namespace Kandooz.InteractionSystem.Interactions
     public class Grabable : InteractableBase
     {
         [SerializeField] protected bool hideHand;
+        [SerializeField] protected bool moveObject = true;
         [SerializeField] private VariableTweener tweener;
 
         private TransformTweenable transformTweenable= new();
@@ -23,15 +24,21 @@ namespace Kandooz.InteractionSystem.Interactions
         protected override void Select()
         {
             if (hideHand) CurrentInteractor.ToggleHandModel(false);
-            grabStrategy.Initialize(CurrentInteractor);
-            InitializeAttachmentPointTransform();
-            LerpObjectToPosition(() => grabStrategy.Grab(this, CurrentInteractor));
+            if (moveObject)
+            {
+                grabStrategy.Initialize(CurrentInteractor);
+                InitializeAttachmentPointTransform();
+                LerpObjectToPosition(() => grabStrategy.Grab(this, CurrentInteractor));
+            }
         }
         protected override void DeSelected()
         {
             if (hideHand) CurrentInteractor.ToggleHandModel(true);
-            tweener.RemoveTweenable(transformTweenable);
-            grabStrategy.UnGrab(this, CurrentInteractor);
+            if (moveObject)
+            {
+                tweener.RemoveTweenable(transformTweenable);
+                grabStrategy.UnGrab(this, CurrentInteractor);
+            }
         }
         
         private void Awake()
