@@ -14,58 +14,63 @@ namespace Leonardo.RythmRadioPuzzle
         // Audio sound effects.
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip blueButtonSFX, greenButtonSFX, redButtonSFX, yellowButtonSFX;
-        [SerializeField] private AudioClip RadioSFX;
 
-        [SerializeField] private AudioClip WinSFX, WrongSFX;
-        private bool SFXplaying;
+        [SerializeField] private AudioClip winSFX, wrongSFX;
+        private bool isPlaying;
         
         [SerializeField] private GameObject winParticleFX;
-        
+        private bool puzzleFinished;
+            
         [SerializeField] private int buttonsTimesPressed = 0; // Counter of the times the buttons were pressed.
         
         private void Start()
         {
-            SFXplaying = false;
+            puzzleFinished = false;
+            isPlaying = false;
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
         
         private void WrongButtonPressed()
         {
-            buttonsTimesPressed = 0;
-            blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
-            
-            // Play SFX
-            if (!SFXplaying)
+            if (!puzzleFinished)
             {
-                SFXplaying = true;
-                audioSource.clip = WrongSFX;
-                audioSource.Play();
-                Debug.Log("Wrong button pressed.");
-                StartCoroutine(SoundEffectChecker(audioSource.clip.length));
+                buttonsTimesPressed = 0;
+                blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
+            
+                // Play SFX
+                if (!isPlaying)
+                {
+                    isPlaying = true;
+                    audioSource.clip = wrongSFX;
+                    audioSource.Play();
+                    Debug.Log("Wrong button pressed.");
+                    StartCoroutine(BoolPlayingDelay(audioSource.clip.length));
+                }
             }
         }
 
-        private IEnumerator SoundEffectChecker(float delayDurationSfx)
+        private IEnumerator BoolPlayingDelay(float delayDurationSfx)
         {
             yield return new WaitForSeconds(delayDurationSfx);
-            SFXplaying = false;
+            isPlaying = false;
         } 
         
         private void PuzzleCompleted()
         {
             //Instantiate(winParticleFX, transform);
             Debug.Log("PUZZLE COMPLETED.");
+            puzzleFinished = true;
             
             // Play SFX
-            audioSource.clip = WinSFX;
-            audioSource.Play(); 
+            audioSource.clip = winSFX;
+            audioSource.Play();
         }
 
 
         #region Button Related Scripts
         public void BlueButtonPressed()
         {
-            if (!blueButtonTapped)
+            if (!blueButtonTapped & !puzzleFinished)
             {
                 blueButtonTapped = true;
                 
@@ -85,7 +90,7 @@ namespace Leonardo.RythmRadioPuzzle
 
         public void YellowButtonPressed()
         {
-            if (!yellowButtonTapped)
+            if (!yellowButtonTapped & !puzzleFinished)
             {
                 yellowButtonTapped = true;
                 
@@ -105,7 +110,7 @@ namespace Leonardo.RythmRadioPuzzle
     
         public void GreenButtonPressed()
         {
-            if (!greenButtonTapped)
+            if (!greenButtonTapped & !puzzleFinished)
             {
                 greenButtonTapped = true;
                 
@@ -125,7 +130,7 @@ namespace Leonardo.RythmRadioPuzzle
     
         public void RedButtonPressed()
         {
-            if (!redButtonTapped)
+            if (!redButtonTapped & !puzzleFinished)
             {
                 redButtonTapped = true;
                 if (buttonsTimesPressed == 3)

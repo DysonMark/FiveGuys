@@ -848,8 +848,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1061744958}
   - component: {fileID: 1061744959}
+  - component: {fileID: 1061744960}
   m_Layer: 0
-  m_Name: RythmRadioPuzzleManagerGO
+  m_Name: ButtonSFXManagerGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,16 +888,111 @@ MonoBehaviour:
   yellowButtonTapped: 0
   greenButtonTapped: 0
   redButtonTapped: 0
-  audioSource: {fileID: 1445678739}
+  audioSource: {fileID: 1061744960}
   blueButtonSFX: {fileID: 8300000, guid: 4e2e7e7fb1741ed449c33abee8332e8a, type: 3}
   greenButtonSFX: {fileID: 8300000, guid: 1a937f94f012a7e4f9b9c75e73264845, type: 3}
   redButtonSFX: {fileID: 8300000, guid: d770b6c0576ddf24591b467bac0b4f87, type: 3}
   yellowButtonSFX: {fileID: 8300000, guid: 7856f1cf1b032a94fbdeba647e4027a1, type: 3}
-  RadioSFX: {fileID: 0}
-  WinSFX: {fileID: 8300000, guid: 4d8c0822cc487f24192ad359660cee53, type: 3}
-  WrongSFX: {fileID: 8300000, guid: 68556ceba0214f6428e7ece7803cd59c, type: 3}
+  winSFX: {fileID: 8300000, guid: 4d8c0822cc487f24192ad359660cee53, type: 3}
+  wrongSFX: {fileID: 8300000, guid: d90493d5dfece054c9646329167da68a, type: 3}
   winParticleFX: {fileID: 0}
   buttonsTimesPressed: 0
+--- !u!82 &1061744960
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061744957}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c49fa62077263c74b90f0362ee5b1bab, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1086472879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +1154,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f067dfb6f33224741ad573c68da0e0db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1507,7 +1603,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d7d1aa5492d69414c8300159cac99396, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1604,8 +1700,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1445678738}
   - component: {fileID: 1445678739}
+  - component: {fileID: 1445678740}
   m_Layer: 0
-  m_Name: RadioGO
+  m_Name: RadioPlayerGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1637,7 +1734,7 @@ AudioSource:
   m_GameObject: {fileID: 1445678737}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c49fa62077263c74b90f0362ee5b1bab, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1724,6 +1821,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1445678740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445678737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6a321e20ae0304ab107262f9fa7b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioAudioSource: {fileID: 1445678739}
+  radioSFX: {fileID: 8300000, guid: 161481e4703a6a44995cf39529867fad, type: 3}
 --- !u!1 &1463364190
 GameObject:
   m_ObjectHideFlags: 0
