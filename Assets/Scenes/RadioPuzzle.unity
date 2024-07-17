@@ -295,7 +295,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1445678740}
+        m_TargetAssemblyTypeName: Leonardo.RythmRadioPuzzle.TurnRadioOn.PlayRadio,
+          Assembly-CSharp
+        m_MethodName: TurnRadioOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   button: {fileID: 1133523379}
   normalPosition: {x: 0, y: 0.5, z: 0}
   pressedPosition: {x: 0, y: 0.2, z: 0}
@@ -342,7 +355,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a656d7e6d6af9d54287d181967683fb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -503,7 +516,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1664041cb07809b4eaa39c69493f8da6, type: 2}
+  - {fileID: 2100000, guid: cc9277d58efeaa84c85f048139616f41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -771,7 +784,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1664041cb07809b4eaa39c69493f8da6, type: 2}
+  - {fileID: 2100000, guid: cc9277d58efeaa84c85f048139616f41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1929,7 +1942,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1664041cb07809b4eaa39c69493f8da6, type: 2}
+  - {fileID: 2100000, guid: cc9277d58efeaa84c85f048139616f41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2304,7 +2317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1664041cb07809b4eaa39c69493f8da6, type: 2}
+  - {fileID: 2100000, guid: cc9277d58efeaa84c85f048139616f41, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 namespace Leonardo.RythmRadioPuzzle
@@ -19,20 +20,20 @@ namespace Leonardo.RythmRadioPuzzle
         private bool isPlaying;
         
         [SerializeField] private GameObject winParticleFX;
-        private bool puzzleFinished;
+        [FormerlySerializedAs("puzzleFinished")] public bool radioPuzzleFinished;
             
         [SerializeField] private int buttonsTimesPressed = 0; // Counter of the times the buttons were pressed.
         
         private void Start()
         {
-            puzzleFinished = false;
+            radioPuzzleFinished = false;
             isPlaying = false;
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
         
         private void WrongButtonPressed()
         {
-            if (!puzzleFinished)
+            if (!radioPuzzleFinished)
             {
                 buttonsTimesPressed = 0;
                 blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
@@ -59,7 +60,7 @@ namespace Leonardo.RythmRadioPuzzle
         {
             //Instantiate(winParticleFX, transform);
             Debug.Log("PUZZLE COMPLETED.");
-            puzzleFinished = true;
+            radioPuzzleFinished = true;
             
             // Play SFX
             audioSource.clip = winSFX;
@@ -70,7 +71,7 @@ namespace Leonardo.RythmRadioPuzzle
         #region Button Related Scripts
         public void BlueButtonPressed()
         {
-            if (!blueButtonTapped & !puzzleFinished)
+            if (!blueButtonTapped & !radioPuzzleFinished)
             {
                 blueButtonTapped = true;
                 
@@ -90,7 +91,7 @@ namespace Leonardo.RythmRadioPuzzle
 
         public void YellowButtonPressed()
         {
-            if (!yellowButtonTapped & !puzzleFinished)
+            if (!yellowButtonTapped & !radioPuzzleFinished)
             {
                 yellowButtonTapped = true;
                 
@@ -110,7 +111,7 @@ namespace Leonardo.RythmRadioPuzzle
     
         public void GreenButtonPressed()
         {
-            if (!greenButtonTapped & !puzzleFinished)
+            if (!greenButtonTapped & !radioPuzzleFinished)
             {
                 greenButtonTapped = true;
                 
@@ -130,7 +131,7 @@ namespace Leonardo.RythmRadioPuzzle
     
         public void RedButtonPressed()
         {
-            if (!redButtonTapped & !puzzleFinished)
+            if (!redButtonTapped & !radioPuzzleFinished)
             {
                 redButtonTapped = true;
                 if (buttonsTimesPressed == 3)
