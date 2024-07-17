@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - FlowTile
+  - TutorialGrab
   layers:
   - Default
   - TransparentFX

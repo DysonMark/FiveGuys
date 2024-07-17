@@ -13,6 +13,7 @@ namespace SAE.FiveGuys.Tutorial
         [SerializeField] private AudioSource endOfTutorial;
         public TutorialBehaviour checkGrabbableObject;
         public TeleportationController didHeTeleported;
+        public TutorialBehaviour valueOfI;
 
         // Start is called before the first frame update
         void Start()
@@ -27,16 +28,22 @@ namespace SAE.FiveGuys.Tutorial
             if (didHeTeleported.isPlayerTeleporting == true)
             {
                 successfulTeleportation.UnPause();
-                stopStartSound.Stop();
+                stopStartSound.Pause();
             }
             else if (didHeTeleported.isPlayerTeleporting == false)
             {
                 successfulTeleportation.Pause();
             }
-
-            if (checkGrabbableObject.isObjectHasBeenGrab == true)
+            
+            Debug.Log("Object has been grab bool " + checkGrabbableObject.isObjectHasBeenGrab);
+            Debug.Log("Value of i: " + valueOfI.i);
+            if (valueOfI.i == 1)
             {
                 endOfTutorial.UnPause();
+            }
+            else if (valueOfI.i == 0)
+            {
+                endOfTutorial.Pause();
             }
         }
     }

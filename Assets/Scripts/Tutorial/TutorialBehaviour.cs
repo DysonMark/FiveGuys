@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JW.FiveGuys.Teleportation;
+using Kandooz.InteractionSystem.Interactions;
 using UnityEngine;
 
 namespace SAE.FiveGuys.Tutorial
@@ -12,6 +14,10 @@ namespace SAE.FiveGuys.Tutorial
         public TeleportationController teleport;
 
         public bool isObjectHasBeenGrab = false;
+
+        public Grabable knowingIfObjectIsSelected;
+
+        public int i = 0;
         // Start is called before the first frame update
         void Start()
         {
@@ -25,12 +31,30 @@ namespace SAE.FiveGuys.Tutorial
             {
                 Debug.Log("Player has teleported");
             }
+            ObjectHasBeenGrab();
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "TutorialGrab")
+            {
+                i = 1;
+                ObjectHasBeenGrab();
+            }
+
         }
 
         public void ObjectHasBeenGrab()
         {
             Debug.Log("Object has been grabbed");
-            isObjectHasBeenGrab = true;
+            if (i == 1)
+            {
+                isObjectHasBeenGrab = true;
+            }
+            else if (i == 0)
+            {
+                isObjectHasBeenGrab = false;
+            }
         }
     }
 }
