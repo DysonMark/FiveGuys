@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -11,7 +13,11 @@ namespace Leonardo.RythmRadioPuzzle
         
         // Audio sound effects.
         [SerializeField] private AudioSource audioSource;
-        [SerializeField] private AudioClip wrongButtonSFX, blueButtonSFX, yellowButtonSFX, greenButtonSFX, redButtonSFX;
+        [SerializeField] private AudioClip blueButtonSFX, greenButtonSFX, redButtonSFX, yellowButtonSFX;
+        [SerializeField] private AudioClip RadioSFX;
+
+        [SerializeField] private AudioClip WinSFX, WrongSFX;
+        private bool SFXplaying;
         
         [SerializeField] private GameObject winParticleFX;
         
@@ -19,20 +25,31 @@ namespace Leonardo.RythmRadioPuzzle
         
         private void Start()
         {
+            SFXplaying = false;
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
-
-
-
+        
         private void WrongButtonPressed()
         {
             buttonsTimesPressed = 0;
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
+            
             // Play SFX
-            //audioSource.clip = wrongButtonSFX;
-            //audioSource.Play();
-            Debug.Log("Wrong button pressed.");
+            if (!SFXplaying)
+            {
+                SFXplaying = true;
+                audioSource.clip = WrongSFX;
+                audioSource.Play();
+                Debug.Log("Wrong button pressed.");
+                StartCoroutine(SoundEffectChecker(audioSource.clip.length));
+            }
         }
+
+        private IEnumerator SoundEffectChecker(float delayDurationSfx)
+        {
+            yield return new WaitForSeconds(delayDurationSfx);
+            SFXplaying = false;
+        } 
         
         private void PuzzleCompleted()
         {
@@ -40,6 +57,8 @@ namespace Leonardo.RythmRadioPuzzle
             Debug.Log("PUZZLE COMPLETED.");
             
             // Play SFX
+            audioSource.clip = WinSFX;
+            audioSource.Play(); 
         }
 
 
@@ -56,8 +75,8 @@ namespace Leonardo.RythmRadioPuzzle
                     buttonsTimesPressed++;
                 
                     // Play SFX
-                    //audioSource.clip = blueButtonSFX;
-                    //audioSource.Play();
+                    audioSource.clip = blueButtonSFX;
+                    audioSource.Play();
                 }
                 else WrongButtonPressed();
             }
@@ -75,8 +94,8 @@ namespace Leonardo.RythmRadioPuzzle
                     buttonsTimesPressed++;
                 
                     // Play SFX
-                    //audioSource.clip = yellowButtonSFX;
-                    //audioSource.Play();
+                    audioSource.clip = yellowButtonSFX;
+                    audioSource.Play();
                 }
                 else WrongButtonPressed();
 
@@ -95,8 +114,8 @@ namespace Leonardo.RythmRadioPuzzle
                     buttonsTimesPressed++;
                 
                     // Play SFX
-                    //audioSource.clip = greenButtonSFX;
-                    //audioSource.Play();
+                    audioSource.clip = greenButtonSFX;
+                    audioSource.Play();
                 }
                 else WrongButtonPressed();
 
@@ -114,8 +133,8 @@ namespace Leonardo.RythmRadioPuzzle
                     buttonsTimesPressed++;
                 
                     // Play SFX
-                    //audioSource.clip = redButtonSFX;
-                    //audioSource.Play();
+                    audioSource.clip = redButtonSFX;
+                    audioSource.Play();
                 
                     PuzzleCompleted();
                 }
