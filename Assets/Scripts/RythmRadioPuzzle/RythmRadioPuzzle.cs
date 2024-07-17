@@ -22,30 +22,7 @@ namespace Leonardo.RythmRadioPuzzle
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
 
-        private void Update()
-        {
-            // Debug Input keys when not using VR.
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                Debug.Log("You pressed the BLUE button.");
-                BlueButtonPressed();
-            }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                Debug.Log("You pressed the YELLOW button.");
-                YellowButtonPressed();  
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                Debug.Log("You pressed the GREEN button.");
-                GreenButtonPressed();
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Debug.Log("You pressed the RED button.");
-                RedButtonPressed();
-            }
-        }
+
 
         private void WrongButtonPressed()
         {
@@ -148,6 +125,35 @@ namespace Leonardo.RythmRadioPuzzle
 
         }
         
+        #endregion
+
+        #region Debug Related Scripts
+
+        private void Update()
+        {
+            // Debug Input keys when not using VR.
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                Debug.Log("You pressed the BLUE button.");
+                BlueButtonPressed();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Debug.Log("You pressed the YELLOW button.");
+                YellowButtonPressed();  
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                Debug.Log("You pressed the GREEN button.");
+                GreenButtonPressed();
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("You pressed the RED button.");
+                RedButtonPressed();
+            }
+        }
+
         #endregion
 
     }
