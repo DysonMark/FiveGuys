@@ -9,11 +9,12 @@ namespace Leonardo.RythmRadioPuzzle
 {
     public class RythmRadioPuzzle : MonoBehaviour
     {
-        // Debug purposes.
         [SerializeField]  private bool blueButtonTapped, yellowButtonTapped, greenButtonTapped, redButtonTapped;
         
-        // Audio sound effects.
+        // Audio source
         [SerializeField] private AudioSource audioSource;
+        
+        // Audio clips for buttons
         [SerializeField] private AudioClip blueButtonSFX, greenButtonSFX, redButtonSFX, yellowButtonSFX;
 
         [SerializeField] private AudioClip winSFX, wrongSFX;
