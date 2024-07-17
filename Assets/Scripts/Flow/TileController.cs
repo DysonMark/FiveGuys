@@ -81,7 +81,11 @@ namespace JW.FiveGuys.Flow
         /// <param name="state">Whether to enable or disable that direction's GameObject</param>
         public void TogglePath(Directions path, bool state)
         {
-            type = TileType.ocupied;
+            if (type != TileType.point)
+            {
+                type = TileType.ocupied;
+            }
+
             switch (path)
             {
                 case Directions.up:

@@ -6,6 +6,7 @@ using System.Text;
 using UnityEngine.Windows.Speech;
 using UnityEngine.Events;
 using Unity.Collections;
+using TMPro;
 
 namespace JW.FiveGuys.Flow
 {
@@ -17,12 +18,12 @@ namespace JW.FiveGuys.Flow
     public class FlowSpeechController : MonoBehaviour
     {
         [SerializeField] [ReadOnly] private string[] keywords = new string[] {
-            "Up",
-            "Right",
-            "Down",
-            "Left",
-            "Reset",
-            "Draw"
+            "Kill",
+            "Fun",
+            "Murder",
+            "Lama",
+            "Blue",
+            "Jamal"
         };
         [SerializeField] private FlowController controller;
         private KeywordRecognizer recognizer;
@@ -48,22 +49,22 @@ namespace JW.FiveGuys.Flow
 
             switch (args.text)
             {
-                case "Up":
+                case "U":
                     controller.ButtonPressed(1);
                     break;
-                case "Right":
+                case "R":
                     controller.ButtonPressed(2);
                     break;
-                case "Down":
+                case "D":
                     controller.ButtonPressed(3);
                     break;
-                case "Left":
+                case "L":
                     controller.ButtonPressed(4);
                     break;
-                case "Reset":
+                case "S":
                     controller.ButtonPressed(-1);
                     break;
-                case "Draw":
+                case "A":
                     controller.ButtonPressed(-2);
                     break;
                 default:
