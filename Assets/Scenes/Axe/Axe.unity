@@ -151,8 +151,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7482027}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.233, y: 2.018, z: -1.1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.974, y: 2.018, z: -0.4084491}
   m_LocalScale: {x: 0.3, y: 1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -161,7 +161,7 @@ Transform:
   - {fileID: 19587660}
   - {fileID: 1897377970}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &7482029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,34 +178,10 @@ MonoBehaviour:
   selectionButton: 1
   onSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7482033}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_freezeRotation
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDeselected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7482033}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_freezeRotation
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   onHoverStart:
     m_PersistentCalls:
       m_Calls: []
@@ -219,6 +195,7 @@ MonoBehaviour:
   currentInteractor: {fileID: 0}
   currentState: 0
   hideHand: 0
+  moveObject: 1
   tweener: {fileID: 0}
 --- !u!114 &7482030
 MonoBehaviour:
@@ -236,24 +213,24 @@ MonoBehaviour:
     poseConstrains:
       indexFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 0.97779423
+        max: 0.97779423
       middleFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 1
+        max: 1
       ringFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 1
+        max: 1
       pinkyFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 1
+        max: 1
       thumbFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 1
+        max: 1
     relativeTransform: {fileID: 944503060}
   rightConstraints:
     poseConstrains:
@@ -413,7 +390,7 @@ Transform:
   m_GameObject: {fileID: 122503026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.006618306, y: -0.040600777, z: -0.12194216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5436,7 +5413,19 @@ MonoBehaviour:
   pivot: {fileID: 1776669490}
   onSocketConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 504733729}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onSocketDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -5506,8 +5495,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41, y: 0.34, z: 0.34}
-  m_Center: {x: -0, y: 0.062077463, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.34}
+  m_Center: {x: -0, y: 0, z: 0}
 --- !u!1 &248308526
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,8 +5566,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41, y: 0.34, z: 0.34}
-  m_Center: {x: -0, y: 0.062077463, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.34}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &260574560
 Transform:
   m_ObjectHideFlags: 0
@@ -5656,7 +5645,19 @@ MonoBehaviour:
   pivot: {fileID: 831440869}
   onSocketConnected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7482033}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onSocketDisconnected:
     m_PersistentCalls:
       m_Calls: []
@@ -5893,7 +5894,7 @@ Transform:
   m_GameObject: {fileID: 497336278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.0899, z: 0}
+  m_LocalPosition: {x: 0.047, y: 0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5999,6 +6000,7 @@ MonoBehaviour:
   currentInteractor: {fileID: 0}
   currentState: 0
   hideHand: 0
+  moveObject: 1
   tweener: {fileID: 0}
 --- !u!114 &504733731
 MonoBehaviour:
@@ -6016,24 +6018,24 @@ MonoBehaviour:
     poseConstrains:
       indexFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 0.36096734
+        max: 0.36096734
       middleFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 0.42511737
+        max: 0.42511737
       ringFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 0.4892674
+        max: 0.4892674
       pinkyFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 0.5534172
+        max: 0.5534172
       thumbFingerLimits:
         locked: 0
-        min: 0
-        max: 0
+        min: 0.4695289
+        max: 0.4695289
     relativeTransform: {fileID: 122503027}
   rightConstraints:
     poseConstrains:
@@ -6067,8 +6069,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504733727}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.208, y: 2.018, z: -1.1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.0371909, y: 2.018, z: 0.028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6077,7 +6079,7 @@ Transform:
   - {fileID: 1915819979}
   - {fileID: 640306633}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &622378564
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,7 +6308,7 @@ Transform:
   m_GameObject: {fileID: 944503059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.04965888, y: 0, z: -0.08784908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6610,7 +6612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9019544231409511832, guid: 2c9e032b669634873a508e9115991b7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.203
+      value: 1.008
       objectReference: {fileID: 0}
     - target: {fileID: 9019544231409511832, guid: 2c9e032b669634873a508e9115991b7c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6744,33 +6746,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2296516212870899078, guid: beb73738ba395df498d083f4738f9c49, type: 3}
   m_PrefabInstance: {fileID: 8356140513110943997}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1302359195
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302359193}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1372945067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6795,8 +6770,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372945067}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03453269, y: -0, z: -0, w: 0.99940366}
-  m_LocalPosition: {x: -0.013628954, y: -0.052831173, z: -0.08072418}
+  m_LocalRotation: {x: -0.0342115, y: 0.13603094, z: -0.0047003916, w: 0.9901026}
+  m_LocalPosition: {x: -0.01362896, y: -0.052831173, z: -0.08072418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7229,7 +7204,7 @@ Transform:
   m_GameObject: {fileID: 1590827160}
   serializedVersion: 2
   m_LocalRotation: {x: -0.03453269, y: -0, z: -0, w: 0.99940366}
-  m_LocalPosition: {x: -0.013628954, y: -0.052831173, z: -0.08072418}
+  m_LocalPosition: {x: -0.01362896, y: -0.052831173, z: -0.08072418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7333,9 +7308,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689642059}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.024, z: -1.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.386, y: 0.896, z: -0.419}
+  m_LocalScale: {x: 1.2534, y: 1.2534, z: 1.2534}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 260574560}
@@ -7343,7 +7318,7 @@ Transform:
   - {fileID: 651405408}
   - {fileID: 2117257532}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1776669489
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,7 +7376,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.333333, y: 1, z: 10}
+  m_LocalScale: {x: 3.333333, y: 1, z: 9.999999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1590827161}
@@ -7709,10 +7684,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AxeGO
       objectReference: {fileID: 0}
-    - target: {fileID: 2296516212870899078, guid: beb73738ba395df498d083f4738f9c49, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5000850371093553979, guid: beb73738ba395df498d083f4738f9c49, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7756,10 +7727,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2296516212870899078, guid: beb73738ba395df498d083f4738f9c49, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1302359195}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beb73738ba395df498d083f4738f9c49, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
