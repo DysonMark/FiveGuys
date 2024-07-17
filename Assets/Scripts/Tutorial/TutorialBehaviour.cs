@@ -10,6 +10,8 @@ namespace SAE.FiveGuys.Tutorial
         [SerializeField] private GameObject head;
 
         public TeleportationController teleport;
+
+        public bool isObjectHasBeenGrab = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -23,6 +25,12 @@ namespace SAE.FiveGuys.Tutorial
             {
                 Debug.Log("Player has teleported");
             }
+        }
+
+        public void ObjectHasBeenGrab()
+        {
+            Debug.Log("Object has been grabbed");
+            isObjectHasBeenGrab = true;
         }
     }
 }

@@ -10,12 +10,15 @@ namespace SAE.FiveGuys.Tutorial
     {
         [SerializeField] private AudioSource successfulTeleportation;
         [SerializeField] private AudioSource stopStartSound;
+        [SerializeField] private AudioSource endOfTutorial;
+        public TutorialBehaviour checkGrabbableObject;
         public TeleportationController didHeTeleported;
 
         // Start is called before the first frame update
         void Start()
         {
             successfulTeleportation.Pause();
+            endOfTutorial.Pause();
         }
 
         // Update is called once per frame
@@ -29,6 +32,11 @@ namespace SAE.FiveGuys.Tutorial
             else if (didHeTeleported.isPlayerTeleporting == false)
             {
                 successfulTeleportation.Pause();
+            }
+
+            if (checkGrabbableObject.isObjectHasBeenGrab == true)
+            {
+                endOfTutorial.UnPause();
             }
         }
     }
