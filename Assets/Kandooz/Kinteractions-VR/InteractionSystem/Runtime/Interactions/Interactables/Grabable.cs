@@ -20,7 +20,7 @@ namespace Kandooz.InteractionSystem.Interactions
         protected override void Activate(){}
         protected override void StartHover(){}
         protected override void EndHover(){}
-
+        
         protected override void Select()
         {
             if (hideHand) CurrentInteractor.ToggleHandModel(false);

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Anchor
   - FlowTile
+  - TutorialGrab
+  - Button
   layers:
   - Default
   - TransparentFX
