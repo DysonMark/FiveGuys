@@ -10,7 +10,6 @@ namespace SAE.FiveGuys.Tutorial
 {
     public class TutorialBehaviour : MonoBehaviour
     {
-        [SerializeField] private GameObject head;
 
         public TeleportationController teleport;
 
@@ -22,14 +21,13 @@ namespace SAE.FiveGuys.Tutorial
 
         public TutorialVoice valueOfY;
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
-            head = GameObject.Find("Head");
             Invoke("ToTheNextScene", 3);
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (teleport.isPlayerTeleporting == true)
             {
@@ -46,16 +44,9 @@ namespace SAE.FiveGuys.Tutorial
                 i = 1;
                 ObjectHasBeenGrab();
             }
-
-           // if (other.tag == "Button")
-            //{
-              //  y = 1;
-                //ToTheNextScene();
-            //}
-
         }
 
-        public void ObjectHasBeenGrab()
+        private void ObjectHasBeenGrab()
         {
             Debug.Log("Object has been grabbed");
             if (i == 1)
@@ -68,7 +59,7 @@ namespace SAE.FiveGuys.Tutorial
             }
         }
         
-        public void ToTheNextScene()
+        private void ToTheNextScene()
         {
             if (valueOfY.y == 1)
                 Debug.Log("Quit the tutorial/Start the game");      
