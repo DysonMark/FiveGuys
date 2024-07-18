@@ -8,7 +8,7 @@ namespace SAE.FiveGuys.Bomb
     public class BombCountdown : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI countdown;
-        [SerializeField] private GameObject bombObject;
+        private GameObject bombObject;
 
         private int counting;
         private float holdCounting = 600;
@@ -20,6 +20,7 @@ namespace SAE.FiveGuys.Bomb
         // Start is called before the first frame update
         void Start()
         {
+            bombObject = GameObject.Find("Bomb");
             countdown = GetComponent<TextMeshProUGUI>();
 
         }

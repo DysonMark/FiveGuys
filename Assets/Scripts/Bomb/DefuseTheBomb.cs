@@ -49,7 +49,6 @@ namespace SAE.FiveGuys.Bomb
             {
                 Debug.Log("Blue in right position!");
                 bluePass = true;
-                bombHasExploded = true;
             }
         }
 

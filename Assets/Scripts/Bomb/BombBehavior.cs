@@ -6,7 +6,7 @@ namespace SAE.FiveGuys.Bomb
 { 
     public class BombBehavior : MonoBehaviour
     {
-        public GameObject bomb;
+        private GameObject bomb;
 
         public BombCountdown verifyBomb;
         // Start is called before the first frame update
