@@ -39,12 +39,6 @@ namespace Leonardo.AxeAssembly
             {
                 StartAxeAssembly();
             }
-            
-            // DEBUG - DELETE LATER ___________________________________________________________________
-            if (Input.GetKeyUp(KeyCode.G))
-            {
-                StartAxeAssembly();
-            }
         }
         // If the two pieces are "Socketed" in the Workstation, create the Axe GameObject
         private void StartAxeAssembly()
@@ -66,17 +60,16 @@ namespace Leonardo.AxeAssembly
             Destroy(axeHeadGameObject);
             particleEffects.SetActive(false);
             Instantiate(axeGameObject, axeInstantiationPos);
-            Debug.Log("Axe instantiated");
         }
         
         // The "Pieces Within Range" counter goes UP each time a piece is within range.
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.name == "HeadMeshRenderer")
+            if (other.transform.name == "HeadMeshV3")
             {
                 piecesWithinRange++;
             }
-            if (other.transform.name == "HandleMeshRenderer")
+            if (other.transform.name == "HandleMeshV3")
             {
                 piecesWithinRange++;
             }
@@ -85,11 +78,11 @@ namespace Leonardo.AxeAssembly
         // The "Pieces Within Range" counter goes DOWN each time a piece is within range.
         private void OnTriggerExit(Collider other)
         {
-            if (other.transform.name == "HeadMeshRenderer")
+            if (other.transform.name == "HeadMeshV3")
             {
                 piecesWithinRange--;
             }
-            if (other.transform.name == "HandleMeshRenderer")
+            if (other.transform.name == "HandleMeshV3")
             {
                 piecesWithinRange--;
             }
