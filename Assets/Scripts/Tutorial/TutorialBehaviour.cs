@@ -5,6 +5,7 @@ using JW.FiveGuys.Teleportation;
 using Kandooz.InteractionSystem.Interactions;
 using UnityEngine;
 
+
 namespace SAE.FiveGuys.Tutorial
 {
     public class TutorialBehaviour : MonoBehaviour
@@ -18,10 +19,13 @@ namespace SAE.FiveGuys.Tutorial
         public Grabable knowingIfObjectIsSelected;
 
         public int i = 0;
+
+        public TutorialVoice valueOfY;
         // Start is called before the first frame update
         void Start()
         {
             head = GameObject.Find("Head");
+            Invoke("ToTheNextScene", 3);
         }
 
         // Update is called once per frame
@@ -32,6 +36,7 @@ namespace SAE.FiveGuys.Tutorial
                 Debug.Log("Player has teleported");
             }
             ObjectHasBeenGrab();
+            ToTheNextScene();
         }
 
         public void OnTriggerEnter(Collider other)
@@ -41,6 +46,12 @@ namespace SAE.FiveGuys.Tutorial
                 i = 1;
                 ObjectHasBeenGrab();
             }
+
+           // if (other.tag == "Button")
+            //{
+              //  y = 1;
+                //ToTheNextScene();
+            //}
 
         }
 
@@ -55,6 +66,12 @@ namespace SAE.FiveGuys.Tutorial
             {
                 isObjectHasBeenGrab = false;
             }
+        }
+        
+        public void ToTheNextScene()
+        {
+            if (valueOfY.y == 1)
+                Debug.Log("Quit the tutorial/Start the game");      
         }
     }
 }

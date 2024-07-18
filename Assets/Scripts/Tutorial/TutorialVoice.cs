@@ -14,6 +14,8 @@ namespace SAE.FiveGuys.Tutorial
         public TutorialBehaviour checkGrabbableObject;
         public TeleportationController didHeTeleported;
         public TutorialBehaviour valueOfI;
+        public int y = 0;
+
 
         // Start is called before the first frame update
         void Start()
@@ -40,6 +42,8 @@ namespace SAE.FiveGuys.Tutorial
             if (valueOfI.i == 1)
             {
                 endOfTutorial.UnPause();
+                y = 1;
+                Debug.Log("y = " + y);
             }
             else if (valueOfI.i == 0)
             {
