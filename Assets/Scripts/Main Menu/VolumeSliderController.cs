@@ -22,7 +22,7 @@ namespace Leonardo.MainMenu.VolumeSlider
         [SerializeField] private Slider volumeSlider;
         [SerializeField] private float changeRate; // The rate in which the value changes when the button is pressed
         
-        public void Start()
+        private void Start()
         {
             if (PlayerPrefs.HasKey("Volume"))
             {
