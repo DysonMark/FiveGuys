@@ -150,13 +150,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23729824}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.158, y: 12.637, z: -0.523}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4158, y: 1.2637, z: 1.8677}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1603836367}
-  m_Father: {fileID: 1283910822}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &23729826
 MonoBehaviour:
@@ -182,7 +182,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4479,10 +4479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c45a879dce3eec449c5793b872b3cc3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 23729825}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c45a879dce3eec449c5793b872b3cc3, type: 3}
 --- !u!4 &1283910822 stripped
@@ -7106,7 +7103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107538175}
   m_Layer: 0
-  m_Name: Managers and Controllers----------------
+  m_Name: ------Managers and Controllers----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7439,3 +7436,4 @@ SceneRoots:
   - {fileID: 177015349}
   - {fileID: 1652513117}
   - {fileID: 2094557735}
+  - {fileID: 23729825}
