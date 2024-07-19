@@ -72,7 +72,7 @@ namespace JW.FiveGuys.Flow
 
         public void TogglePath(Directions path, bool state)
         {
-            type = TileType.ocupied;
+            if (type != TileType.point) type = TileType.ocupied;
             switch (path)
             {
                 case Directions.up:

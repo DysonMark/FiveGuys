@@ -10241,9 +10241,49 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1018570195}
     - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: currentPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[0]
+      value: 
+      objectReference: {fileID: 1018570193}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[1]
+      value: 
+      objectReference: {fileID: 1300271553}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[2]
+      value: 
+      objectReference: {fileID: 1037724070}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[3]
+      value: 
+      objectReference: {fileID: 2095422666}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[4]
+      value: 
+      objectReference: {fileID: 1118093525}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[5]
+      value: 
+      objectReference: {fileID: 1058454157}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[6]
+      value: 
+      objectReference: {fileID: 447006489}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[7]
+      value: 
+      objectReference: {fileID: 1868423083}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: grid.Array.data[8]
+      value: 
+      objectReference: {fileID: 636251266}
     - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: onSolve.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10348,6 +10388,10 @@ PrefabInstance:
       propertyPath: isSpawned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6339614296158759733, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: flowController
+      value: 
+      objectReference: {fileID: 1433183000885062655}
     - target: {fileID: 6734548143412806193, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: m_Camera
       value: 
@@ -10469,10 +10513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keywords:
-  - Up
-  - Down
-  - Left
-  - Right
+  - North
+  - South
+  - West
+  - East
   - Reset
   - Draw
   controller: {fileID: 1433183000885062655}

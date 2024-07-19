@@ -11,7 +11,7 @@ namespace JW.FiveGuys.Flow
     {
         [Header("Grid")]
         [SerializeField] private int varient = 0;
-        [SerializeField] private JW_L_GOVariable grid;
+        [SerializeField] private List<GameObject> grid = new List<GameObject>();
         [SerializeField] private GameObject cursor;
 
         [Header("Movement")]
@@ -25,6 +25,8 @@ namespace JW.FiveGuys.Flow
         [SerializeField] private bool isSolved = false;
         [SerializeField] private UnityEvent onSolve;
 
+        public List<GameObject> Grid { get { return grid; } set { grid = value; } }
+
         /// <summary>
         /// Checks all the tiles of type "end"
         /// </summary>
@@ -32,7 +34,7 @@ namespace JW.FiveGuys.Flow
         public bool CheckWin()
         {
             List<bool> endConditions = new List<bool>(); // Will conain all the current states of all the end tiles
-            foreach (var item in grid.Values) // Go through all the tiles
+            foreach (var item in grid) // Go through all the tiles
             {
                 TileController tile = item.GetComponent<TileController>(); // Get the tile information
                 if (tile.Type == TileController.TileType.point) endConditions.Add(tile.IsPathable); // Add the tile if it is an end type
@@ -68,7 +70,7 @@ namespace JW.FiveGuys.Flow
                 currentPosition += moveBy;
 
                 // get the tile in the new position
-                currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>();
+                currentTile = grid[GetIndex(currentPosition, 3)].GetComponent<TileController>();
 
                 // Update cursor position
                 cursor.transform.position = currentTile.transform.position;
@@ -192,7 +194,7 @@ namespace JW.FiveGuys.Flow
             {
                 if (isDrawing)
                 {
-                    TileController checkTile = grid.Values[GetIndex(currentPosition + moveBy, 3)].GetComponent<TileController>();
+                    TileController checkTile = grid[GetIndex(currentPosition + moveBy, 3)].GetComponent<TileController>();
 
                     if (checkTile == null) // Does the tile exist?
                     {
@@ -266,7 +268,7 @@ namespace JW.FiveGuys.Flow
             startPosition = currentPosition; // Set the current position as the default
 
             // Set the current tile to the one at the current position
-            currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>();
+            currentTile = grid[GetIndex(currentPosition, 3)].GetComponent<TileController>();
 
             // Set cursor position to current tile
             cursor.transform.position = currentTile.transform.position;
@@ -282,13 +284,13 @@ namespace JW.FiveGuys.Flow
 
             currentPosition = startPosition; // Reset the cursor position to what we started at
 
-            foreach (var item in grid.Values) // Go through all the tiles and reset them to their defaults
+            foreach (var item in grid   ) // Go through all the tiles and reset them to their defaults
             {
                 TileController tile = item.GetComponent<TileController>();
                 tile.SetToDefaults();
             }
 
-            currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>(); // Set the current tile back to the one we are now currently on
+            currentTile = grid[GetIndex(currentPosition, 3)].GetComponent<TileController>(); // Set the current tile back to the one we are now currently on
 
             // Reset cursor position to the starting tile
             cursor.transform.position = currentTile.transform.position;

@@ -30,16 +30,16 @@ namespace JW.FiveGuys.Flow
 
             switch (args.text)
             {
-                case "Up":
+                case "North":
                     controller.ButtonPressed(1);
                     break;
-                case "Right":
+                case "East":
                     controller.ButtonPressed(2);
                     break;
-                case "Down":
+                case "South":
                     controller.ButtonPressed(3);
                     break;
-                case "Left":
+                case "West":
                     controller.ButtonPressed(4);
                     break;
                 case "Reset":
