@@ -14,7 +14,7 @@ namespace JW.FiveGuys.Flow
         [SerializeField] private Vector2Int gridSize = Vector2Int.one;
 
         [Header("Grid")]
-        [SerializeField] private JW_L_GOVariable grid;
+        [SerializeField] private FlowController flowController;
 
 
         public void SpawnGrid()
@@ -25,10 +25,12 @@ namespace JW.FiveGuys.Flow
                 {
                     var tile = Instantiate(gridTile, transform.position + new Vector3(
                         0, 
-                        tileSize.x * col, 
-                        tileSize.y * row
+                        tileSize.x * row, 
+                        tileSize.y * col
                         ), gridTile.transform.rotation, gameObject.transform);
-                    grid.Value = tile;
+                    tile.name = $"Tile({col},{row})";
+                    flowController.Grid.Add(tile);
+                    tile.GetComponent<TileController>().SetDefaults();
                 }
             }
 
@@ -37,26 +39,16 @@ namespace JW.FiveGuys.Flow
 
         public void DestroyGrid()
         {
-            if (grid.Values.Count > 0)
+            if (flowController.Grid.Count > 0)
             {
-                for (int i = grid.Values.Count - 1; i >= 0; i--)
+                for (int i = flowController.Grid.Count - 1; i >= 0; i--)
                 {
-                    DestroyImmediate(grid.Values[i]);
+                    DestroyImmediate(flowController.Grid[i]);
                 }
-                grid.Values.Clear();
+                flowController.Grid.Clear();
             }
 
             isSpawned = false;
-        }
-
-        private void OnEnable()
-        {
-            if (!isSpawned) SpawnGrid();
-        }
-
-        private void OnDisable()
-        {
-            if (isSpawned) DestroyGrid();
         }
     } 
 }
