@@ -500,11 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 0}
-  Keydisplay1: {fileID: 0}
-  Keydisplay2: {fileID: 0}
-  Keydisplay3: {fileID: 0}
-  Keydisplay4: {fileID: 343750953}
-  correctSequence: 
+  numberPad: {fileID: 0}
   currentSequence: 
 --- !u!1 &370498002
 GameObject:
@@ -691,11 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 0}
-  Keydisplay1: {fileID: 370498004}
-  Keydisplay2: {fileID: 0}
-  Keydisplay3: {fileID: 0}
-  Keydisplay4: {fileID: 0}
-  correctSequence: 
+  numberPad: {fileID: 0}
   currentSequence: 
 --- !u!1 &417147698
 GameObject:
@@ -1081,11 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 0}
-  Keydisplay1: {fileID: 0}
-  Keydisplay2: {fileID: 960650836}
-  Keydisplay3: {fileID: 0}
-  Keydisplay4: {fileID: 0}
-  correctSequence: 
+  numberPad: {fileID: 0}
   currentSequence: 
 --- !u!1 &994859712
 GameObject:
@@ -1408,7 +1396,17 @@ PrefabInstance:
       propertyPath: onPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2044021020}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1912805450190103878, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 550941270751016997, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 6179702581559010135, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 8354406178957706840, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 7958421920094351545, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 5875292100352639553, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 5053250843321246340, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 7067177187530623271, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 2776180730864737820, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
+    - {fileID: 8030091918908025475, guid: b1c00c3234f6d754fb94eda867d1b0dc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2093,11 +2091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 0}
-  Keydisplay1: {fileID: 0}
-  Keydisplay2: {fileID: 0}
-  Keydisplay3: {fileID: 1877698649}
-  Keydisplay4: {fileID: 0}
-  correctSequence: 
+  numberPad: {fileID: 0}
   currentSequence: 
 --- !u!1 &2002720005
 GameObject:
@@ -2283,6 +2277,7 @@ GameObject:
   - component: {fileID: 2044021017}
   - component: {fileID: 2044021016}
   - component: {fileID: 2044021020}
+  - component: {fileID: 2044021021}
   m_Layer: 0
   m_Name: Keypad
   m_TagString: Untagged
@@ -2389,12 +2384,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 0}
-  Keydisplay1: {fileID: 0}
-  Keydisplay2: {fileID: 0}
-  Keydisplay3: {fileID: 0}
-  Keydisplay4: {fileID: 0}
-  correctSequence: 
+  numberPad: {fileID: 0}
   currentSequence: 
+--- !u!114 &2044021021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044021015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c38759024781740b7ddad69550fc72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Keydisplay1: {fileID: 370498004}
+  Keydisplay2: {fileID: 960650836}
+  Keydisplay3: {fileID: 1877698649}
+  Keydisplay4: {fileID: 343750953}
+  correctSequence: 
+  onPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  number: 0
 --- !u!1 &2069141016
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,11 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 2069141018}
-  Keydisplay1: {fileID: 0}
-  Keydisplay2: {fileID: 0}
-  Keydisplay3: {fileID: 0}
-  Keydisplay4: {fileID: 0}
-  correctSequence: 
+  numberPad: {fileID: 0}
   currentSequence: 
 --- !u!114 &2069141018
 MonoBehaviour:
