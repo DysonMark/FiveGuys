@@ -28,10 +28,7 @@ namespace Kandooz.ScriptableSystem
             get { return list; }
             set
             {
-                if (value.GetType() != typeof(List<T>))
-                {
-                    list = value;
-                }
+                list = value;
             }
         }
         public T Value
