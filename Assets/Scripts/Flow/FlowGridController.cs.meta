@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - gridTile: {fileID: 8987163983543140843, guid: 1664c49800082bc469b2fb413dc5a2e0, type: 3}
+  - grid: {fileID: 11400000, guid: 4d3144cab6ae764488949ddb26608faa, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
