@@ -1,6 +1,7 @@
 using Kandooz.InteractionSystem.Animations;
 using Kandooz.InteractionSystem.Interactions;
 using UnityEngine;
+using static UnityEngine.InputSystem.InputAction;
 
 namespace Kandooz.InteractionSystem.Core
 {
@@ -18,7 +19,7 @@ namespace Kandooz.InteractionSystem.Core
         [SerializeField] [HideInInspector] private Transform leftHandPivot;
         [SerializeField] [HideInInspector] private Transform rightHandPivot;
         [SerializeField] [HideInInspector] private bool initializeLayers;
-
+        [SerializeField] private Transform offsetObject;
         private HandPoseController _leftPoseController, _rightPoseController;
         public HandPoseController LeftHandPrefab => config.HandData.LeftHandPrefab;
         public HandPoseController RightHandPrefab => config.HandData.RightHandPrefab;
@@ -97,5 +98,27 @@ namespace Kandooz.InteractionSystem.Core
             handGameObject.AddComponent<TriggerInteractor>();
             return hand;
         }
+        public void ResetPosition()
+        {
+            Debug.Log("helo");
+            var direction = transform.position - Camera.main.transform.position;
+            direction.y = 0;
+            offsetObject.position = direction;
+            
+        }
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                ResetPosition();
+            }
+        }
+        public void OnTrackingStateChanged(CallbackContext ctx )
+        {
+            var i=ctx.ReadValue<int>();
+            Debug.Log(i);
+
+        }
+
     }
 }
