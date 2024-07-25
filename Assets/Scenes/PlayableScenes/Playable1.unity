@@ -37595,6 +37595,10 @@ PrefabInstance:
       propertyPath: grid.Array.data[8]
       value: 
       objectReference: {fileID: 1280720824}
+    - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: onSolve.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2825240796089183416, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: m_IsActive
       value: 0
