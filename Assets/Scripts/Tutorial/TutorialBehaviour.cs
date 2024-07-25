@@ -4,12 +4,17 @@ using System.Collections.Generic;
 using JW.FiveGuys.Teleportation;
 using Kandooz.InteractionSystem.Interactions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 namespace SAE.FiveGuys.Tutorial
 {
     public class TutorialBehaviour : MonoBehaviour
     {
+
+        [SerializeField] private Scene nextScene;
+        [SerializeField] private string sceneName;
+        [SerializeField] private float timer;
 
         public TeleportationController teleport;
 
@@ -62,7 +67,16 @@ namespace SAE.FiveGuys.Tutorial
         private void ToTheNextScene()
         {
             if (valueOfY.y == 1)
-                Debug.Log("Quit the tutorial/Start the game");      
+            {
+
+                timer -= Time.deltaTime;
+                if (timer <= 0f)
+                {
+                    Debug.Log("Quit the tutorial/Start the game");
+                    SceneManager.LoadScene("Playable1"); //you should change the name of the scene if you wanna load another one
+                }
+            }
+            
         }
     }
 }
