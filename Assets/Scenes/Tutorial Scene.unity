@@ -1363,6 +1363,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7ed6f5600b3445936e526eecffab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene:
+    m_Handle: 0
+  sceneName: 
+  timer: 5
   teleport: {fileID: 813446591}
   isObjectHasBeenGrab: 0
   knowingIfObjectIsSelected: {fileID: 752169217}
@@ -1923,6 +1927,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7ed6f5600b3445936e526eecffab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene:
+    m_Handle: 0
+  sceneName: 
+  timer: 0
   teleport: {fileID: 813446591}
   isObjectHasBeenGrab: 0
   knowingIfObjectIsSelected: {fileID: 752169217}
@@ -3005,6 +3013,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7ed6f5600b3445936e526eecffab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene:
+    m_Handle: 0
+  sceneName: 
+  timer: 0
   teleport: {fileID: 813446591}
   isObjectHasBeenGrab: 0
   knowingIfObjectIsSelected: {fileID: 752169217}
@@ -3524,6 +3536,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7ed6f5600b3445936e526eecffab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene:
+    m_Handle: 0
+  sceneName: 
+  timer: 0
   teleport: {fileID: 813446591}
   isObjectHasBeenGrab: 0
   knowingIfObjectIsSelected: {fileID: 752169217}
@@ -3546,6 +3562,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b7ed6f5600b3445936e526eecffab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene:
+    m_Handle: 0
+  sceneName: 
+  timer: 0
   teleport: {fileID: 0}
   isObjectHasBeenGrab: 0
   knowingIfObjectIsSelected: {fileID: 0}
@@ -4060,7 +4080,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdown: {fileID: 881232650}
-  bombObject: {fileID: 0}
   bombChecker: 0
   bombOff: {fileID: 0}
 --- !u!1 &895205168
@@ -5350,7 +5369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd120cbdf3cf06c4baefafdee7ab5a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb: {fileID: 0}
   verifyBomb: {fileID: 0}
 --- !u!222 &1205602080
 CanvasRenderer:
