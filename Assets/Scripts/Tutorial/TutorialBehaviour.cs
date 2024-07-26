@@ -51,7 +51,9 @@ namespace SAE.FiveGuys.Tutorial
             }
         }
 
-        private void ObjectHasBeenGrab()
+        public void SetI(int set = 1) { i = set; }
+
+        public void ObjectHasBeenGrab()
         {
             Debug.Log("Object has been grabbed");
             if (i == 1)
@@ -64,7 +66,7 @@ namespace SAE.FiveGuys.Tutorial
             }
         }
         
-        private void ToTheNextScene()
+        public void ToTheNextScene()
         {
             if (valueOfY.y == 1)
             {
