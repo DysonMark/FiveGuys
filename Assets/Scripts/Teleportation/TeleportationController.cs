@@ -41,7 +41,7 @@ namespace JW.FiveGuys.Teleportation
         // Update is called once per frame
         void Update()
         {
-            Debug.Log(Input.GetAxis("XRI_Left_Trigger"));
+            //Debug.Log(Input.GetAxis("XRI_Left_Trigger"));
 
             if (Input.GetAxis("XRI_Left_Trigger") >=1 || Input.GetKeyDown(teleportKey)){
                 isAiming = true;
