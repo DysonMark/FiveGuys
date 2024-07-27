@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 00000000000000000000000000000000000000000000000000000000
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 000000000000000000000000000000000000000000000000
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 0000000000000000000000000000000000000000000000000000000000000000
@@ -1223,6 +1223,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2303921292967740188, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319332, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1681,7 +1685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 00000000000000000000000000000000
@@ -1697,7 +1701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 000000000000000000000000
@@ -1713,7 +1717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 0000000000000000
@@ -1729,7 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 00000000
@@ -1745,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 
@@ -1761,7 +1765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 000000000000000000000000000000000000000000000000000000000000000000000000
@@ -2081,6 +2085,17 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1438173408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2303921292967740188, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
+  m_PrefabInstance: {fileID: 1041957930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1573308466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,7 +2108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb02425d1e3c5643a1b43b3ab40a0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displaycurrentSequence: {fileID: 2069141018}
+  displaycurrentSequence: {fileID: 1438173408}
   numberPad: {fileID: 1041957933}
   sequence: 
   currentSequence: 0000000000000000000000000000000000000000
