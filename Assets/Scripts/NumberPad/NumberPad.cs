@@ -8,8 +8,6 @@ using Random = UnityEngine.Random;
 
 public class NumberPad : MonoBehaviour
 {
-    [SerializeField] private UnityEvent onPressed;
-    [SerializeField] private int number;
 
     //Variables for each digit for the correct sequence 
     private int Digit1;
@@ -23,13 +21,9 @@ public class NumberPad : MonoBehaviour
     public TMP_Text Keydisplay3;
     public TMP_Text Keydisplay4;
 
-    //
+    //List for the correct sequence
     public List<int> correctSequence = new List<int>();
 
-    private void OnTriggerEnter(Collider other)
-    {
-        onPressed.Invoke();
-    }
     void Start()
     { 
         //Sequence Generator
