@@ -9,21 +9,27 @@ using UnityEngine.Events;
 
 public class KeypadNumber : MonoBehaviour
 {
+    //To show the Sequence when entered by the player
     [SerializeField] private TMP_Text displaycurrentSequence;
 
+    //To access the NumberPad script
     public NumberPad numberPad;
-
+    
+    //Variables for the sequences 
     public string sequence;
     public List<int> currentSequence = new List<int>();
 
+    //Function for the number pressed by the player 
     public void NumberPressed(int number)
     {
+        //sequence which will be printed when the player eneters the number
         sequence += number.ToString();
+        //Displays for the player
         displaycurrentSequence.text = sequence;
+        //Adds the number to be checked in the end
         currentSequence.Add(number);
 
-        //displaycurrentSequence.text = currentSequence.ToString();
-
+        //When the player enters 4 digits, it checks if the digits entered is the correct sequence 
         if (currentSequence.Count == 4) 
         {
             bool check = Enumerable.SequenceEqual( numberPad.correctSequence, currentSequence);
@@ -39,9 +45,5 @@ public class KeypadNumber : MonoBehaviour
                 currentSequence.Clear();
             }
         }
-    
-    
-    
-    
     }
 }
