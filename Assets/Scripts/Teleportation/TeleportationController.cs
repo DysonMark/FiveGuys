@@ -31,6 +31,7 @@ namespace JW.FiveGuys.Teleportation
         [Header("Debugging")]
         [SerializeField] private KeyCode teleportKey = KeyCode.G; // For keyboard debugging
 
+        public bool isPlayerTeleporting = false;
         // Start is called before the first frame update
         void Start()
         {
@@ -40,7 +41,9 @@ namespace JW.FiveGuys.Teleportation
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetAxis("XRI_Left_Trigger")>=1 || Input.GetKeyDown(teleportKey)){
+            //Debug.Log(Input.GetAxis("XRI_Left_Trigger"));
+
+            if (Input.GetAxis("XRI_Left_Trigger") >=1 || Input.GetKeyDown(teleportKey)){
                 isAiming = true;
                 //Debug.Log("Aim Start");
                 onAimStart.Raise();
@@ -62,6 +65,7 @@ namespace JW.FiveGuys.Teleportation
                     if (teleTo != null) { teleTo.OnTeleportTo.Invoke(); }
                     //Debug.Log("TeleTo");
                     currentPoint.SetActive(false); // Disable the point we are now standing on
+                    isPlayerTeleporting = true;
                 }
 
                 telePoint = null;
