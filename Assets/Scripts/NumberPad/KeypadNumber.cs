@@ -30,7 +30,7 @@ public class KeypadNumber : MonoBehaviour
         currentSequence.Add(number);
 
         //When the player enters 4 digits, it checks if the digits entered is the correct sequence 
-        if (currentSequence.Count == 4) 
+        if (currentSequence.Count >= 4) 
         {
             bool check = Enumerable.SequenceEqual( numberPad.correctSequence, currentSequence);
             if (check == true)
