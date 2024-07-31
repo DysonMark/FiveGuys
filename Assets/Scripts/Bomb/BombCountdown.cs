@@ -20,7 +20,7 @@ namespace SAE.FiveGuys.Bomb
         // Start is called before the first frame update
         void Start()
         {
-            bombObject = GameObject.Find("Bomb");
+            bombObject = GameObject.Find("TimerBomb1");
             countdown = GetComponent<TextMeshProUGUI>();
 
         }

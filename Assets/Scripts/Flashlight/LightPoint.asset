@@ -15,4 +15,4 @@ MonoBehaviour:
   onRaised:
     m_PersistentCalls:
       m_Calls: []
-  value: {x: 0, y: 0, z: 0}
+  value: {x: 2.75, y: 0.25, z: -0.4}

@@ -15,8 +15,9 @@ namespace JW.FiveGuys.LightMoth
         [SerializeField] private float rayDistance = 20f;
         [SerializeField] private Vector3 rayDirection = Vector3.forward;
         [SerializeField] private Vector3 rayOffset = Vector3.zero;
-        [SerializeField] private JW_Vect3Variable rayPoint;
+        [SerializeField] private AdvancedVector3 rayPoint;
         [SerializeField] private bool isOn = false;
+        [SerializeField] private LineRenderer lineRenderer;
 
         /// <summary>
         /// Toggle the light on or off. alternativly sets the light on or off
@@ -47,12 +48,16 @@ namespace JW.FiveGuys.LightMoth
         {
             if (isOn)
             {
+                lineRenderer.SetPosition(0, lineRenderer.transform.position);
+
                 var lightHit = Physics.Raycast(transform.position + rayOffset, -transform.up, out RaycastHit hitInfo, rayDistance);
 
                 if (lightHit)
                 {
                     rayPoint.Value = hitInfo.point;
                 }
+
+                lineRenderer.SetPosition(1, rayPoint.Value);
             }
         }
 

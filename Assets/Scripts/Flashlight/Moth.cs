@@ -12,7 +12,7 @@ namespace JW.FiveGuys.LightMoth
     public class Moth : MonoBehaviour
     {
         [Header("Movement")]
-        [SerializeField] private JW_Vect3Variable lightPoint;
+        [SerializeField] private AdvancedVector3 lightPoint;
         [SerializeField] private float moveSpeed = 0.1f;
         [SerializeField] private Rigidbody rb;
 

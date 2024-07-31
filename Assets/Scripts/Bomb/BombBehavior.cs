@@ -12,7 +12,7 @@ namespace SAE.FiveGuys.Bomb
         // Start is called before the first frame update
         void Start()
         {
-            bomb = GameObject.Find("Bomb");
+            bomb = GameObject.Find("TimerBomb1");
             Invoke("ChangeBombColor", 600);
         }
 

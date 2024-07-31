@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace SAE.FiveGuys.Bomb
 {
@@ -14,11 +17,13 @@ namespace SAE.FiveGuys.Bomb
 
         private bool yellowPass = false;
 
-        private bool greenPass = false;
+  //      private bool greenPass = false;
 
         public bool bombHasBeenDefused = false;
 
-        public bool bombHasExploded = false;
+        public bool bombHasExploded;
+
+        public int test = 0;
         // Start is called before the first frame update
         void Start()
         {
@@ -29,6 +34,12 @@ namespace SAE.FiveGuys.Bomb
         void Update()
         {
             DefuseOrNot();
+            if (bombHasExploded == true)
+            {
+                test = 2;
+            }
+            Debug.Log("ok: " + bombHasExploded);
+
         }
 
         public void BlueWire()
@@ -90,6 +101,7 @@ namespace SAE.FiveGuys.Bomb
             }
         }
 
+        /*
         public void GreenWire()
         {
             Debug.Log("Green wire has been cut!");
@@ -110,7 +122,7 @@ namespace SAE.FiveGuys.Bomb
                 greenPass = true;
             }
         }
-
+*/
         private void DefuseOrNot()
         {
             for(int i = 0; i < whichWire.Count; i++)
@@ -118,7 +130,7 @@ namespace SAE.FiveGuys.Bomb
                 Debug.Log("My list: " + whichWire[i]);
             }
 
-            if (bluePass == true && redPass == true && yellowPass == true && greenPass == true)
+            if (bluePass == true && redPass == true && yellowPass == true)
             {
                 Debug.Log("Bomb defused");
                 bombHasBeenDefused = true;

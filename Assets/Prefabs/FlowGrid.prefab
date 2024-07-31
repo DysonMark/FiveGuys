@@ -3526,7 +3526,7 @@ MonoBehaviour:
   gridTile: {fileID: 8987163983543140843, guid: 1664c49800082bc469b2fb413dc5a2e0, type: 3}
   tileSize: {x: 1, y: -1}
   gridSize: {x: 3, y: 3}
-  grid: {fileID: 11400000, guid: 4d3144cab6ae764488949ddb26608faa, type: 2}
+  flowController: {fileID: 0}
 --- !u!114 &2393063893162441912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3540,7 +3540,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   varient: 1
-  grid: {fileID: 11400000, guid: 4d3144cab6ae764488949ddb26608faa, type: 2}
+  grid:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cursor: {fileID: 5013786872257217176}
   currentPosition: {x: 1, y: 0}
   currentTile: {fileID: 0}
