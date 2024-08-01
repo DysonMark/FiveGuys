@@ -17,85 +17,75 @@ public class KeypadNumber : MonoBehaviour
     
     //Variables for the sequences 
     public string sequence;
-    public List<int> currentSequence = new List<int>();
 
-    //Function for the number pressed by the player 
-  /*public void NumberPressed(int number)
-    {
-        //sequence which will be printed when the player eneters the number
-        sequence += number.ToString();
-        //Displays for the player
-        displaycurrentSequence.text = sequence;
-        //Adds the number to be checked in the end
-        currentSequence.Add(number);
-
-        //When the player enters 4 digits, it checks if the digits entered is the correct sequence 
-        if (currentSequence.Count >= 4) 
-        {
-            bool check = Enumerable.SequenceEqual( numberPad.correctSequence, currentSequence);
-            if (check == true)
-            {
-                displaycurrentSequence.text = ("Access Granted");
-                //Win condition for the game 
-            }
-            else
-            {
-                //if the sequence is wrong, it clears the numbers and the player can enter a new sequence 
-                displaycurrentSequence.text = ("Access Denied");
-                currentSequence.Clear();
-            }
-        }
-    }*/
-    public void numberPressed(int index)
+    public void NumberPressed(int index)
     {
         switch (index)
         {
             case 0:
-                currentSequence.Add(0);
+                sequence += 0;
+                displaycurrentSequence.text = sequence;
                 break;
             case 1:
-                currentSequence.Add(1);
+                sequence += 1;
+                displaycurrentSequence.text = sequence;
                 break;
             case 2:
-                currentSequence.Add(2);
+                sequence += 2;
+                displaycurrentSequence.text = sequence;
                 break;
             case 3:
-                currentSequence.Add(3);
+                sequence += 3;
+                displaycurrentSequence.text = sequence;
                 break;
             case 4:
-                currentSequence.Add(4);
+                sequence += 4;
+                displaycurrentSequence.text = sequence;
                 break;
             case 5:
-                currentSequence.Add(5);
+                sequence += 5;
+                displaycurrentSequence.text = sequence;
                 break;
             case 6:
-                currentSequence.Add(6);
+                sequence += 6;
+                displaycurrentSequence.text = sequence;
                 break;
             case 7:
-                currentSequence.Add(7);
+                sequence += 7;
+                displaycurrentSequence.text = sequence;
                 break;
             case 8:
-                currentSequence.Add(8);
+                sequence += 8;
+                displaycurrentSequence.text = sequence;
                 break;
             case 9:
-                currentSequence.Add(9);
+                sequence += 9;
+                displaycurrentSequence.text = sequence;
                 break;
             case 10:
-                bool check = Enumerable.SequenceEqual( numberPad.correctSequence, currentSequence);
-            if (check == true)
-            {
-                displaycurrentSequence.text = ("Access Granted");
-                //Win condition for the game 
-            }
-            else
-            {
-                //if the sequence is wrong, it clears the numbers and the player can enter a new sequence 
-                displaycurrentSequence.text = ("Access Denied");
-                currentSequence.Clear();
-            }
+                sequenceChecker();
                 break;
-            
-
         }
+    }
+    
+    public void sequenceChecker()
+    {
+        if (numberPad.CorrectSequence == sequence)
+        {
+            displaycurrentSequence.text = ("Access Granted");
+            //Win condition for the game 
+        }
+        else
+        {
+            //if the sequence is wrong, it clears the numbers and the player can enter a new sequence 
+            displaycurrentSequence.text = ("Access Denied");
+            sequence = string.Empty;
+        }
+        
+    }
+
+    public void OnSolved()
+    {
+        //Function for after completion of puzzle 
     }
 }

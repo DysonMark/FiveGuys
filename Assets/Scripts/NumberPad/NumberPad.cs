@@ -21,9 +21,8 @@ public class NumberPad : MonoBehaviour
     public TMP_Text Keydisplay3;
     public TMP_Text Keydisplay4;
 
-    //List for the correct sequence
-    public List<int> correctSequence = new List<int>();
-
+    //Correct sequence for the keypad
+    public string CorrectSequence;
     void Start()
     { 
         //Sequence Generator
@@ -32,11 +31,10 @@ public class NumberPad : MonoBehaviour
         Digit3 = Random.Range(0, 10);
         Digit4 = Random.Range(0, 10);
 
-        //Adding the digits to the correct sequence
-        correctSequence.Add(Digit1);
-        correctSequence.Add(Digit2);
-        correctSequence.Add(Digit3);
-        correctSequence.Add(Digit4);
+        CorrectSequence += Digit1;
+        CorrectSequence += Digit2;
+        CorrectSequence += Digit3;
+        CorrectSequence += Digit4;
 
         //Displaying of digits
         Keydisplay1.text = Digit1.ToString();
