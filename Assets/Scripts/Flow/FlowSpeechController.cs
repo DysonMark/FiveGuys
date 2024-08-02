@@ -35,5 +35,10 @@ namespace JW.FiveGuys.Flow
                 }
             }
         }
+
+        public void DoVoice()
+        {
+            voiceControll.Activate();
+        }
     } 
 }
