@@ -5,6 +5,10 @@ using UnityEngine;
 
 namespace JW.FiveGuys.LightMoth
 {
+    /// <summary>
+    /// Author: JW
+    /// Moves towards a Vector3 point at a given speed
+    /// </summary>
     public class Moth : MonoBehaviour
     {
         [Header("Movement")]
@@ -19,7 +23,6 @@ namespace JW.FiveGuys.LightMoth
 
         private void FixedUpdate()
         {
-            //transform.position = Vector3.MoveTowards(transform.position, lightPoint.Value, moveSpeed);
             rb.velocity = (lightPoint.Value - transform.position).normalized * moveSpeed;
         }
     } 

@@ -5,6 +5,10 @@ using UnityEngine;
 
 namespace JW.FiveGuys.Flow
 {
+    /// <summary>
+    /// Author: JW
+    /// Note: Not In Use. This script was supposed to update the text for the Flow puzzle's button controller to say the cursor's state
+    /// </summary>
     public class DrawingUpdater : MonoBehaviour
     {
         [Header("Setup")]
