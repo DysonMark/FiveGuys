@@ -32,10 +32,20 @@ namespace SAE.FiveGuys.Bomb
                 bombRenderer.material.SetColor("_BaseColor", Color.green);
             }
         }
+
+        private void TurnBombRed()
+        {
+            if (verifyBomb.bombChecker == 2)
+            { 
+                var bombRenderer = bomb.GetComponent<Renderer>();
+                bombRenderer.material.SetColor("_BaseColor", Color.red);
+            }
+        }
         // Update is called once per frame
         void Update()
         {
             TurnBombGreen();
+            TurnBombRed();
         }
     }
 }

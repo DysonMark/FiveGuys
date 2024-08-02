@@ -56,6 +56,11 @@ namespace SAE.FiveGuys.Bomb
                 counting = 0;
                 holdCounting = 0;
             }
+            else if (bombOff.bombHasExploded == true)
+            {
+                bombChecker = 2;
+                countdown.text = "WRONG";
+            }
             else
             {
                 bombChecker = 0;
