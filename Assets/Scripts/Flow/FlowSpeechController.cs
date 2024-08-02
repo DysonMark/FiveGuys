@@ -27,6 +27,7 @@ namespace JW.FiveGuys.Flow
 
             if (Input.GetKeyUp(activateOn) || Input.GetAxis("XRI_Right_PrimaryButton") >= 1)
             {
+                Debug.Log("hello");
                 if (!isActive)
                 {
                     voiceControll.Activate();
