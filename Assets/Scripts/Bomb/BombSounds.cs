@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
 namespace SAE.FiveGuys.Bomb
 {
     public class BombSounds : MonoBehaviour
@@ -13,6 +12,7 @@ namespace SAE.FiveGuys.Bomb
 
         [SerializeField] private AudioSource bombExplosion;
         public DefuseTheBomb bombDefusedCheck;
+        public DefuseTheBomb test;
         
         // Start is called before the first frame update
         void Start()
@@ -24,9 +24,11 @@ namespace SAE.FiveGuys.Bomb
         void Update()
         {
             PauseAndPlay();
+            if (test.test == 2)
+                PlayBombExplodedSound();
         }
 
-        private void PauseAndPlay()
+        public void PauseAndPlay()
         {
             if (bombDefusedCheck.bombHasBeenDefused == false)
             {
@@ -42,16 +44,22 @@ namespace SAE.FiveGuys.Bomb
             {
                 bombExplosion.Pause();
             }
-            else if (bombDefusedCheck.bombHasExploded == true)
+            
+           if (bombDefusedCheck.bombHasExploded == true)
             {
                 bombTicking.Pause();
-                bombExplosion.UnPause();
+                Invoke("PlayBombExplodedSound", 1);
             }
         }
         
         private void PlayBombDefusedSound()
         {
             bombDefused.UnPause();
+        }
+
+        private void PlayBombExplodedSound()
+        {
+            bombExplosion.UnPause();
         }
         
         
