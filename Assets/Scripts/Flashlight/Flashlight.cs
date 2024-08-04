@@ -17,7 +17,6 @@ namespace JW.FiveGuys.LightMoth
         [SerializeField] private Vector3 rayOffset = Vector3.zero;
         [SerializeField] private AdvancedVector3 rayPoint;
         [SerializeField] private bool isOn = false;
-        [SerializeField] private LineRenderer lineRenderer;
         
         // Actual light Game Object.
         [SerializeField] private GameObject lightEmission;
@@ -51,7 +50,6 @@ namespace JW.FiveGuys.LightMoth
         {
             if (isOn)
             {
-                lineRenderer.SetPosition(0, lineRenderer.transform.position);
 
                 var lightHit = Physics.Raycast(transform.position + rayOffset, -transform.up, out RaycastHit hitInfo, rayDistance);
 
@@ -61,8 +59,7 @@ namespace JW.FiveGuys.LightMoth
                 {
                     rayPoint.Value = hitInfo.point;
                 }
-
-                lineRenderer.SetPosition(1, rayPoint.Value);
+                
             }
             else
             {
