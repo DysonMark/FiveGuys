@@ -11,13 +11,13 @@ namespace SAE.FiveGuys.Bomb
     {
         public List<int> whichWire = new List<int>();
 
-        private bool bluePass = false;
+        public bool bluePass = false;
 
-        private bool redPass = false;
+        public bool redPass = false;
 
-        private bool yellowPass = false;
+        public bool yellowPass = false;
 
-  //      private bool greenPass = false;
+        public bool greenPass = false;
 
         public bool bombHasBeenDefused = false;
 
@@ -101,7 +101,7 @@ namespace SAE.FiveGuys.Bomb
             }
         }
 
-        /*
+        
         public void GreenWire()
         {
             Debug.Log("Green wire has been cut!");
@@ -122,7 +122,7 @@ namespace SAE.FiveGuys.Bomb
                 greenPass = true;
             }
         }
-*/
+
         private void DefuseOrNot()
         {
             for(int i = 0; i < whichWire.Count; i++)
@@ -130,7 +130,7 @@ namespace SAE.FiveGuys.Bomb
                 Debug.Log("My list: " + whichWire[i]);
             }
 
-            if (bluePass == true && redPass == true && yellowPass == true)
+            if (bluePass == true && redPass == true && yellowPass == true && greenPass == true)
             {
                 Debug.Log("Bomb defused");
                 bombHasBeenDefused = true;

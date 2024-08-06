@@ -7,9 +7,10 @@ namespace SAE.FiveGuys.Bomb
     public class CutWires : MonoBehaviour
     {
         private SkinnedMeshRenderer skinnedMeshRenderer;
-        public string blendShapeName;
+        //public string blendShapeName;
         private Mesh mesh;
-        public float blendShapeWeight;
+       // public float blendShapeWeight;
+        public DefuseTheBomb pass;
 
         // Start is called before the first frame update
         void Start()
@@ -26,6 +27,19 @@ namespace SAE.FiveGuys.Bomb
                 skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
                 Debug.Log("Space pressed");
             }
+            CutColorWires();
+        }
+
+        void CutColorWires()
+        {
+            if (pass.redPass == true)
+                skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
+            if (pass.bluePass == true)
+                skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
+            if (pass.greenPass == true)
+                skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
+            if (pass.yellowPass == true)
+                skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
         }
     }
 

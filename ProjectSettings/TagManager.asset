@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - FlowTile
+  - Wires
   layers:
   - Default
   - TransparentFX
