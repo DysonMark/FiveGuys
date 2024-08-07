@@ -17,7 +17,9 @@ namespace JW.FiveGuys.LightMoth
         [SerializeField] private Vector3 rayOffset = Vector3.zero;
         [SerializeField] private AdvancedVector3 rayPoint;
         [SerializeField] private bool isOn = false;
-        [SerializeField] private LineRenderer lineRenderer;
+        
+        // Actual light Game Object.
+        [SerializeField] private GameObject lightEmission;
 
         /// <summary>
         /// Toggle the light on or off. alternativly sets the light on or off
@@ -48,16 +50,20 @@ namespace JW.FiveGuys.LightMoth
         {
             if (isOn)
             {
-                lineRenderer.SetPosition(0, lineRenderer.transform.position);
 
                 var lightHit = Physics.Raycast(transform.position + rayOffset, -transform.up, out RaycastHit hitInfo, rayDistance);
 
+                lightEmission.SetActive(isOn);
+                
                 if (lightHit)
                 {
                     rayPoint.Value = hitInfo.point;
                 }
-
-                lineRenderer.SetPosition(1, rayPoint.Value);
+                
+            }
+            else
+            {
+                lightEmission.SetActive(isOn);
             }
         }
 
@@ -68,5 +74,6 @@ namespace JW.FiveGuys.LightMoth
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(rayPoint.Value, 0.1f);
         }
+        
     } 
 }
