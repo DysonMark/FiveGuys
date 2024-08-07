@@ -30,18 +30,69 @@ MonoBehaviour:
     name: fiveguys
     id: 405902168613564
     lang: en
-    isPrivate: 0
+    isPrivate: 1
     createdAt: 2024-07-27T00:30:01-0700
     trainingStatus: 1
-    lastTrainDuration: 0
-    lastTrainedAt: 1969-12-31T16:00:00-0800
-    nextTrainAt: 1969-12-31T16:00:00-0800
+    lastTrainDuration: 65
+    lastTrainedAt: 2024-08-07T01:19:18-0700
+    nextTrainAt: 2024-08-07T01:18:13-0700
     intents:
+    - id: 350573894758307
+      name: Down
+      entities: []
+    - id: 1669731347161155
+      name: Draw
+      entities: []
+    - id: 1660001841415070
+      name: Left
+      entities: []
+    - id: 1674213643411076
+      name: Reset
+      entities: []
+    - id: 1631835120930380
+      name: Right
+      entities: []
+    - id: 1053859792823717
+      name: Up
+      entities: []
+    - id: 841515091258097
+      name: eight
+      entities: []
+    - id: 1411008146245280
+      name: enter
+      entities: []
+    - id: 859660722726096
+      name: five
+      entities: []
+    - id: 414720468246281
+      name: four
+      entities: []
+    - id: 1501446794098652
+      name: nine
+      entities: []
+    - id: 447264528281415
+      name: one
+      entities: []
+    - id: 989659346241846
+      name: seven
+      entities: []
+    - id: 1021973616153179
+      name: six
+      entities: []
+    - id: 507544845163421
+      name: three
+      entities: []
+    - id: 1196529674869354
+      name: two
+      entities: []
     - id: 1520999748791801
       name: wit$confirmation
       entities: []
     - id: 1447707109269381
       name: wit$negation
+      entities: []
+    - id: 460288133491604
+      name: zero
       entities: []
     entities: []
     traits: []

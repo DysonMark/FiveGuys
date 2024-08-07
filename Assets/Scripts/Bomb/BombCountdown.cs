@@ -44,7 +44,7 @@ namespace SAE.FiveGuys.Bomb
             holdCounting -= subtract * Time.deltaTime;
             counting = (int)holdCounting;
             countdown.text = ((int)counting).ToString();
-            Debug.Log(counting);
+            //Debug.Log(counting);
         }
 
         private void DeleteTextOnBomb()

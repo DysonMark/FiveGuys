@@ -38,7 +38,7 @@ namespace SAE.FiveGuys.Bomb
             {
                 test = 2;
             }
-            Debug.Log("ok: " + bombHasExploded);
+            //Debug.Log("ok: " + bombHasExploded);
 
         }
 
