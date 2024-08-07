@@ -9,6 +9,7 @@ namespace SAE.FiveGuys.Bomb
     {
         [SerializeField] SkinnedMeshRenderer skinnedMeshRenderer;
         private Mesh mesh;
+        [SerializeField] private List<string> finisheditems = new();
         public DefuseTheBomb pass;
         [SerializeField] private GameObject axe;
         public bool isAxe = false;
@@ -25,6 +26,11 @@ namespace SAE.FiveGuys.Bomb
             
         }
 
+        public void OnExploded()
+        {
+            finisheditems.Clear();
+        }
+
         void CutColorWires()
         {
             if (pass.redPass == true)
@@ -39,12 +45,14 @@ namespace SAE.FiveGuys.Bomb
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag == "RedWire")
+            if (other.gameObject.tag == "RedWire"&& !finisheditems.Contains(("RedWire")))
             {
                 //isAxe = true;
                 pass.RedWire();
                 CutColorWires();
+                other.GetComponent<Collider>().enabled = false;
                 Debug.Log("ENTER redWire");
+                finisheditems.Add("RedWire");
             }
 
             if (other.gameObject.tag == "YellowWire")

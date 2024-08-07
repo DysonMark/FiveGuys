@@ -7478,6 +7478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinnedMeshRenderer: {fileID: 0}
+  finisheditems: []
   pass: {fileID: 0}
   axe: {fileID: 0}
   isAxe: 0
@@ -7796,19 +7797,7 @@ MonoBehaviour:
   selectionButton: 1
   onSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Assembly-CSharp
-        m_MethodName: YellowWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
@@ -8113,6 +8102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinnedMeshRenderer: {fileID: 3365251215034164273}
+  finisheditems: []
   pass: {fileID: 4299733419465368935}
   axe: {fileID: 7902330821494275025}
   isAxe: 0
@@ -10617,6 +10607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinnedMeshRenderer: {fileID: 3365251215034164273}
+  finisheditems: []
   pass: {fileID: 4299733419465368935}
   axe: {fileID: 7902330821494275025}
   isAxe: 0
@@ -11138,6 +11129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skinnedMeshRenderer: {fileID: 0}
+  finisheditems: []
   pass: {fileID: 4299733419465368935}
   axe: {fileID: 7752464161614993731}
   isAxe: 0
