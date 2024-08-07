@@ -36,6 +36,8 @@ public class NumberPad : MonoBehaviour
         CorrectSequence += Digit3;
         CorrectSequence += Digit4;
 
+        print(CorrectSequence);
+
         //Displaying of digits
         Keydisplay1.text = Digit1.ToString();
         Keydisplay2.text = Digit2.ToString();
