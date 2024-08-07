@@ -24,6 +24,8 @@ namespace SAE.FiveGuys.Bomb
         public bool bombHasExploded;
 
         public int test = 0;
+
+        public CutWires axeBehavior;
         // Start is called before the first frame update
         void Start()
         {

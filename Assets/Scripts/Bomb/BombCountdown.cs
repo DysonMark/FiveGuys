@@ -43,7 +43,10 @@ namespace SAE.FiveGuys.Bomb
         {
             holdCounting -= subtract * Time.deltaTime;
             counting = (int)holdCounting;
-            countdown.text = ((int)counting).ToString();
+            //countdown.text = counting.ToString();
+            int minutes = Mathf.FloorToInt(holdCounting / 60);
+            int seconds = Mathf.FloorToInt((holdCounting % 60));
+            countdown.text = string.Format("{0:00}:{1:00}", minutes, seconds);
             Debug.Log(counting);
         }
 
