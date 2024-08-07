@@ -23,6 +23,7 @@ public class KeypadNumber : MonoBehaviour
         switch (index)
         {
             case 0:
+                print("Works");
                 sequence += 0;
                 displaycurrentSequence.text = sequence;
                 break;
@@ -63,12 +64,12 @@ public class KeypadNumber : MonoBehaviour
                 displaycurrentSequence.text = sequence;
                 break;
             case 10:
-                sequenceChecker();
+                SequenceChecker();
                 break;
         }
     }
     
-    public void sequenceChecker()
+    public void SequenceChecker()
     {
         if (numberPad.CorrectSequence == sequence)
         {
