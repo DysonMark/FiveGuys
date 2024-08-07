@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,6 @@ public class KeypadNumber : MonoBehaviour
     
     //Variables for the sequences 
     public string sequence;
-
     public void NumberPressed(int index)
     {
         switch (index)
@@ -73,6 +73,7 @@ public class KeypadNumber : MonoBehaviour
         if (numberPad.CorrectSequence == sequence)
         {
             displaycurrentSequence.text = ("Access Granted");
+            OnSolved();
             //Win condition for the game 
         }
         else
