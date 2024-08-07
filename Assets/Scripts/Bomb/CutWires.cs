@@ -22,7 +22,7 @@ namespace SAE.FiveGuys.Bomb
         // Update is called once per frame
         void Update()
         {
-            CutColorWires();
+            
         }
 
         void CutColorWires()

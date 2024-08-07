@@ -6368,7 +6368,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.07956641, y: 0.4984582, z: 0.3837142}
   m_Center: {x: -0.000000005587935, y: 0.1345612, z: 0.92590904}
@@ -10596,6 +10596,7 @@ GameObject:
   - component: {fileID: 2172605042762509077}
   - component: {fileID: 59592485436573665}
   - component: {fileID: 7902330821494275026}
+  - component: {fileID: 7902330821494275027}
   m_Layer: 0
   m_Name: Metal
   m_TagString: Cut
@@ -10619,6 +10620,28 @@ MonoBehaviour:
   pass: {fileID: 4299733419465368935}
   axe: {fileID: 7902330821494275025}
   isAxe: 0
+--- !u!64 &7902330821494275027
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902330821494275025}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: f31859dbadd854a4d9bc42fec08f4443, type: 3}
 --- !u!114 &7933653195216640054
 MonoBehaviour:
   m_ObjectHideFlags: 0
