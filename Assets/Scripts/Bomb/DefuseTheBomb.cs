@@ -49,7 +49,6 @@ namespace SAE.FiveGuys.Bomb
         public void RedWire()
         {
             whichWire.Add(2);
-            
             if (whichWire.Count < 2)
             {
                 bombHasExploded = true;
