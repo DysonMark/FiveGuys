@@ -12,7 +12,6 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private List<string> finisheditems = new();
         public DefuseTheBomb pass;
         [SerializeField] private GameObject axe;
-        public bool isAxe = false;
 
         // Start is called before the first frame update
         void Start()
@@ -20,60 +19,34 @@ namespace SAE.FiveGuys.Bomb
             skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
-
-        public void OnExploded()
-        {
-            finisheditems.Clear();
-        }
-
-        void CutColorWires()
-        {
-            if (pass.redPass == true)
-                skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
-            if (pass.bluePass == true)
-                skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
-            if (pass.greenPass == true)
-                skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
-            if (pass.yellowPass == true)
-                skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
-        }
-
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.tag == "RedWire"&& !finisheditems.Contains(("RedWire")))
+            if (other.gameObject.tag == "RedWire" && !finisheditems.Contains(("RedWire")))
             {
-                //isAxe = true;
-                pass.RedWire();
-                CutColorWires();
-                other.GetComponent<Collider>().enabled = false;
-                Debug.Log("ENTER redWire");
                 finisheditems.Add("RedWire");
+                pass.RedWire();
+                skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
             }
 
-            if (other.gameObject.tag == "YellowWire")
+            if (other.gameObject.tag == "YellowWire" && !finisheditems.Contains("YellowWire"))
             {
+                finisheditems.Add("YellowWire");
                 pass.YellowWire();
-                CutColorWires();
-                Debug.Log("ENTER yellowWire");
+                skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
             }
 
-            if (other.gameObject.tag == "BlueWire")
+            if (other.gameObject.tag == "BlueWire" && !finisheditems.Contains("BlueWire"))
             {
+                finisheditems.Add("BlueWire");
                 pass.BlueWire();
-                CutColorWires();
-                Debug.Log("ENTER blueWire");
+                skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
             }
 
-            if (other.gameObject.tag == "GreenWire")
+            if (other.gameObject.tag == "GreenWire" && !finisheditems.Contains("GreenWire"))
             {
+                finisheditems.Add("GreenWire");
                 pass.GreenWire();
-                CutColorWires();
-                Debug.Log("ENTER greenWire");
+                skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
             }
         }
     }

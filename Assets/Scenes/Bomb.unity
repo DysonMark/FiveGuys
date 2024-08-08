@@ -135,8 +135,6 @@ GameObject:
   - component: {fileID: 89963885}
   - component: {fileID: 89963884}
   - component: {fileID: 89963883}
-  - component: {fileID: 89963882}
-  - component: {fileID: 89963881}
   - component: {fileID: 89963887}
   m_Layer: 0
   m_Name: Green_Wire_2
@@ -145,112 +143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &89963881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89963880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Unity.TextMeshPro
-        m_MethodName: GreenWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
---- !u!114 &89963882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89963880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1463505087}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1678022398}
-  pivotParent: {fileID: 2030157640}
 --- !u!136 &89963883
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1500,8 +1392,6 @@ GameObject:
   - component: {fileID: 716911223}
   - component: {fileID: 716911222}
   - component: {fileID: 716911221}
-  - component: {fileID: 716911220}
-  - component: {fileID: 716911219}
   - component: {fileID: 716911225}
   m_Layer: 0
   m_Name: Green_Wire_4
@@ -1510,112 +1400,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &716911219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716911218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Unity.TextMeshPro
-        m_MethodName: GreenWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
---- !u!114 &716911220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716911218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1145718690}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1335238749}
-  pivotParent: {fileID: 898347600}
 --- !u!136 &716911221
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2373,8 +2157,7 @@ MonoBehaviour:
   greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
+  timeIsUp: {fileID: 0}
 --- !u!1 &881232648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,6 +2306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdown: {fileID: 881232650}
+  holdCounting: 600
   bombChecker: 0
   bombOff: {fileID: 0}
 --- !u!1 &895205168
@@ -2947,8 +2731,6 @@ GameObject:
   - component: {fileID: 1026882234}
   - component: {fileID: 1026882233}
   - component: {fileID: 1026882232}
-  - component: {fileID: 1026882231}
-  - component: {fileID: 1026882230}
   - component: {fileID: 1026882236}
   m_Layer: 0
   m_Name: Green_Wire_3
@@ -2957,112 +2739,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1026882230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026882229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Unity.TextMeshPro
-        m_MethodName: GreenWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
---- !u!114 &1026882231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026882229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1877481264}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 348378619}
-  pivotParent: {fileID: 334950462}
 --- !u!136 &1026882232
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3452,8 +3128,6 @@ GameObject:
   - component: {fileID: 1188974953}
   - component: {fileID: 1188974952}
   - component: {fileID: 1188974951}
-  - component: {fileID: 1188974950}
-  - component: {fileID: 1188974949}
   - component: {fileID: 1188974955}
   m_Layer: 0
   m_Name: Green_Wire
@@ -3462,112 +3136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1188974949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188974948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Unity.TextMeshPro
-        m_MethodName: GreenWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
---- !u!114 &1188974950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188974948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1566847277}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 254790529}
-  pivotParent: {fileID: 390437628}
 --- !u!136 &1188974951
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3822,6 +3390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verifyBomb: {fileID: 881232652}
+  colorBomb: {fileID: 0}
 --- !u!222 &1205602080
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3849,8 +3418,7 @@ MonoBehaviour:
   greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
+  timeIsUp: {fileID: 0}
 --- !u!114 &1205602083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3867,7 +3435,6 @@ MonoBehaviour:
   bombDefused: {fileID: 1205602085}
   bombExplosion: {fileID: 1205602086}
   bombDefusedCheck: {fileID: 1205602081}
-  test: {fileID: 0}
 --- !u!82 &1205602084
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4503,139 +4070,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268785807}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1328280422
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1328280426}
-  - component: {fileID: 1328280425}
-  - component: {fileID: 1328280424}
-  - component: {fileID: 1328280423}
-  - component: {fileID: 1328280427}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Wires
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1328280423
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328280422}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1328280424
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328280422}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1328280425
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328280422}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1328280426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328280422}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.747318, y: 2.0513465, z: 0.53}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1328280427
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328280422}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1335238748
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,8 +4315,6 @@ GameObject:
   - component: {fileID: 1502985348}
   - component: {fileID: 1502985347}
   - component: {fileID: 1502985346}
-  - component: {fileID: 1502985345}
-  - component: {fileID: 1502985344}
   - component: {fileID: 1502985350}
   m_Layer: 0
   m_Name: Green_Wire_1
@@ -4891,112 +4323,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1502985344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502985343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Unity.TextMeshPro
-        m_MethodName: GreenWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
---- !u!114 &1502985345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1502985343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1026095525}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 123624037}
-  pivotParent: {fileID: 921962868}
 --- !u!136 &1502985346
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6568,8 +5894,7 @@ MonoBehaviour:
   greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
+  timeIsUp: {fileID: 0}
 --- !u!4 &686709048835824839
 Transform:
   m_ObjectHideFlags: 0
@@ -6663,53 +5988,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1017715450204324312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6930516200030889830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Assembly-CSharp
-        m_MethodName: BlueWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
 --- !u!1 &1140121418680590892
 GameObject:
   m_ObjectHideFlags: 0
@@ -6973,67 +6251,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &1668242901624522346
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.4794931
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8500004
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.1589785
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1397313433562162953, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742771587774086579, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_Name
-      value: bombwirescuttable
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742771587774086579, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f6f2cf4d746d04945b68007f2b2062f8, type: 3}
 --- !u!23 &1700654255883539402
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7272,53 +6489,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1890528296580035751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8373717637820080944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Assembly-CSharp
-        m_MethodName: BlueWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
 --- !u!114 &1907243948665994436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7481,7 +6651,6 @@ MonoBehaviour:
   finisheditems: []
   pass: {fileID: 0}
   axe: {fileID: 0}
-  isAxe: 0
 --- !u!114 &2272659603579865496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7495,6 +6664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdown: {fileID: 1300065118205874916}
+  holdCounting: 600
   bombChecker: 0
   bombOff: {fileID: 0}
 --- !u!1 &2426150782570073006
@@ -7516,53 +6686,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &2451586328778260017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5732407900350738868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: 0
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Assembly-CSharp
-        m_MethodName: RedWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
 --- !u!114 &2552994402701375812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7582,8 +6705,7 @@ MonoBehaviour:
   greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
+  timeIsUp: {fileID: 0}
 --- !u!114 &2555253523638075117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7651,53 +6773,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6852423518714789230}
   m_CullTransparentMesh: 1
---- !u!114 &2611909237545175854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6695918174388071215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Assembly-CSharp
-        m_MethodName: BlueWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
 --- !u!23 &2628530602367246846
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7781,41 +6856,6 @@ Transform:
   - {fileID: 2201392674356830847}
   m_Father: {fileID: 6723535698857549653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2848593091519161522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4193569420165647588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls: []
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
 --- !u!1 &2914322286942124466
 GameObject:
   m_ObjectHideFlags: 0
@@ -8105,7 +7145,6 @@ MonoBehaviour:
   finisheditems: []
   pass: {fileID: 4299733419465368935}
   axe: {fileID: 7902330821494275025}
-  isAxe: 0
 --- !u!1 &3497205086985861120
 GameObject:
   m_ObjectHideFlags: 0
@@ -8154,6 +7193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdown: {fileID: 3161736960298025785}
+  holdCounting: 900
   bombChecker: 0
   bombOff: {fileID: 4299733419465368935}
 --- !u!114 &3652431319465694428
@@ -8197,65 +7237,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3853668977271708302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4193569420165647588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 4989045317539836149}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 6398120931581670589}
-  pivotParent: {fileID: 1830588592086069489}
 --- !u!1 &3905666936754751104
 GameObject:
   m_ObjectHideFlags: 0
@@ -8381,8 +7362,6 @@ GameObject:
   - component: {fileID: 4077979752580014043}
   - component: {fileID: 6308380729822389077}
   - component: {fileID: 8952749974273929610}
-  - component: {fileID: 3853668977271708302}
-  - component: {fileID: 2848593091519161522}
   - component: {fileID: 8952749974273929611}
   m_Layer: 0
   m_Name: Yellow_Wire_1
@@ -8452,8 +7431,7 @@ MonoBehaviour:
   greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
+  timeIsUp: {fileID: 3546069930354312783}
 --- !u!65 &4314320518507181591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8498,65 +7476,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &4550719950855091295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6930516200030889830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 2201392674356830847}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 8539056932187241190}
-  pivotParent: {fileID: 2756372438775076619}
 --- !u!136 &4557229728453471869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8588,65 +7507,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7902330821494275025}
   m_Mesh: {fileID: 4300004, guid: f31859dbadd854a4d9bc42fec08f4443, type: 3}
---- !u!114 &4645643183720451944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206065987380542899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 5678587738052511929}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 6753140807626183857}
-  pivotParent: {fileID: 8717013416153985718}
 --- !u!1 &4676393446416432431
 GameObject:
   m_ObjectHideFlags: 0
@@ -9103,8 +7963,7 @@ MonoBehaviour:
   greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
+  timeIsUp: {fileID: 0}
 --- !u!4 &5456375756122196637
 Transform:
   m_ObjectHideFlags: 0
@@ -9254,11 +8113,7 @@ GameObject:
   - component: {fileID: 585506412841496160}
   - component: {fileID: 6756822936173591454}
   - component: {fileID: 439885064817866772}
-  - component: {fileID: 8412909490654210605}
-  - component: {fileID: 2451586328778260017}
-  - component: {fileID: 5877031030048377072}
   - component: {fileID: 8412909490654210606}
-  - component: {fileID: 8412909490654210607}
   m_Layer: 0
   m_Name: Red_Wire_1
   m_TagString: RedWire
@@ -9279,6 +8134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verifyBomb: {fileID: 3546069930354312783}
+  colorBomb: {fileID: 4299733419465368935}
 --- !u!4 &5790914908548886626
 Transform:
   m_ObjectHideFlags: 0
@@ -9294,27 +8150,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1371741555035016531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5877031030048377072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5732407900350738868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d373b8003b51a344ba34f0e79b8b3b57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  whichWire: 
-  bluePass: 0
-  redPass: 0
-  yellowPass: 0
-  greenPass: 0
-  bombHasBeenDefused: 0
-  bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
 --- !u!224 &5887394924821021010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9565,8 +8400,7 @@ MonoBehaviour:
   greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
-  test: 0
-  axeBehavior: {fileID: 0}
+  timeIsUp: {fileID: 0}
 --- !u!1 &6390087561693013752
 GameObject:
   m_ObjectHideFlags: 0
@@ -9844,7 +8678,6 @@ MonoBehaviour:
   bombDefused: {fileID: 5194197332109870371}
   bombExplosion: {fileID: 6457919664910263778}
   bombDefusedCheck: {fileID: 4299733419465368935}
-  test: {fileID: 4299733419465368935}
 --- !u!224 &6496156282035681854
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9865,53 +8698,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0566, y: -0.0009}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6501330429694753605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9206065987380542899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e75e702e9843be848f4097e68762d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionHand: -1
-  selectionButton: 1
-  onSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4299733419465368935}
-        m_TargetAssemblyTypeName: SAE.FiveGuys.Bomb.DefuseTheBomb, Assembly-CSharp
-        m_MethodName: BlueWire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDeselected:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverStart:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  onActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  isSelected: 0
-  currentInteractor: {fileID: 0}
-  currentState: 0
-  hideHand: 0
-  moveObject: 1
-  tweener: {fileID: 0}
 --- !u!224 &6623458938786187170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9944,8 +8730,6 @@ GameObject:
   - component: {fileID: 986403099413943765}
   - component: {fileID: 8326557815149029445}
   - component: {fileID: 5529010155229516789}
-  - component: {fileID: 7933653195216640054}
-  - component: {fileID: 2611909237545175854}
   - component: {fileID: 8326557815149029446}
   m_Layer: 0
   m_Name: Blue_Wire_1
@@ -10210,8 +8994,6 @@ GameObject:
   - component: {fileID: 3700945840979705603}
   - component: {fileID: 2628530602367246846}
   - component: {fileID: 1449104573461286258}
-  - component: {fileID: 4550719950855091295}
-  - component: {fileID: 1017715450204324312}
   - component: {fileID: 6930516200030889831}
   m_Layer: 0
   m_Name: Blue_Wire_3
@@ -10514,65 +9296,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7885234071994386051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8373717637820080944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 73727968880288540}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1385907750141794290}
-  pivotParent: {fileID: 8785835185234202592}
 --- !u!1 &7902330821494275025
 GameObject:
   m_ObjectHideFlags: 0
@@ -10610,7 +9333,6 @@ MonoBehaviour:
   finisheditems: []
   pass: {fileID: 4299733419465368935}
   axe: {fileID: 7902330821494275025}
-  isAxe: 0
 --- !u!64 &7902330821494275027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10633,65 +9355,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: f31859dbadd854a4d9bc42fec08f4443, type: 3}
---- !u!114 &7933653195216640054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6695918174388071215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 4277886293112148202}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 4789597580478881463}
-  pivotParent: {fileID: 8393449599358584273}
 --- !u!114 &7958568333583513525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10976,8 +9639,6 @@ GameObject:
   - component: {fileID: 7159828738985072910}
   - component: {fileID: 1700654255883539402}
   - component: {fileID: 5010282508950891464}
-  - component: {fileID: 7885234071994386051}
-  - component: {fileID: 1890528296580035751}
   - component: {fileID: 8373717637820080945}
   m_Layer: 0
   m_Name: Blue_Wire_2
@@ -11030,65 +9691,6 @@ Transform:
   - {fileID: 4277886293112148202}
   m_Father: {fileID: 191387045328267970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8412909490654210605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5732407900350738868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a42456a56e49b999f5ef43dc1a7ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1381288197775553699}
-  rightConstraints:
-    poseConstrains:
-      indexFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      middleFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      ringFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      pinkyFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-      thumbFingerLimits:
-        locked: 0
-        min: 0
-        max: 0
-    relativeTransform: {fileID: 1217682361128189822}
-  pivotParent: {fileID: 4848589318560929761}
 --- !u!54 &8412909490654210606
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11116,23 +9718,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &8412909490654210607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5732407900350738868}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f399ae16b4ae2ce4a8ec9383cba7882c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 0}
-  finisheditems: []
-  pass: {fileID: 4299733419465368935}
-  axe: {fileID: 7752464161614993731}
-  isAxe: 0
 --- !u!1 &8443646992546093569
 GameObject:
   m_ObjectHideFlags: 0
@@ -11484,8 +10069,6 @@ GameObject:
   - component: {fileID: 4717919242135009295}
   - component: {fileID: 451205625922387847}
   - component: {fileID: 6587305592505704}
-  - component: {fileID: 4645643183720451944}
-  - component: {fileID: 6501330429694753605}
   - component: {fileID: 9206065987380542900}
   m_Layer: 0
   m_Name: Blue_Wire_4
@@ -11533,6 +10116,4 @@ SceneRoots:
   - {fileID: 1670587587}
   - {fileID: 1472534397}
   - {fileID: 8899932535765728247}
-  - {fileID: 1668242901624522346}
   - {fileID: 686709048835824839}
-  - {fileID: 1328280426}
