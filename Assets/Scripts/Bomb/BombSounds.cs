@@ -12,7 +12,6 @@ namespace SAE.FiveGuys.Bomb
 
         [SerializeField] private AudioSource bombExplosion;
         public DefuseTheBomb bombDefusedCheck;
-        public DefuseTheBomb test;
         
         // Start is called before the first frame update
         void Start()
@@ -24,8 +23,6 @@ namespace SAE.FiveGuys.Bomb
         void Update()
         {
             PauseAndPlay();
-            if (test.test == 2)
-                PlayBombExplodedSound();
         }
 
         public void PauseAndPlay()

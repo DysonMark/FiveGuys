@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Anchor
   - FlowTile
+  - Wires
+  - Cut
+  - RedWire
+  - YellowWire
+  - BlueWire
+  - GreenWire
   layers:
   - Default
   - TransparentFX
