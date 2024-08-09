@@ -21714,6 +21714,10 @@ PrefabInstance:
       value: 0.558
       objectReference: {fileID: 0}
     - target: {fileID: 6184435329651281556, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184435329651281556, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: voiceControll
       value: 
       objectReference: {fileID: 446978629}
