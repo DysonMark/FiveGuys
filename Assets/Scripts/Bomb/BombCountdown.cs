@@ -11,7 +11,7 @@ namespace SAE.FiveGuys.Bomb
         private GameObject bombObject;
 
         private int counting;
-        private float holdCounting = 600;
+        public float holdCounting = 900;
         private float subtract = 1;
         public int bombChecker = 0;
 
@@ -35,7 +35,7 @@ namespace SAE.FiveGuys.Bomb
 
         private void TextToInt()
         {
-            countdown.text = "600";
+            countdown.text = "10";
             int.TryParse(countdown.text, out counting);
         }
 
@@ -43,8 +43,9 @@ namespace SAE.FiveGuys.Bomb
         {
             holdCounting -= subtract * Time.deltaTime;
             counting = (int)holdCounting;
-            countdown.text = ((int)counting).ToString();
-            Debug.Log(counting);
+            int minutes = Mathf.FloorToInt(holdCounting / 60);
+            int seconds = Mathf.FloorToInt((holdCounting % 60));
+            countdown.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
 
         private void DeleteTextOnBomb()
@@ -55,6 +56,11 @@ namespace SAE.FiveGuys.Bomb
                 countdown.text = "OFF";
                 counting = 0;
                 holdCounting = 0;
+            }
+            else if (bombOff.bombHasExploded == true)
+            {
+                bombChecker = 2;
+                countdown.text = "WRONG";
             }
             else
             {

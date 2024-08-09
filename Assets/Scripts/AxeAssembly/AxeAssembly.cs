@@ -27,7 +27,7 @@ namespace Leonardo.AxeAssembly
         private void Update()
         {
             CheckPiecesInRange();
-            Debug.Log("Pieces within range:" + piecesWithinRange);
+            //Debug.Log("Pieces within range:" + piecesWithinRange);
         }
 
 

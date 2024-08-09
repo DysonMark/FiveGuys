@@ -9,19 +9,21 @@ namespace SAE.FiveGuys.Bomb
         private GameObject bomb;
 
         public BombCountdown verifyBomb;
+
+        public DefuseTheBomb colorBomb;
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             bomb = GameObject.Find("TimerBomb1");
-            Invoke("ChangeBombColor", 600);
         }
 
         private void ChangeBombColor()
         {
-            Debug.Log("Im here");
             var bombRenderer = bomb.GetComponent<Renderer>();
-            bombRenderer.material.SetColor("_BaseColor", Color.red);
-            Debug.Log("Explosion");
+            if (colorBomb.bombHasExploded == true)
+            {
+                bombRenderer.material.SetColor("_BaseColor", Color.red);   
+            }
         }
 
         private void TurnBombGreen()
@@ -33,9 +35,10 @@ namespace SAE.FiveGuys.Bomb
             }
         }
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             TurnBombGreen();
+            ChangeBombColor();
         }
     }
 }

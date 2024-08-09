@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Kandooz.InteractionSystem.Interactions
 {
-    [RequireComponent(typeof(InteractionPoseConstrainer))]
     public class Grabable : InteractableBase
     {
         [SerializeField] protected bool hideHand;
