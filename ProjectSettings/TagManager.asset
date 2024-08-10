@@ -6,8 +6,12 @@ TagManager:
   tags:
   - Anchor
   - FlowTile
-  - TutorialGrab
-  - Button
+  - Wires
+  - Cut
+  - RedWire
+  - YellowWire
+  - BlueWire
+  - GreenWire
   layers:
   - Default
   - TransparentFX
@@ -23,7 +27,7 @@ TagManager:
   - 
   - FlashLightSockets
   - 
-  - 
+  - Invisible
   - 
   - 
   - 

@@ -27,7 +27,7 @@ namespace Leonardo.AxeAssembly
         private void Update()
         {
             CheckPiecesInRange();
-            Debug.Log("Pieces within range:" + piecesWithinRange);
+            //Debug.Log("Pieces within range:" + piecesWithinRange);
         }
 
 
@@ -65,11 +65,11 @@ namespace Leonardo.AxeAssembly
         // The "Pieces Within Range" counter goes UP each time a piece is within range.
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.name == "HeadMeshRenderer")
+            if (other.transform.name == "HeadMeshV3")
             {
                 piecesWithinRange++;
             }
-            if (other.transform.name == "HandleMeshRenderer")
+            if (other.transform.name == "HandleMeshV3")
             {
                 piecesWithinRange++;
             }
@@ -78,11 +78,11 @@ namespace Leonardo.AxeAssembly
         // The "Pieces Within Range" counter goes DOWN each time a piece is within range.
         private void OnTriggerExit(Collider other)
         {
-            if (other.transform.name == "HeadMeshRenderer")
+            if (other.transform.name == "HeadMeshV3")
             {
                 piecesWithinRange--;
             }
-            if (other.transform.name == "HandleMeshRenderer")
+            if (other.transform.name == "HandleMeshV3")
             {
                 piecesWithinRange--;
             }

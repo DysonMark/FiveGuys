@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae8236d201034b448a0228a9add819f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightPoint: {fileID: 11400000, guid: a4e71914ac1db1a41b0851cc83326433, type: 2}
+  lightPoint: {fileID: 0}
   moveSpeed: 1
   rb: {fileID: 0}
 --- !u!54 &548415387
@@ -1024,6 +1024,7 @@ MonoBehaviour:
   telePoint: {fileID: 0}
   currentPoint: {fileID: 2146875712}
   teleportKey: 103
+  isPlayerTeleporting: 0
 --- !u!1 &1256777653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5253809974633574797, guid: 2c9e032b669634873a508e9115991b7c, type: 3}
@@ -1441,8 +1442,9 @@ MonoBehaviour:
   rayDistance: 20
   rayDirection: {x: 0, y: 0, z: 1}
   rayOffset: {x: 0, y: 0, z: 0}
-  rayPoint: {fileID: 11400000, guid: a4e71914ac1db1a41b0851cc83326433, type: 2}
+  rayPoint: {fileID: 0}
   isOn: 0
+  lineRenderer: {fileID: 0}
 --- !u!114 &1529066791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,6 +1502,7 @@ MonoBehaviour:
   currentInteractor: {fileID: 0}
   currentState: 0
   hideHand: 0
+  moveObject: 1
   tweener: {fileID: 0}
 --- !u!114 &1529066792
 MonoBehaviour:

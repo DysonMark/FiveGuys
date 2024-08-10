@@ -1,139 +1,198 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 namespace Leonardo.RythmRadioPuzzle
 {
     public class RythmRadioPuzzle : MonoBehaviour
     {
-        // Debug purposes.
-        [SerializeField]  private bool blueButtonPressed, yellowButtonPressed, greenButtonPressed, redButtonPressed;
+        // Button states.
+        [SerializeField]  private bool blueButtonTapped, yellowButtonTapped, greenButtonTapped, redButtonTapped;
         
-        // Audio sound effects.
+        // Audio source.
         [SerializeField] private AudioSource audioSource;
-        [SerializeField] private AudioClip wrongButtonSFX, blueButtonSFX, yellowButtonSFX, greenButtonSFX, redButtonSFX;
         
+        // Audio sound clips for buttons
+        [SerializeField] private AudioClip blueButtonSFX, greenButtonSFX, redButtonSFX, yellowButtonSFX;
+        
+        // Audio sound clips for states.
+        [SerializeField] private AudioClip winSFX, wrongSFX;
+        
+        private bool isPlaying;
+        
+        // Visual effects
         [SerializeField] private GameObject winParticleFX;
         
+        //----------------------------------------------------------------------------------------------------------------
+        public bool radioPuzzleFinished;        // Activates when the puzzle is completed.
+            
         [SerializeField] private int buttonsTimesPressed = 0; // Counter of the times the buttons were pressed.
-
+        
         private void Start()
         {
-            blueButtonPressed = yellowButtonPressed = greenButtonPressed = redButtonPressed = false;
+            radioPuzzleFinished = false;
+            isPlaying = false;
+            blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
-
-        private void Update()
-        {
-            // Debug Input keys when not using VR.
-            if (Input.GetKeyUp(KeyCode.A))
-            {
-                Debug.Log("You pressed the BLUE button.");
-                BlueButtonPressed();
-            }
-            if (Input.GetKeyUp(KeyCode.S))
-            {
-                Debug.Log("You pressed the YELLOW button.");
-                YellowButtonPressed();  
-            }
-            if (Input.GetKeyUp(KeyCode.D))
-            {
-                Debug.Log("You pressed the GREEN button.");
-                GreenButtonPressed();
-            }
-            if (Input.GetKeyUp(KeyCode.F))
-            {
-                Debug.Log("You pressed the RED button.");
-                RedButtonPressed();
-            }
-        }
-
+        
         private void WrongButtonPressed()
         {
-            if (buttonsTimesPressed > 3)
-            {
-                Debug.Log("You've already completed the puzzle");
-                return;
-            }
-            else
+            if (!radioPuzzleFinished)
             {
                 buttonsTimesPressed = 0;
-                blueButtonPressed = yellowButtonPressed = greenButtonPressed = redButtonPressed = false;
+                blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
+            
                 // Play SFX
-                //audioSource.clip = wrongButtonSFX;
-                //audioSource.Play();
-                Debug.Log("Wrong button pressed.");
+                if (!isPlaying)
+                {
+                    isPlaying = true;
+                    audioSource.clip = wrongSFX;
+                    audioSource.Play();
+                    Debug.Log("Wrong button pressed.");
+                    StartCoroutine(BoolPlayingDelay(audioSource.clip.length));
+                }
             }
         }
+
+        // Changes the boolean "isPlaying" as false after the audio stops playing so it doesn't play a SFX
+        // every frame the button is pressed.
+        private IEnumerator BoolPlayingDelay(float delayDurationSfx)
+        {
+            yield return new WaitForSeconds(delayDurationSfx);
+            isPlaying = false;
+        } 
+        
         
         private void PuzzleCompleted()
         {
             //Instantiate(winParticleFX, transform);
             Debug.Log("PUZZLE COMPLETED.");
+            radioPuzzleFinished = true;
             
             // Play SFX
+            audioSource.clip = winSFX;
+            audioSource.Play();
         }
 
 
         #region Button Related Scripts
         public void BlueButtonPressed()
         {
-            // If this was the first button to be pressed, go to the next step.
-            if (buttonsTimesPressed == 0)
+            if (!blueButtonTapped & !radioPuzzleFinished)
             {
-                buttonsTimesPressed++;
-                blueButtonPressed = true; // For Debug purposes.
+                blueButtonTapped = true;
                 
-                // Play SFX
-                //audioSource.clip = blueButtonSFX;
-                //audioSource.Play();
+                // If this was the first button to be pressed, go to the next step.
+                if (buttonsTimesPressed == 0)
+                {
+                    buttonsTimesPressed++;
+                
+                    // Play SFX
+                    audioSource.clip = blueButtonSFX;
+                    audioSource.Play();
+                }
+                else WrongButtonPressed();
             }
-            else WrongButtonPressed();
+
         }
 
         public void YellowButtonPressed()
         {
-            if (buttonsTimesPressed == 1)
+            if (!yellowButtonTapped & !radioPuzzleFinished)
             {
-                buttonsTimesPressed++;
-                yellowButtonPressed = true; // For Debug purposes.
+                yellowButtonTapped = true;
                 
-                // Play SFX
-                //audioSource.clip = yellowButtonSFX;
-                //audioSource.Play();
+                // If this was the second button to be pressed, go to the next step.
+                if (buttonsTimesPressed == 1)
+                {
+                    buttonsTimesPressed++;
+                
+                    // Play SFX
+                    audioSource.clip = yellowButtonSFX;
+                    audioSource.Play();
+                }
+                else WrongButtonPressed();
+
             }
-            else WrongButtonPressed();
+
         }
     
         public void GreenButtonPressed()
         {
-            if (buttonsTimesPressed == 2)
+            if (!greenButtonTapped & !radioPuzzleFinished)
             {
-                buttonsTimesPressed++;
-                greenButtonPressed = true; // For Debug purposes.
+                greenButtonTapped = true;
                 
-                // Play SFX
-                //audioSource.clip = greenButtonSFX;
-                //audioSource.Play();
+                // If this was the third button to be pressed, go to the next step.
+                if (buttonsTimesPressed == 2)
+                {
+                    buttonsTimesPressed++;
+                
+                    // Play SFX
+                    audioSource.clip = greenButtonSFX;
+                    audioSource.Play();
+                }
+                else WrongButtonPressed();
+
             }
-            else WrongButtonPressed();
+
         } 
     
         public void RedButtonPressed()
         {
-            if (buttonsTimesPressed == 3)
+            if (!redButtonTapped & !radioPuzzleFinished)
             {
-                buttonsTimesPressed++;
-                redButtonPressed = true; // For Debug purposes.
+                redButtonTapped = true;
                 
-                // Play SFX
-                //audioSource.clip = redButtonSFX;
-                //audioSource.Play();
+                // If this was the fourth button to be pressed, go to the next step.
+                if (buttonsTimesPressed == 3)
+                {
+                    buttonsTimesPressed++;
                 
-                PuzzleCompleted();
+                    // Play SFX
+                    audioSource.clip = redButtonSFX;
+                    audioSource.Play();
+                
+                    PuzzleCompleted();
+                }
+                else WrongButtonPressed();
+
             }
-            else WrongButtonPressed();
+
         }
         
+        #endregion
+
+        #region Debug Related Scripts
+
+        private void Update()
+        {
+            // Debug Input keys when not using VR.
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                Debug.Log("You pressed the BLUE button.");
+                BlueButtonPressed();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Debug.Log("You pressed the YELLOW button.");
+                YellowButtonPressed();  
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                Debug.Log("You pressed the GREEN button.");
+                GreenButtonPressed();
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("You pressed the RED button.");
+                RedButtonPressed();
+            }
+        }
+
         #endregion
 
     }
