@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6954774945557709049, guid: b060031edc20f9f46bcb358348df5284, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7083754007735440353, guid: b060031edc20f9f46bcb358348df5284, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3942,8 +3946,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whichWire: 
+  bluePass: 0
+  redPass: 0
+  yellowPass: 0
+  greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
+  timeIsUp: {fileID: 0}
 --- !u!1 &881232648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4092,6 +4101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdown: {fileID: 881232650}
+  holdCounting: 900
   bombChecker: 0
   bombOff: {fileID: 0}
 --- !u!1 &895205168
@@ -5382,6 +5392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verifyBomb: {fileID: 0}
+  colorBomb: {fileID: 0}
 --- !u!222 &1205602080
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5403,8 +5414,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whichWire: 
+  bluePass: 0
+  redPass: 0
+  yellowPass: 0
+  greenPass: 0
   bombHasBeenDefused: 0
   bombHasExploded: 0
+  timeIsUp: {fileID: 0}
 --- !u!114 &1205602083
 MonoBehaviour:
   m_ObjectHideFlags: 0
