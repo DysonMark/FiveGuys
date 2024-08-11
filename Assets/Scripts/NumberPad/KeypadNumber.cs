@@ -22,16 +22,13 @@ public class KeypadNumber : MonoBehaviour
         switch (index)
         {
             case 0:
-                print("Works");
                 sequence += 0;
                 displaycurrentSequence.text = sequence;
-                Debug.Log("Llama");
                 break;
             case 1:
                 sequence += 1;
                 displaycurrentSequence.text = sequence;
-                Debug.Log("Llama");
-
+                
                 break;
             case 2:
                 sequence += 2;

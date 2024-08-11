@@ -1,3 +1,5 @@
+using TMPro;
+using UnityEngine;
 
 public class NumberPad : MonoBehaviour
 {
