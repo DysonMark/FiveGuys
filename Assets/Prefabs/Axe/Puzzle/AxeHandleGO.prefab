@@ -331,7 +331,6 @@ MonoBehaviour:
   currentInteractor: {fileID: 0}
   currentState: 0
   hideHand: 0
-  moveObject: 1
   tweener: {fileID: 0}
 --- !u!54 &3365644646331475543
 Rigidbody:
@@ -377,7 +376,7 @@ MonoBehaviour:
   radius: 0.03
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2097152
   notSocketable: 0
   socket: {fileID: 0}
 --- !u!1 &8141283714934017152

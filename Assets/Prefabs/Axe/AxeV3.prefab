@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 3178108777310495044}
   - component: {fileID: 5608050769283716221}
   - component: {fileID: 4191276188281921532}
+  - component: {fileID: 4314320518016070587}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -147,6 +148,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4314320518016070587
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497205085420748204}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.067692764, y: 0.17329368, z: 1.0639395}
+  m_Center: {x: -0.00063211366, y: -0.019938985, z: 0.5381337}
 --- !u!1 &7512053428594586178
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +328,6 @@ MonoBehaviour:
   currentInteractor: {fileID: 0}
   currentState: 0
   hideHand: 0
-  moveObject: 1
   tweener: {fileID: 0}
 --- !u!1 &7902330823150616189
 GameObject:
@@ -319,6 +340,7 @@ GameObject:
   - component: {fileID: 6863929442238934836}
   - component: {fileID: 4588575833642189878}
   - component: {fileID: 2172605044327624377}
+  - component: {fileID: 59592485993742925}
   m_Layer: 0
   m_Name: Metal
   m_TagString: Untagged
@@ -391,3 +413,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &59592485993742925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902330823150616189}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07956641, y: 0.4984582, z: 0.3837142}
+  m_Center: {x: -0.000000005587935, y: 0.1345612, z: 0.92590904}
