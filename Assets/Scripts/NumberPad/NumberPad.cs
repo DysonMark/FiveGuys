@@ -1,11 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-using UnityEngine.Events;
-using Random = UnityEngine.Random;
-
+/*
 public class NumberPad : MonoBehaviour
 {
 
@@ -45,3 +38,4 @@ public class NumberPad : MonoBehaviour
         Keydisplay4.text = Digit4.ToString();
     }
 }
+*/
