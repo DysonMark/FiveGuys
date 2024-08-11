@@ -1,4 +1,4 @@
-/*
+
 public class NumberPad : MonoBehaviour
 {
 
@@ -38,4 +38,3 @@ public class NumberPad : MonoBehaviour
         Keydisplay4.text = Digit4.ToString();
     }
 }
-*/

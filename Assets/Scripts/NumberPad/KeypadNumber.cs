@@ -6,7 +6,6 @@ using TMPro;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.Events;
-/*
 public class KeypadNumber : MonoBehaviour
 {
     //To show the Sequence when entered by the player
@@ -92,4 +91,4 @@ public class KeypadNumber : MonoBehaviour
     {
         //Function for after completion of puzzle 
     }
-}*/
+}
