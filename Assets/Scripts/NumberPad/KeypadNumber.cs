@@ -17,6 +17,9 @@ public class KeypadNumber : MonoBehaviour
     //Variables for the sequences 
     public string sequence;
 
+    //Function for the number pressed by the player using case switch
+    //Every digit has a case where the number gets added to sequence and gets displayed on the keypad
+    //When enter is called Sequencechecker function is called
     public void NumberPressed(int index)
     {
         switch (index)
@@ -68,6 +71,7 @@ public class KeypadNumber : MonoBehaviour
         }
     }
     
+    //Function to Check the sequence entered by the player
     public void SequenceChecker()
     {
         if (numberPad.CorrectSequence == sequence)
