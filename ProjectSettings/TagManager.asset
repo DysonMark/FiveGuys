@@ -12,6 +12,7 @@ TagManager:
   - YellowWire
   - BlueWire
   - GreenWire
+  - Plank
   layers:
   - Default
   - TransparentFX
