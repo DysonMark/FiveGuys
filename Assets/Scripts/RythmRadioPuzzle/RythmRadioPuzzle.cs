@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Palmmedia.ReportGenerator.Core.Parser.Analysis;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 
@@ -27,6 +29,7 @@ namespace Leonardo.RythmRadioPuzzle
         [SerializeField] private GameObject winParticleFX;
         
         //----------------------------------------------------------------------------------------------------------------
+        public UnityEvent radioPuzzleCompletionEvent;
         public bool radioPuzzleFinished;        // Activates when the puzzle is completed.
             
         [SerializeField] private int buttonsTimesPressed = 0; // Counter of the times the buttons were pressed.
@@ -71,6 +74,7 @@ namespace Leonardo.RythmRadioPuzzle
             //Instantiate(winParticleFX, transform);
             Debug.Log("PUZZLE COMPLETED.");
             radioPuzzleFinished = true;
+            radioPuzzleCompletionEvent.Invoke();
             
             // Play SFX
             audioSource.clip = winSFX;
@@ -193,6 +197,11 @@ namespace Leonardo.RythmRadioPuzzle
             }
         }
 
+        public void TestMethod()
+        {
+            Debug.Log("Radio_Puzzle: Test method activated.");
+        }
+        
         #endregion
 
     }
