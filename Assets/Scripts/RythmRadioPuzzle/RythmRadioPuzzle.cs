@@ -61,7 +61,7 @@ namespace Leonardo.RythmRadioPuzzle
         }
 
         // Changes the boolean "isPlaying" as false after the audio stops playing so it doesn't play a SFX
-        // every frame the button is pressed.
+        // every frame the button is being pressed.
         private IEnumerator BoolPlayingDelay(float delayDurationSfx)
         {
             yield return new WaitForSeconds(delayDurationSfx);
