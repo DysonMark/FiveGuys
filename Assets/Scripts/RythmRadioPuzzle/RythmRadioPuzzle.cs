@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Palmmedia.ReportGenerator.Core.Parser.Analysis;
+using Unity.VisualScripting;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -26,6 +29,9 @@ namespace Leonardo.RythmRadioPuzzle
         private bool isPlaying;
         
         // Visual effects
+        [SerializeField] private GameObject blueButtonBase, greenButtonBase, redButtonBase, yellowButtonBase;
+        private Renderer blueButtonRend, greenButtonRend, redButtonRend, yellowButtonRend;
+        [SerializeField] private Material inactiveMaterial, activeMaterial;
         [SerializeField] private GameObject winParticleFX;
         
         //----------------------------------------------------------------------------------------------------------------
@@ -33,20 +39,31 @@ namespace Leonardo.RythmRadioPuzzle
         public bool radioPuzzleFinished;        // Activates when the puzzle is completed.
             
         [SerializeField] private int buttonsTimesPressed = 0; // Counter of the times the buttons were pressed.
+        //----------------------------------------------------------------------------------------------------------------
+
+        private List<string> correctSequence = new List<string> {"Blue", "Yellow", "Green", "Red"};
+        private List<string> playerSequence = new List<string>();
         
         private void Start()
         {
+            blueButtonRend = blueButtonBase.GetComponent<Renderer>();
+            greenButtonRend = greenButtonBase.GetComponent<Renderer>();
+            redButtonRend = redButtonBase.GetComponent<Renderer>();
+            yellowButtonRend = yellowButtonBase.GetComponent<Renderer>();
+            
             radioPuzzleFinished = false;
             isPlaying = false;
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
         
-        private void WrongButtonPressed()
+        private void RestartPuzzle()
         {
             if (!radioPuzzleFinished)
             {
+                playerSequence.Clear();
                 buttonsTimesPressed = 0;
                 blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
+                blueButtonRend.material = greenButtonRend.material = redButtonRend.material = yellowButtonRend.material = inactiveMaterial;
             
                 // Play SFX
                 if (!isPlaying)
@@ -59,21 +76,10 @@ namespace Leonardo.RythmRadioPuzzle
                 }
             }
         }
-
-        // Changes the boolean "isPlaying" as false after the audio stops playing so it doesn't play a SFX
-        // every frame the button is pressed.
-        private IEnumerator BoolPlayingDelay(float delayDurationSfx)
-        {
-            yield return new WaitForSeconds(delayDurationSfx);
-            isPlaying = false;
-        } 
-        
-        
         private void PuzzleCompleted()
         {
             //Instantiate(winParticleFX, transform);
             Debug.Log("PUZZLE COMPLETED.");
-            radioPuzzleFinished = true;
             radioPuzzleCompletionEvent.Invoke();
             
             // Play SFX
@@ -81,24 +87,35 @@ namespace Leonardo.RythmRadioPuzzle
             audioSource.Play();
         }
 
+        // Changes the boolean "isPlaying" as false after the audio stops playing so it doesn't play a SFX
+        // every frame the button is being pressed.
+        private IEnumerator BoolPlayingDelay(float delayDurationSfx)
+        {
+            yield return new WaitForSeconds(delayDurationSfx);
+            isPlaying = false;
+        } 
+        
+        
+
 
         #region Button Related Scripts
         public void BlueButtonPressed()
         {
             if (!blueButtonTapped & !radioPuzzleFinished)
             {
+                // Play SFX.
+                audioSource.clip = blueButtonSFX;
+                audioSource.Play();
+                
+                // Change bool so this function only happens as a trigger.
                 blueButtonTapped = true;
                 
-                // If this was the first button to be pressed, go to the next step.
-                if (buttonsTimesPressed == 0)
-                {
-                    buttonsTimesPressed++;
+                // Add this button being pressed to the player list sequence.
+                playerSequence.Add("Blue");
                 
-                    // Play SFX
-                    audioSource.clip = blueButtonSFX;
-                    audioSource.Play();
-                }
-                else WrongButtonPressed();
+                // Change to shiny material.
+                blueButtonRend.material = activeMaterial;
+
             }
 
         }
@@ -107,19 +124,18 @@ namespace Leonardo.RythmRadioPuzzle
         {
             if (!yellowButtonTapped & !radioPuzzleFinished)
             {
+                // Play SFX.
+                audioSource.clip = yellowButtonSFX;
+                audioSource.Play();
+
+                // Change bool so this function only happens as a trigger.
                 yellowButtonTapped = true;
                 
-                // If this was the second button to be pressed, go to the next step.
-                if (buttonsTimesPressed == 1)
-                {
-                    buttonsTimesPressed++;
+                // Add this button being pressed to the player list sequence.
+                playerSequence.Add("Yellow");
                 
-                    // Play SFX
-                    audioSource.clip = yellowButtonSFX;
-                    audioSource.Play();
-                }
-                else WrongButtonPressed();
-
+                // Change to shiny material.
+                yellowButtonRend.material = activeMaterial;
             }
 
         }
@@ -128,19 +144,19 @@ namespace Leonardo.RythmRadioPuzzle
         {
             if (!greenButtonTapped & !radioPuzzleFinished)
             {
+                // Play SFX.
+                audioSource.clip = greenButtonSFX;
+                audioSource.Play();
+
+                // Change bool so this function only happens as a trigger.
                 greenButtonTapped = true;
                 
-                // If this was the third button to be pressed, go to the next step.
-                if (buttonsTimesPressed == 2)
-                {
-                    buttonsTimesPressed++;
+                // Add this button being pressed to the player list sequence.
+                playerSequence.Add("Green");
                 
-                    // Play SFX
-                    audioSource.clip = greenButtonSFX;
-                    audioSource.Play();
-                }
-                else WrongButtonPressed();
-
+                // Change to shiny material.
+                greenButtonRend.material = activeMaterial;
+                
             }
 
         } 
@@ -149,23 +165,37 @@ namespace Leonardo.RythmRadioPuzzle
         {
             if (!redButtonTapped & !radioPuzzleFinished)
             {
+                // Play SFX.
+                audioSource.clip = redButtonSFX;
+                audioSource.Play();
+
+                // Change bool so this function only happens as a trigger.
                 redButtonTapped = true;
                 
-                // If this was the fourth button to be pressed, go to the next step.
-                if (buttonsTimesPressed == 3)
-                {
-                    buttonsTimesPressed++;
+                // Add this button being pressed to the player list sequence.
+                playerSequence.Add("Red");
                 
-                    // Play SFX
-                    audioSource.clip = redButtonSFX;
-                    audioSource.Play();
-                
-                    PuzzleCompleted();
-                }
-                else WrongButtonPressed();
-
+                // Change to shiny material.
+                redButtonRend.material = activeMaterial;
             }
+        }
 
+        private void CheckPlayerInput()
+        {
+            if (playerSequence.Count == correctSequence.Count)
+            {
+                if (!radioPuzzleFinished && playerSequence.SequenceEqual(correctSequence))
+                {
+                    PuzzleCompleted();
+                    radioPuzzleFinished = true;
+                    Debug.Log("Radio_Puzzle: The player inserted the correct sequence");
+                }
+                else if (!radioPuzzleFinished)
+                {
+                    RestartPuzzle();
+                    Debug.Log("The player inserted the INCORRECT sequence.");
+                }
+            }
         }
         
         #endregion
@@ -174,32 +204,34 @@ namespace Leonardo.RythmRadioPuzzle
 
         private void Update()
         {
-            // Debug Input keys when not using VR.
+            CheckPlayerInput();
+            NonVRDebugMethod();
+        }
+
+        // Debug Input keys when not using VR.
+
+        private void NonVRDebugMethod()
+        {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                Debug.Log("You pressed the BLUE button.");
+                Debug.Log("Radio_Puzzle: You pressed the BLUE button.");
                 BlueButtonPressed();
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
-                Debug.Log("You pressed the YELLOW button.");
+                Debug.Log("Radio_Puzzle: You pressed the YELLOW button.");
                 YellowButtonPressed();  
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                Debug.Log("You pressed the GREEN button.");
+                Debug.Log("Radio_Puzzle: You pressed the GREEN button.");
                 GreenButtonPressed();
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Debug.Log("You pressed the RED button.");
+                Debug.Log("Radio_Puzzle: You pressed the RED button.");
                 RedButtonPressed();
             }
-        }
-
-        public void TestMethod()
-        {
-            Debug.Log("Radio_Puzzle: Test method activated.");
         }
         
         #endregion
