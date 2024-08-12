@@ -2,7 +2,6 @@ using Kandooz.ScriptableSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditorInternal.ReorderableList;
 
 namespace JW.FiveGuys.Flow
 {
