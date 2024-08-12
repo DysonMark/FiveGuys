@@ -16,7 +16,7 @@ namespace JW.FiveGuys.LightMoth
         [SerializeField] private Vector3 rayDirection = Vector3.forward;
         [SerializeField] private Vector3 rayOffset = Vector3.zero;
         [SerializeField] private AdvancedVector3 rayPoint;
-        [SerializeField] private bool isOn = false;
+        [SerializeField] public bool isOn = false;
         
         // Actual light Game Object.
         [SerializeField] private GameObject lightEmission;
