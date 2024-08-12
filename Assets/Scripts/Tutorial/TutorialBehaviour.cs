@@ -25,6 +25,8 @@ namespace SAE.FiveGuys.Tutorial
         public int i = 0;
 
         public TutorialVoice valueOfY;
+
+        [SerializeField] private GameObject cameraRigPos;
         // Start is called before the first frame update
         private void Start()
         {
@@ -40,6 +42,10 @@ namespace SAE.FiveGuys.Tutorial
             }
             ObjectHasBeenGrab();
             ToTheNextScene();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                cameraRigPos.transform.position = transform.position + new Vector3(0, 0, 0);
+            }
         }
 
         public void OnTriggerEnter(Collider other)
