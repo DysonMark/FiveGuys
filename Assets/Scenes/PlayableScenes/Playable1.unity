@@ -38145,8 +38145,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whichWire: 
+  bluePass: 0
+  redPass: 0
+  yellowPass: 0
+  greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   bombHasExploded: 0
+  timeIsUp: {fileID: 0}
 --- !u!1 &881232648
 GameObject:
   m_ObjectHideFlags: 0
@@ -38295,6 +38303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdown: {fileID: 881232650}
+  holdCounting: 900
   bombChecker: 0
   bombOff: {fileID: 1205602081}
 --- !u!1 &882178113
@@ -46058,6 +46067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verifyBomb: {fileID: 881232652}
+  colorBomb: {fileID: 0}
 --- !u!222 &1205602080
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46079,8 +46089,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whichWire: 
+  bluePass: 0
+  redPass: 0
+  yellowPass: 0
+  greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 431462108}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   bombHasExploded: 0
+  timeIsUp: {fileID: 0}
 --- !u!114 &1205602083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48913,6 +48943,10 @@ PrefabInstance:
     - target: {fileID: 8407550250494192078, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: m_Name
       value: FlowGrid
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407550250494192078, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8731126718080241091, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: m_LocalScale.x

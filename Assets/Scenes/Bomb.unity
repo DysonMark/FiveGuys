@@ -2156,6 +2156,9 @@ MonoBehaviour:
   yellowPass: 0
   greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
 --- !u!1 &881232648
@@ -3417,6 +3420,9 @@ MonoBehaviour:
   yellowPass: 0
   greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
 --- !u!114 &1205602083
@@ -5893,6 +5899,9 @@ MonoBehaviour:
   yellowPass: 0
   greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
 --- !u!4 &686709048835824839
@@ -6704,6 +6713,9 @@ MonoBehaviour:
   yellowPass: 0
   greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
 --- !u!114 &2555253523638075117
@@ -7430,6 +7442,33 @@ MonoBehaviour:
   yellowPass: 0
   greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5194197332109870371}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: UnPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1716453112235353017}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   bombHasExploded: 0
   timeIsUp: {fileID: 3546069930354312783}
 --- !u!65 &4314320518507181591
@@ -7962,6 +8001,9 @@ MonoBehaviour:
   yellowPass: 0
   greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
 --- !u!4 &5456375756122196637
@@ -8399,6 +8441,9 @@ MonoBehaviour:
   yellowPass: 0
   greenPass: 0
   bombHasBeenDefused: 0
+  onSolved:
+    m_PersistentCalls:
+      m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
 --- !u!1 &6390087561693013752
