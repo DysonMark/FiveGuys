@@ -7,17 +7,11 @@ using TMPro;
 
 namespace JW.FiveGuys.Flow
 {
-    /// <summary>
-    /// Author: JW
-    /// Handle the controls for the Flow puzzle. There is a cursor that moves on the board by either speech or world space buttons.
-    /// The goal is to connect all the same color points to each other without the lines crossing (which the script physically won't allow). The script checks for a solve after a tile is moved by looking at all the tiles of type "point", return true if all are no longer "pathable" (ie. can't be drawn on)
-    /// When the puzzle is solved, onSolve event is invoked
-    /// </summary>
     public class FlowController : MonoBehaviour
     {
         [Header("Grid")]
         [SerializeField] private int varient = 0;
-        [SerializeField] private JW_L_GOVariable grid;
+        [SerializeField] private List<GameObject> grid = new List<GameObject>();
         [SerializeField] private GameObject cursor;
 
         [Header("Movement")]
@@ -31,6 +25,8 @@ namespace JW.FiveGuys.Flow
         [SerializeField] private bool isSolved = false;
         [SerializeField] private UnityEvent onSolve;
 
+        public List<GameObject> Grid { get { return grid; } set { grid = value; } }
+
         /// <summary>
         /// Checks all the tiles of type "end"
         /// </summary>
@@ -38,13 +34,18 @@ namespace JW.FiveGuys.Flow
         public bool CheckWin()
         {
             List<bool> endConditions = new List<bool>(); // Will conain all the current states of all the end tiles
-            foreach (var item in grid.Values) // Go through all the tiles
+            foreach (var item in grid) // Go through all the tiles
             {
                 TileController tile = item.GetComponent<TileController>(); // Get the tile information
                 if (tile.Type == TileController.TileType.point) endConditions.Add(tile.IsPathable); // Add the tile if it is an end type
             }
 
             return !endConditions.Contains(true); // Check if any of the tiles are still pathable, ie. not visited yet
+        }
+
+        public void TilePressed()
+        {
+            // 
         }
 
         /// <summary>
@@ -65,16 +66,15 @@ namespace JW.FiveGuys.Flow
                 }
 
                 // get the new position
-                Debug.Log("Position moved");
+                Debug.LogError("Position moved");
                 currentPosition += moveBy;
 
                 // get the tile in the new position
-                currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>();
+                currentTile = grid[GetIndex(currentPosition, 3)].GetComponent<TileController>();
 
                 // Update cursor position
                 cursor.transform.position = currentTile.transform.position;
 
-                // if we are drawing, draw the new tile's path so it connects with the previous tile's and update its varient (used to distinguish between the different colors so we can have multiple color lines)
                 if (isDrawing)
                 {
                     // Set it to our current varient
@@ -91,17 +91,6 @@ namespace JW.FiveGuys.Flow
             }
         }
 
-        /// <summary>
-        /// A function for easily controling the Flow puzzle through outside scripts by giving it a certain number to perform a certain action.
-        /// </summary>
-        /// <param name="index">
-        /// -2: Tries to toggle the cursor's state between drawing and not drawing\n
-        /// -1: Reset the grid to its starting state\n
-        /// 1: Move up\n
-        /// 2: Move right\n
-        /// 3: Move down\n
-        /// 4: Move left
-        /// </param>
         public void ButtonPressed(int index)
         {
             switch (index)
@@ -203,27 +192,26 @@ namespace JW.FiveGuys.Flow
             // Tile checks
             else
             {
-                if (isDrawing) // Only do this check for if we would draw onto the tile. This is so we can use the same function to limit the cursor's movement to the grid more easily
+                if (isDrawing)
                 {
-                    // Tile we would move to
-                    TileController checkTile = grid.Values[GetIndex(currentPosition + moveBy, 3)].GetComponent<TileController>(); 
+                    TileController checkTile = grid[GetIndex(currentPosition + moveBy, 3)].GetComponent<TileController>();
 
-                    if (checkTile == null) // Does the tile exist? If not, it is an invalid move
+                    if (checkTile == null) // Does the tile exist?
                     {
                         Debug.LogWarning("Tile does not exist");
                         return false;
                     }
-                    else // Yes it does! So check if it is full or allowed to be moved onto
+                    else // Yes it does
                     {
-                        if (!checkTile.IsPathable) // Is the tile "pathable" (ie. there is still room on the tile for a path to go through without making any kind of 3 way connections)
+                        if (!checkTile.IsPathable) // Is the tile full yet?
                         {
-                            // Is it a "point" type and with 1 or fewer paths on it (tiles are considered full or "unpathable" if they have 2 paths on them)
-                            if (checkTile.Type == TileController.TileType.point && checkTile.PathCount <= 1) 
+                            if (checkTile.Type == TileController.TileType.point && checkTile.PathCount <= 1) // Yes, but is it a start tile with 1 or fewer paths?
                             {
+                                // Report move as valid
                                 Debug.Log("Move is valid");
                                 return true;
                             }
-                            else // The tile is not a "point" tile and is full, so it is not a valid move
+                            else // No, so it is not valid
                             {
                                 Debug.LogWarning("Tile is not pathable");
                                 return false;
@@ -231,30 +219,28 @@ namespace JW.FiveGuys.Flow
                         }
                         else // Tile is pathable
                         {
-                            // Is the tile a different "varient" (color) and not a "wild card" (a varient of 0 is the default and means it is not set by anything so we should be allowed to draw on it and change its varient)
+                            // Tile varient is not 0 (0 is used as a default that can be changed, all the other numbers need to be the same to be a valid move)
                             if (checkTile.Varient != 0 && checkTile.Varient != varient)
                             {
                                 Debug.LogWarning("Tile is not a default varient or of the same varient");
                                 return false;
                             }
-                            else // Tile is the same varient or 0
+                            else
                             {
+                                // Report move as valid
                                 Debug.Log("Move is valid");
                                 return true;
                             }
                         }
                     }
                 }
-                else // We are not drawing so we don't care what tile we move onto, just whether we stay in bounds.
+                else
                 {
-                    return true; 
+                    return true; // We don't check for tile validity when drawing so we just say it would work
                 }
             }
         }
 
-        /// <summary>
-        /// Handles toggling the cursor between drawing and not drawing as it moves. The cursor can only toggle if it is on a point tile, in which case it will also start drawing with that tile's varient
-        /// </summary>
         private void ToggleCursor()
         {
             if (currentTile.Type == TileController.TileType.point)
@@ -262,8 +248,11 @@ namespace JW.FiveGuys.Flow
                 isDrawing = !isDrawing;
                 varient = currentTile.Varient;
             }
+            else
+            {
+                isDrawing = false;
+            }
             
-            // Update the world space button's text to our current drawing state
             if (isDrawing)
             {
                 drawingButton.text = "Drawing";
@@ -274,16 +263,12 @@ namespace JW.FiveGuys.Flow
             }
         }
 
-        /// <summary>
-        /// Used for setting the controller's default values that will be used when reseting.
-        /// </summary>
         private void SetDefaults()
         {
-            // Set the current position as the default
-            startPosition = currentPosition; 
+            startPosition = currentPosition; // Set the current position as the default
 
             // Set the current tile to the one at the current position
-            currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>();
+            currentTile = grid[GetIndex(currentPosition, 3)].GetComponent<TileController>();
 
             // Set cursor position to current tile
             cursor.transform.position = currentTile.transform.position;
@@ -293,25 +278,19 @@ namespace JW.FiveGuys.Flow
             ToggleCursor();
         }
 
-        /// <summary>
-        /// Set all the values to their default we set at the start
-        /// </summary>
         private void ResetToDefaults()
         {
             if (isSolved) return; // Don't allow reseting the puzzle once it is solved
 
-            // Reset the cursor position to what we started at
-            currentPosition = startPosition;
+            currentPosition = startPosition; // Reset the cursor position to what we started at
 
-            // Go through all the tiles and reset them to their defaults
-            foreach (var item in grid.Values) 
+            foreach (var item in grid   ) // Go through all the tiles and reset them to their defaults
             {
                 TileController tile = item.GetComponent<TileController>();
                 tile.SetToDefaults();
             }
 
-            // Set the current tile back to the one we are now currently on
-            currentTile = grid.Values[GetIndex(currentPosition, 3)].GetComponent<TileController>(); 
+            currentTile = grid[GetIndex(currentPosition, 3)].GetComponent<TileController>(); // Set the current tile back to the one we are now currently on
 
             // Reset cursor position to the starting tile
             cursor.transform.position = currentTile.transform.position;
@@ -319,13 +298,12 @@ namespace JW.FiveGuys.Flow
 
         private void OnEnable()
         {
-            SetDefaults(); // Set the default values when this puzzle is first enabled
+            SetDefaults();
         }
 
         // Update is called once per frame
         void Update()
         {
-            // Debug keyboard inputs for moving around, reseting, and toggling the cursor draw state
             if (Input.GetKeyDown(KeyCode.W))
             {
                 MovePosition(new Vector2Int(0, 1));

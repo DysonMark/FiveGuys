@@ -3,72 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Text;
-using UnityEngine.Windows.Speech;
 using UnityEngine.Events;
-using Unity.Collections;
+using Oculus.Voice;
+using System.ComponentModel;
 
 namespace JW.FiveGuys.Flow
 {
-    /// <summary>
-    /// Author: JW
-    /// A script for recognising speech phrases in order to control the Flow puzzle's cursor.
-    /// NOTE: This script needs to be on the same GameObject as the FlowController in order to work
-    /// </summary>
     public class FlowSpeechController : MonoBehaviour
     {
-        [SerializeField] [ReadOnly] private string[] keywords = new string[] {
-            "Up",
-            "Right",
-            "Down",
-            "Left",
-            "Reset",
-            "Draw"
-        };
-        [SerializeField] private FlowController controller;
-        private KeywordRecognizer recognizer;
+        [SerializeField] private KeyCode activateOn = KeyCode.Space;
+        [SerializeField] private AppVoiceExperience voiceControll;
+        [SerializeField][ReadOnly(true)] private bool isActive = false;
+
 
         // Start is called before the first frame update
-        void Start()
+        void Update()
         {
-            controller = GetComponent<FlowController>();
+            if (Input.GetAxis("XRI_Right_PrimaryButton") <= 1)
+            {
+                isActive = false;
+            }
 
-            // Initialize the speech recognition system
-            recognizer = new KeywordRecognizer(keywords);
-            recognizer.OnPhraseRecognized += OnPhraseRecognized;
-            recognizer.Start();
+            if (Input.GetKeyUp(activateOn) || Input.GetAxis("XRI_Right_PrimaryButton") >= 1)
+            {
+                Debug.Log("hello");
+                if (!isActive)
+                {
+                    voiceControll.Activate();
+                    isActive = true;
+                }
+            }
         }
 
-        /// <summary>
-        /// Gets called when the system recognises one of the keywords we set. It then simulates that button being pressed
-        /// </summary>
-        /// <param name="args"></param>
-        private void OnPhraseRecognized(PhraseRecognizedEventArgs args)
+        public void DoVoice()
         {
-            Debug.Log(args.text);
-
-            switch (args.text)
-            {
-                case "Up":
-                    controller.ButtonPressed(1);
-                    break;
-                case "Right":
-                    controller.ButtonPressed(2);
-                    break;
-                case "Down":
-                    controller.ButtonPressed(3);
-                    break;
-                case "Left":
-                    controller.ButtonPressed(4);
-                    break;
-                case "Reset":
-                    controller.ButtonPressed(-1);
-                    break;
-                case "Draw":
-                    controller.ButtonPressed(-2);
-                    break;
-                default:
-                    break;
-            }
+            voiceControll.Activate();
         }
     } 
 }

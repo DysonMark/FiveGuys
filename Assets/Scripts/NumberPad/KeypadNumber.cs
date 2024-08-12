@@ -1,58 +1,101 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class KeypadNumber : MonoBehaviour
 {
-    private int Digit1;
-    private int Digit2;
-    private int Digit3;
-    private int Digit4;
+    //To show the Sequence when entered by the player
+    [SerializeField] private TMP_Text displaycurrentSequence;
 
-    public TMP_Text Keydisplay1;
-    public TMP_Text Keydisplay2;
-    public TMP_Text Keydisplay3;
-    public TMP_Text Keydisplay4;
+    //To access the NumberPad script
+    public NumberPad numberPad;
+    
+    //Variables for the sequences 
+    public string sequence;
 
-    public List<int> correctSequence = new List<int>();
-    public List<int> currentSequence = new List<int>();
-    void Start()
+    [SerializeField] private UnityEvent OnSolve;
+
+    public void NumberPressed(int index)
     {
-        //Sequence Generator
-        Digit1 = Random.Range(0, 10);
-        Digit2 = Random.Range(0, 10);
-        Digit3 = Random.Range(0, 10);
-        Digit4 = Random.Range(0, 10);
-        //Adding the digits to the correct sequence
-        correctSequence[0] = Digit1;
-        correctSequence[1] = Digit2;
-        correctSequence[2] = Digit3;
-        correctSequence[3] = Digit4;
-        //Displaying of digits
-        Keydisplay1.text = Digit1.ToString();
-        Keydisplay2.text = Digit2.ToString();
-        Keydisplay3.text = Digit3.ToString();
-        Keydisplay4.text = Digit4.ToString();
-    }   
-    void Update()
-    {
-
-    }
-
-    public void NumberPressed(int number)
-    {
-        currentSequence.Add(number);
-        if (currentSequence.Count > 3) 
+        switch (index)
         {
-            Enumerable.SequenceEqual(correctSequence, currentSequence);
+            case 0:
+                print("Works");
+                sequence += 0;
+                displaycurrentSequence.text = sequence;
+                Debug.Log("Llama");
+                break;
+            case 1:
+                sequence += 1;
+                displaycurrentSequence.text = sequence;
+                Debug.Log("Llama");
+
+                break;
+            case 2:
+                sequence += 2;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 3:
+                sequence += 3;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 4:
+                sequence += 4;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 5:
+                sequence += 5;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 6:
+                sequence += 6;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 7:
+                sequence += 7;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 8:
+                sequence += 8;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 9:
+                sequence += 9;
+                displaycurrentSequence.text = sequence;
+                break;
+            case 10:
+                SequenceChecker();
+                break;
+        }
+    }
+    
+    public void SequenceChecker()
+    {
+        //Win condition for the game 
+        if (numberPad.CorrectSequence == sequence)
+        {
+            displaycurrentSequence.text = ("Access Granted");
+            OnSolved();
         }
         else
         {
-            currentSequence.Clear();
+            //if the sequence is wrong, it clears the numbers and the player can enter a new sequence 
+            displaycurrentSequence.text = ("Access Denied");
+            sequence = string.Empty;
         }
         
+    }
+
+    /// <summary>
+    /// Function for after completion of puzzle 
+    /// </summary>
+    public void OnSolved()
+    {
+        if (OnSolve != null) { OnSolve?.Invoke(); }
     }
 }

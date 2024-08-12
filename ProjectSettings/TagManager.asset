@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Anchor
   - FlowTile
+  - Wires
+  - Cut
+  - RedWire
+  - YellowWire
+  - BlueWire
+  - GreenWire
+  - Plank
   layers:
   - Default
   - TransparentFX
@@ -21,7 +28,7 @@ TagManager:
   - 
   - FlashLightSockets
   - 
-  - 
+  - Invisible
   - 
   - 
   - 
@@ -30,7 +37,7 @@ TagManager:
   - 
   - AxeHandleSocket
   - AxeHeadSocket
-  - 
+  - AxeCompletedSocket
   - 
   - 
   - 
