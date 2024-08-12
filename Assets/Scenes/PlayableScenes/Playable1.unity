@@ -3895,6 +3895,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178922762}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &186070599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1472925055393928840, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+  m_PrefabInstance: {fileID: 1268692744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &186124534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7560,6 +7565,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &368527145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4665078616572683784, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+  m_PrefabInstance: {fileID: 1268692744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &375969241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20658,6 +20668,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895205168}
   m_CullTransparentMesh: 1
+--- !u!1 &901466075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7204142117165793164, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+  m_PrefabInstance: {fileID: 1268692744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &904790919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22077,6 +22092,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8de661310a30e1644aa9a8b3f7959bc4, type: 3}
   m_PrefabInstance: {fileID: 966652553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &970260783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7456094967467095878, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+  m_PrefabInstance: {fileID: 1268692744}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &970921125
 GameObject:
@@ -28480,6 +28500,30 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8344780649612765345, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+      propertyPath: redButtonBase
+      value: 
+      objectReference: {fileID: 970260783}
+    - target: {fileID: 8344780649612765345, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+      propertyPath: activeMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3232ef30c9b4c1342bea78b6942725c2, type: 2}
+    - target: {fileID: 8344780649612765345, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+      propertyPath: blueButtonBase
+      value: 
+      objectReference: {fileID: 186070599}
+    - target: {fileID: 8344780649612765345, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+      propertyPath: greenButtonBase
+      value: 
+      objectReference: {fileID: 901466075}
+    - target: {fileID: 8344780649612765345, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+      propertyPath: inactiveMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: cc9277d58efeaa84c85f048139616f41, type: 2}
+    - target: {fileID: 8344780649612765345, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
+      propertyPath: yellowButtonBase
+      value: 
+      objectReference: {fileID: 368527145}
     - target: {fileID: 8344780649612765345, guid: 4c05c9fd1bd82e042be90a78b9ec220c, type: 3}
       propertyPath: radioPuzzleCompletionEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
