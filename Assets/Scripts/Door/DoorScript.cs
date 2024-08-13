@@ -7,7 +7,7 @@ public class DoorScript : MonoBehaviour
 
     //summary: This script checks if any gameobject enters the box collider. If it does, it rotates the door to give access to the next room 
 
-    [SerializeField] public bool isOpened; //
+    [SerializeField] public bool isOpened; //bool value used for opening the door
     [SerializeField] public float turningSpeed; //determines how fast the door opens
     
     void Update()

@@ -12,6 +12,6 @@ public class RotatingMesh : MonoBehaviour
     
     void Update()
     {
-        transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime); //rotates the gameobject around the y-axis overtime
+        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime); //rotates the gameobject around the y-axis overtime
     }
 }
