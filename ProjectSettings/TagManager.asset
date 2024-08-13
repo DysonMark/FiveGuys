@@ -12,6 +12,9 @@ TagManager:
   - YellowWire
   - BlueWire
   - GreenWire
+  - Button
+  - TutorialGrab
+  - Tutorial
   layers:
   - Default
   - TransparentFX

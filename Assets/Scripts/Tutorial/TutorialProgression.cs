@@ -11,6 +11,8 @@ public class TutorialProgression : MonoBehaviour
     private double vectorY = 1.50;
 
     private double vectorZ = -91.50;
+
+    private double vectorZFlashlight = 0.03;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +22,15 @@ public class TutorialProgression : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        ToNextTask();
+    { 
+        //ToNextTask();
     }
     
     private void ToNextTask()
     {
         if (activateFlash.isOn == true)
         {
-            cameraRigPos.transform.position = transform.position + new Vector3(0, 0, 0);
+            cameraRigPos.transform.position = new Vector3((transform.position.x + 2), transform.position.y, transform.position.z);
         }
     }
 }

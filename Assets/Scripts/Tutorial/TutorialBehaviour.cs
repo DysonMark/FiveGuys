@@ -61,7 +61,6 @@ namespace SAE.FiveGuys.Tutorial
 
         public void ObjectHasBeenGrab()
         {
-            Debug.Log("Object has been grabbed");
             if (i == 1)
             {
                 isObjectHasBeenGrab = true;

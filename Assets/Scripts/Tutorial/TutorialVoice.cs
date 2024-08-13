@@ -37,13 +37,10 @@ namespace SAE.FiveGuys.Tutorial
                 successfulTeleportation.Pause();
             }
             
-            Debug.Log("Object has been grab bool " + checkGrabbableObject.isObjectHasBeenGrab);
-            Debug.Log("Value of i: " + valueOfI.i);
             if (valueOfI.i == 1)
             {
                 endOfTutorial.UnPause();
                 y = 1;
-                Debug.Log("y = " + y);
             }
             else if (valueOfI.i == 0)
             {
