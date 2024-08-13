@@ -76,7 +76,6 @@ namespace SAE.FiveGuys.Tutorial
         {
             if (valueOfY.y == 1)
             {
-
                 timer -= Time.deltaTime;
                 if (timer <= 0f)
                 {
