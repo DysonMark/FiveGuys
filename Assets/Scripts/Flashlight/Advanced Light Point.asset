@@ -15,5 +15,5 @@ MonoBehaviour:
   clearOn: 3
   defaultOn: 3
   defaultClearFirst: 1
-  valuE: {x: 0, y: 0, z: 0}
-  defaults: {x: 0, y: 0, z: 0}
+  valuE: {x: 43, y: 0.2, z: -23}
+  defaults: {x: 43, y: 0.2, z: -23}
