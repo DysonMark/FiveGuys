@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace SAE.FiveGuys.Bomb
@@ -20,14 +21,15 @@ namespace SAE.FiveGuys.Bomb
         public bool greenPass = false;
 
         public bool bombHasBeenDefused = false;
-
+        [SerializeField] private UnityEvent onDiffused;
         public bool bombHasExploded;
         public BombCountdown timeIsUp;
         
         // Update is called once per frame
         void Update()
         {
-            DefuseOrNot();
+            // check diffuse if not diffused, not exploded
+            if (!bombHasExploded && !bombHasBeenDefused) { DefuseOrNot(); }
 
         }
         public void BlueWire()
@@ -96,6 +98,7 @@ namespace SAE.FiveGuys.Bomb
             if (bluePass == true && redPass == true && yellowPass == true && greenPass == true)
             {
                 bombHasBeenDefused = true;
+                if (onDiffused != null) { onDiffused?.Invoke(); }
             }
 
             if (timeIsUp.holdCounting <= 0)
