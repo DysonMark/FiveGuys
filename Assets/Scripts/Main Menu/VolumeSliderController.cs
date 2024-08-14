@@ -21,13 +21,9 @@ namespace Leonardo.MainMenu.VolumeSlider
         [SerializeField] private float maxSliderAmount = 100.0f;
         [SerializeField] private Slider volumeSlider;
         [SerializeField] private float changeRate; // The rate in which the value changes when the button is pressed
-        [SerializeField] private AudioClip volumeChangeSFX;
-        private AudioSource settingsAudioSource;
         
-        private void Start()
+        public void Start()
         {
-            settingsAudioSource = GetComponent<AudioSource>();
-            settingsAudioSource.clip = volumeChangeSFX;
             if (PlayerPrefs.HasKey("Volume"))
             {
                 SliderChange(PlayerPrefs.GetFloat("Volume"));
@@ -47,8 +43,6 @@ namespace Leonardo.MainMenu.VolumeSlider
             volumeSlider.value = Mathf.Clamp(volumeSlider.value + changeRate * Time.deltaTime, volumeSlider.minValue,
                 volumeSlider.maxValue);
             TransferVolumeParameters(volumeSlider.value);
-            // Play feedback sound to the player
-            settingsAudioSource.Play();
         }
 
         public void VolumeDown()
@@ -56,8 +50,6 @@ namespace Leonardo.MainMenu.VolumeSlider
             volumeSlider.value = Mathf.Clamp(volumeSlider.value - changeRate * Time.deltaTime, volumeSlider.minValue,
                 volumeSlider.maxValue);
             TransferVolumeParameters(volumeSlider.value);
-            // Play feedback sound to the player
-            settingsAudioSource.Play();
         }
 
         private void TransferVolumeParameters(float volumeValue)

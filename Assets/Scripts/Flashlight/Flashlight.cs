@@ -1,6 +1,7 @@
 using Kandooz.ScriptableSystem;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace JW.FiveGuys.LightMoth
@@ -16,7 +17,7 @@ namespace JW.FiveGuys.LightMoth
         [SerializeField] private Vector3 rayDirection = Vector3.forward;
         [SerializeField] private Vector3 rayOffset = Vector3.zero;
         [SerializeField] private AdvancedVector3 rayPoint;
-        [SerializeField] private bool isOn = false;
+        [SerializeField] public bool isOn = false;
         
         // Actual light Game Object.
         [SerializeField] private GameObject lightEmission;
@@ -50,14 +51,11 @@ namespace JW.FiveGuys.LightMoth
         {
             if (isOn)
             {
-
-                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.up, out RaycastHit hitInfo, rayDistance);
-
+                var lightHit = Physics.Raycast(transform.position + rayOffset, -transform.up, out RaycastHit hitInfo, rayDistance);
                 lightEmission.SetActive(isOn);
-                
                 if (lightHit)
-                {
-                    rayPoint.Value = hitInfo.point;
+              {
+                rayPoint.Value = hitInfo.point;
                 }
                 
             }
@@ -66,8 +64,8 @@ namespace JW.FiveGuys.LightMoth
                 lightEmission.SetActive(isOn);
             }
         }
-
         private void OnDrawGizmosSelected()
+
         {
             Debug.DrawRay(transform.position + rayOffset, transform.up, Color.red, rayDistance);
 
