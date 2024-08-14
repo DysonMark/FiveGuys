@@ -2290,8 +2290,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 4.1551476, y: 2.535141, z: 9.064457}
-  m_BoxOffset: {x: -0.020227432, y: 0.14908129, z: -0.99300003}
+  m_BoxSize: {x: 4.526882, y: 2.535141, z: 9.064457}
+  m_BoxOffset: {x: 0.055791855, y: 0.14908123, z: -0.99300003}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
@@ -5728,6 +5728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PinballMachineV1_WO_Glass
       objectReference: {fileID: 0}
+    - target: {fileID: 3838481135149993503, guid: 3fc3d5ff0909ae646976cfab7c018c06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4471747796694144165, guid: 3fc3d5ff0909ae646976cfab7c018c06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.793
@@ -8173,7 +8177,7 @@ Transform:
   m_GameObject: {fileID: 424951839}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 39.12, y: 1.5829995, z: -22.211}
+  m_LocalPosition: {x: 39.12, y: 1.757, z: -22.211}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17831,7 +17835,7 @@ Transform:
   m_GameObject: {fileID: 817731562}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 36.813, y: 1.5829995, z: -22.211}
+  m_LocalPosition: {x: 36.813, y: 1.766, z: -22.211}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21132,7 +21136,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 1e-45, z: 2.6353e-41, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1e-44, z: 4.685e-42, w: -1}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 10
@@ -25772,7 +25776,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 7.26e-43, y: -1295798, z: 7.26e-43, w: 1.72e-43}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.1e-44, z: 2.2324e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 10
@@ -28677,7 +28681,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.1e-44, z: 3.6e-42, w: 7.892e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -30867,6 +30871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArcadeMachineV4
       objectReference: {fileID: 0}
+    - target: {fileID: 542159291667134158, guid: 867e6bc493b0510469a23a5629a6ee06, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 922661420046183540, guid: 867e6bc493b0510469a23a5629a6ee06, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.049
@@ -31795,6 +31803,10 @@ PrefabInstance:
     - target: {fileID: 2972500299756645501, guid: 09c5e99668f3fd1458b27251bf645589, type: 3}
       propertyPath: m_Name
       value: ArcadeMachineV3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972500299756645501, guid: 09c5e99668f3fd1458b27251bf645589, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3621049364464733608, guid: 09c5e99668f3fd1458b27251bf645589, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -34801,7 +34813,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 4e-45, z: 3.519e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 10
@@ -37617,6 +37629,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b314b1c30a3755408c6be6cdba33eee, type: 2}
+    - target: {fileID: -7277717356915998559, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -7243650026484632240, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -37633,6 +37649,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b314b1c30a3755408c6be6cdba33eee, type: 2}
+    - target: {fileID: -4480395516627657400, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -4159284267488814358, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -2881893335311235522, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -37737,6 +37761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arc Bench
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1873538708712695172, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.09
@@ -37768,6 +37796,22 @@ PrefabInstance:
     - target: {fileID: 1873538708712695172, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109544213888945680, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3177320750974231958, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3453727664338341803, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3480455457213279879, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4153080428572826670, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -37805,6 +37849,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 4989741648538830735, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285168338325924386, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7054930020507984137, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.63
@@ -37841,6 +37893,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b314b1c30a3755408c6be6cdba33eee, type: 2}
+    - target: {fileID: 8066385649119414943, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8266729059000370591, guid: 4b81cad544461304c9ce8cbc1c6e7785, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -38450,7 +38506,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 3e-45, z: 4.654e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 10
@@ -38695,7 +38751,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1747125730
 Transform:
@@ -40858,6 +40914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ArcadeMachineV1
       objectReference: {fileID: 0}
+    - target: {fileID: 6478202514781454089, guid: 56c8dae64d3bec446853710a45df2cf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41800,6 +41860,10 @@ PrefabInstance:
     - target: {fileID: 6478202514781454089, guid: 56c8dae64d3bec446853710a45df2cf6, type: 3}
       propertyPath: m_Name
       value: ArcadeMachineV1_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478202514781454089, guid: 56c8dae64d3bec446853710a45df2cf6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44797,7 +44861,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1991269585
 Transform:
@@ -46985,7 +47049,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 8e-45, z: 2.134e-41, w: 4.591775e-39}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 10
@@ -48267,8 +48331,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 4.1551476, y: 2.535141, z: 6.7855587}
-  m_BoxOffset: {x: -0.020227432, y: 0.14908123, z: 0.14644909}
+  m_BoxSize: {x: 4.1551476, y: 2.535141, z: 7.5330486}
+  m_BoxOffset: {x: -0.020227432, y: 0.14908123, z: -0.22729588}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
