@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 namespace SAE.FiveGuys.GameOver
 {
     public class QuitOrRetry : MonoBehaviour
@@ -15,6 +15,7 @@ namespace SAE.FiveGuys.GameOver
         public void Retry()
         {
             Debug.Log("Player has retry");
+            SceneManager.LoadScene(1);
         }
 
     }
