@@ -482,9 +482,9 @@ InputManager:
     sensitivity: 1000
     snap: 0
     invert: 0
-    type: 0
-    axis: -1
-    joyNum: 0
+    type: 2
+    axis: 7
+    joyNum: 8
   - serializedVersion: 3
     m_Name: XRI_Right_GripButton
     descriptiveName: Device grip button
