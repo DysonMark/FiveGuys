@@ -18,8 +18,8 @@ public class GameOver : MonoBehaviour
     {
         if (dead.bombHasExploded == true)
         {
+            //Load GameOver scene
             SceneManager.LoadScene(2);
-            // Load first scene
         }
     }
 }
