@@ -4297,11 +4297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9019544231409511832, guid: 2c9e032b669634873a508e9115991b7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.12
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 9019544231409511832, guid: 2c9e032b669634873a508e9115991b7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.348
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 9019544231409511832, guid: 2c9e032b669634873a508e9115991b7c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6550,7 +6550,6 @@ MonoBehaviour:
   maxSliderAmount: 100
   volumeSlider: {fileID: 835414429}
   changeRate: 1
-  volumeChangeSFX: {fileID: 8300000, guid: 9ec99e4e348294f44a6b492cae9fd605, type: 3}
 --- !u!82 &1652513119
 AudioSource:
   m_ObjectHideFlags: 0
