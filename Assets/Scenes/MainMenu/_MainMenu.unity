@@ -175,7 +175,7 @@ MonoBehaviour:
   onSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 177015350}
+      - m_Target: {fileID: 88806063}
         m_TargetAssemblyTypeName: Leonardo.SceneChanger.NextScene, Assembly-CSharp
         m_MethodName: LoadNextScene
         m_Mode: 1
@@ -283,7 +283,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.0558447
+  m_Radius: 2.06
   m_Height: 2.1116896
   m_Direction: 1
   m_Center: {x: -0.14120445, y: -0.050000027, z: 0}
@@ -454,6 +454,7 @@ GameObject:
   - component: {fileID: 88806062}
   - component: {fileID: 88806061}
   - component: {fileID: 88806060}
+  - component: {fileID: 88806063}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -547,6 +548,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88806058}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &88806063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88806058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60068b7329460c040b8b611828e90edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndexToLoad: 1
 --- !u!1 &125454727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,17 +1053,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &177015350 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4786527411449265585, guid: 59bd8d07c458f434bb9bf6987d819c23, type: 3}
-  m_PrefabInstance: {fileID: 3737660316316840674}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60068b7329460c040b8b611828e90edf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &254679670
 GameObject:
   m_ObjectHideFlags: 0
