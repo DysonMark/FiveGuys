@@ -20,7 +20,7 @@ namespace SAE.FiveGuys.Bomb
 
         public bool greenPass = false;
 
-        public bool bombHasBeenDefused = false;
+        public bool bombHasBeenDefused = false; 
         [SerializeField] private UnityEvent onDiffused;
         public bool bombHasExploded;
         public BombCountdown timeIsUp;
