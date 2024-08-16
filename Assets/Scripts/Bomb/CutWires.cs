@@ -32,16 +32,18 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private GameObject greenWireTwo;
         [SerializeField] private GameObject greenWireThree;
         //public DefuseTheBomb newEvent;
-        public UnityEvent onUse;
+        //public UnityEvent onWireCut;
+        public CheckColliders checkEvent;
+        
         // Start is called before the first frame update
         void Start()
         {
-            onUse.AddListener(CutEachWires);
             skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
         }
 
-        void FixedUpdate()
+        void LateUpdate()
         {
+            CutEachWires();
         }
 
         public void CutEachWires()
@@ -52,6 +54,7 @@ namespace SAE.FiveGuys.Bomb
                 finisheditems.Add("RedWire");
                 pass.RedWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
+                //onWireCut.Invoke();
             }
 
             if (yellowColliderCheck.cutThisWire == true && yellowColliderCheck.gameObject.name == "Yellow_Wire_1")
@@ -59,6 +62,7 @@ namespace SAE.FiveGuys.Bomb
                 finisheditems.Add("YellowWire");
                 pass.YellowWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
+                //onWireCut.Invoke();
             }
 
             if (blueColliderCheckOne.cutThisWire == true && blueColliderCheckOne.gameObject.name == "Blue_Wire_1" ||
@@ -70,6 +74,9 @@ namespace SAE.FiveGuys.Bomb
                 finisheditems.Add("BlueWire");
                 pass.BlueWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
+                //checkEvent.onWireCut.Invoke();
+                //checkEvent.onWireCut.RemoveListener(CutEachWires);
+                // onWireCut.Invoke();
             }
 
             if (greenColliderCheckOne.cutThisWire == true && greenColliderCheckOne.gameObject.name == "Green_Wire" ||
@@ -80,8 +87,8 @@ namespace SAE.FiveGuys.Bomb
                 finisheditems.Add("GreenWire");
                 pass.GreenWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
+                //onWireCut.Invoke();
             }
-            if (onUse != null) {onUse?.Invoke();}
         }
 
         /* void OnTriggerEnter(Collider other)

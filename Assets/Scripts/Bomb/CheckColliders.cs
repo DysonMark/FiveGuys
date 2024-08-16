@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
+using UnityEngine.Events;
 
 namespace SAE.FiveGuys.Bomb
 {
@@ -15,7 +16,8 @@ namespace SAE.FiveGuys.Bomb
         public float radius = 1.0f;
         public LayerMask layerMask;
         public Color capsuleColor = Color.red;
-        //private CutWires checkEvent;
+        public CutWires checkEvent;
+        public UnityEvent onWireCut;
 
         private void Start()
         {
@@ -37,7 +39,9 @@ namespace SAE.FiveGuys.Bomb
                 if (hitCollider.gameObject.name == "Metal")
                 {
                     cutThisWire = true;
-              //      checkEvent.onUse.Invoke();
+                    //onWireCut.Invoke();
+                    //checkEvent.onWireCut.Invoke();
+                    //      checkEvent.onUse.Invoke();
                 }
             }
         }
