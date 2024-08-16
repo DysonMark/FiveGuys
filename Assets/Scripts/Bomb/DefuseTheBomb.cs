@@ -24,6 +24,10 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private UnityEvent onDiffused;
         public bool bombHasExploded;
         public BombCountdown timeIsUp;
+        public int blueCounter = 0;
+        public int redCounter = 0;
+        public int yellowCounter = 0;
+        public int greenCounter = 0;
         
         // Update is called once per frame
         void Update()
@@ -34,62 +38,82 @@ namespace SAE.FiveGuys.Bomb
         }
         public void BlueWire()
         {
-            whichWire.Add(1);
-            if (whichWire == null)
+            if (blueCounter < 1)
             {
-                bombHasExploded = true;
+                whichWire.Add(1);
+                if (whichWire == null)
+                {
+                    bombHasExploded = true;
+                }
+                else if (whichWire[0] != 1)
+                {
+                    bombHasExploded = true;
+                }
+                else
+                {
+                    bluePass = true;
+                }
+
+                blueCounter++;
             }
-            else if (whichWire[0] != 1)
-            {
-                bombHasExploded = true;
-            }
-            else
-            {
-                bluePass = true;
-            }
+
         }
         public void RedWire()
         {
-            whichWire.Add(2);
-            if (whichWire.Count < 2)
+            if (redCounter < 1)
             {
-                bombHasExploded = true;
-            }
-            else
-            {
-                redPass = true;
+                whichWire.Add(2);
+                if (whichWire.Count < 2)
+                {
+                    bombHasExploded = true;
+                }
+                else
+                {
+                    redPass = true;
+                }
+
+                redCounter++;   
             }
         }
         public void YellowWire()
         {
-            whichWire.Add(3);
-            if (whichWire.Count < 3)
+            if (yellowCounter < 1)
             {
-                bombHasExploded = true;
-            }
-            else if (whichWire[2] != 3)
-            {
-                bombHasExploded = true;
-            }
-            else
-            {
-                yellowPass = true;
+                whichWire.Add(3);
+                if (whichWire.Count < 3)
+                {
+                    bombHasExploded = true;
+                }
+                else if (whichWire[2] != 3)
+                {
+                    bombHasExploded = true;
+                }
+                else
+                {
+                    yellowPass = true;
+                }
+
+                yellowCounter++;
             }
         }
         public void GreenWire()
         {
-            whichWire.Add(4);
-            if (whichWire.Count < 4)
+            if (greenCounter < 1)
             {
-                bombHasExploded = true;
-            }
-            else if (whichWire[3] != 4)
-            {
-                bombHasExploded = true;
-            }
-            else
-            {
-                greenPass = true;
+                whichWire.Add(4);
+                if (whichWire.Count < 4)
+                {
+                    bombHasExploded = true;
+                }
+                else if (whichWire[3] != 4)
+                {
+                    bombHasExploded = true;
+                }
+                else
+                {
+                    greenPass = true;
+                }
+                greenCounter++;   
             }
         }
         

@@ -31,9 +31,9 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private GameObject greenWireOne;
         [SerializeField] private GameObject greenWireTwo;
         [SerializeField] private GameObject greenWireThree;
-        //public DefuseTheBomb newEvent;
-        //public UnityEvent onWireCut;
+        public UnityEvent onWireCut;
         public CheckColliders checkEvent;
+        public DefuseTheBomb checkCounter;
         
         // Start is called before the first frame update
         void Start()
@@ -41,20 +41,18 @@ namespace SAE.FiveGuys.Bomb
             skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
         }
 
-        void LateUpdate()
+        void Update()
         {
-            CutEachWires();
+           CutEachWires();
         }
 
         public void CutEachWires()
         {
-            //Debug.Log("name: " + colliderCheck.gameObject);
             if (redColliderCheck.cutThisWire == true && redColliderCheck.gameObject.name == "Red_Wire_1")
             {
                 finisheditems.Add("RedWire");
                 pass.RedWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
-                //onWireCut.Invoke();
             }
 
             if (yellowColliderCheck.cutThisWire == true && yellowColliderCheck.gameObject.name == "Yellow_Wire_1")
@@ -62,7 +60,6 @@ namespace SAE.FiveGuys.Bomb
                 finisheditems.Add("YellowWire");
                 pass.YellowWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
-                //onWireCut.Invoke();
             }
 
             if (blueColliderCheckOne.cutThisWire == true && blueColliderCheckOne.gameObject.name == "Blue_Wire_1" ||
@@ -70,13 +67,9 @@ namespace SAE.FiveGuys.Bomb
                 blueColliderCheckThree.cutThisWire == true && blueColliderCheckThree.gameObject.name == "Blue_Wire_3" ||
                 blueColliderCheckFour.cutThisWire == true && blueColliderCheckFour.gameObject.name == "Blue_Wire_4")
             {
-                Debug.Log("I've been there");
                 finisheditems.Add("BlueWire");
                 pass.BlueWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
-                //checkEvent.onWireCut.Invoke();
-                //checkEvent.onWireCut.RemoveListener(CutEachWires);
-                // onWireCut.Invoke();
             }
 
             if (greenColliderCheckOne.cutThisWire == true && greenColliderCheckOne.gameObject.name == "Green_Wire" ||
@@ -87,7 +80,6 @@ namespace SAE.FiveGuys.Bomb
                 finisheditems.Add("GreenWire");
                 pass.GreenWire();
                 skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
-                //onWireCut.Invoke();
             }
         }
 
@@ -124,5 +116,4 @@ namespace SAE.FiveGuys.Bomb
         }*/
         //}
     }
-}   
-//
+}

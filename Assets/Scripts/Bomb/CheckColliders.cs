@@ -16,14 +16,6 @@ namespace SAE.FiveGuys.Bomb
         public float radius = 1.0f;
         public LayerMask layerMask;
         public Color capsuleColor = Color.red;
-        public CutWires checkEvent;
-        public UnityEvent onWireCut;
-
-        private void Start()
-        {
-            //  checkEvent.onUse.AddListener(checkEvent.CutEachWires);
-        }
-
         private void Update()
         {
             CutOverlapCapsule();
@@ -39,9 +31,6 @@ namespace SAE.FiveGuys.Bomb
                 if (hitCollider.gameObject.name == "Metal")
                 {
                     cutThisWire = true;
-                    //onWireCut.Invoke();
-                    //checkEvent.onWireCut.Invoke();
-                    //      checkEvent.onUse.Invoke();
                 }
             }
         }
