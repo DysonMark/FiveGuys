@@ -27,7 +27,6 @@ namespace SAE.FiveGuys.Bomb
 
             foreach (Collider hitCollider in hitColliders)
             {
-                Debug.Log(hitCollider.gameObject.name);
                 if (hitCollider.gameObject.name == "Metal")
                 {
                     cutThisWire = true;

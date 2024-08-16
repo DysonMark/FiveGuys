@@ -31,9 +31,6 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private GameObject greenWireOne;
         [SerializeField] private GameObject greenWireTwo;
         [SerializeField] private GameObject greenWireThree;
-        public UnityEvent onWireCut;
-        public CheckColliders checkEvent;
-        public DefuseTheBomb checkCounter;
         
         // Start is called before the first frame update
         void Start()
@@ -82,38 +79,5 @@ namespace SAE.FiveGuys.Bomb
                 skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
             }
         }
-
-        /* void OnTriggerEnter(Collider other)
-         {
-             /*if (other.gameObject.tag == "RedWire" && !finisheditems.Contains(("RedWire")) && axe.gameObject.tag == "Cut")
-             {
-                 Debug.Log("Collision with other: " + other);
-                 finisheditems.Add("RedWire");
-                 pass.RedWire();
-                 skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
-             }*/
-
-        /*if (other.gameObject.tag == "YellowWire" && !finisheditems.Contains("YellowWire") && axe.gameObject.tag == "Cut")
-        {
-            finisheditems.Add("YellowWire");
-            pass.YellowWire();
-            skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
-        }*/
-/*
-            if (other.gameObject.tag == "BlueWire" && !finisheditems.Contains("BlueWire") && axe.gameObject.tag == "Cut")
-            {
-                finisheditems.Add("BlueWire");
-                pass.BlueWire();
-                skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
-            }
-
-            if (other.gameObject.tag == "GreenWire" && !finisheditems.Contains("GreenWire") && axe.gameObject.tag == "Cut")
-            {
-                finisheditems.Add("GreenWire");
-                pass.GreenWire();
-                skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
-            }
-        }*/
-        //}
     }
 }
