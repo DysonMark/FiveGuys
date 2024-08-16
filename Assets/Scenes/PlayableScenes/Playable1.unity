@@ -5338,7 +5338,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9a350561734d113439c9392d72268180, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14717,7 +14717,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4ae9276638ead1b4c8b6a4299b69bf7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19004,6 +19004,10 @@ MonoBehaviour:
       m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
+  blueCounter: 0
+  redCounter: 0
+  yellowCounter: 0
+  greenCounter: 0
 --- !u!1 &877352498
 GameObject:
   m_ObjectHideFlags: 0
@@ -19498,6 +19502,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2303921294396319332, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: c49fa62077263c74b90f0362ee5b1bab, type: 2}
     - target: {fileID: 2303921294396319333, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.6859
@@ -25434,6 +25442,10 @@ MonoBehaviour:
       m_Calls: []
   bombHasExploded: 0
   timeIsUp: {fileID: 0}
+  blueCounter: 0
+  redCounter: 0
+  yellowCounter: 0
+  greenCounter: 0
 --- !u!114 &1205602083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38336,6 +38348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 1673149784}
+  audioSource: {fileID: 0}
+  keypadDeniedSFX: {fileID: 0}
+  keypadGrantedSFX: {fileID: 0}
   numberPad: {fileID: 891008234}
   sequence: 
   OnSolve:
@@ -39089,6 +39104,10 @@ MonoBehaviour:
         m_CallState: 2
   bombHasExploded: 0
   timeIsUp: {fileID: 877352499}
+  blueCounter: 0
+  redCounter: 0
+  yellowCounter: 0
+  greenCounter: 0
 --- !u!114 &1790561843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39101,7 +39120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f399ae16b4ae2ce4a8ec9383cba7882c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 1790561844}
   finisheditems: []
   pass: {fileID: 1790561842}
   axe: {fileID: 7902330821474984522}
@@ -39123,6 +39141,8 @@ MonoBehaviour:
   greenWireOne: {fileID: 913492850}
   greenWireTwo: {fileID: 395326104}
   greenWireThree: {fileID: 1692683695}
+  bomb: {fileID: 0}
+  defuseTheBombObject: {fileID: 0}
 --- !u!137 &1790561844
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -47018,7 +47038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f399ae16b4ae2ce4a8ec9383cba7882c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 0}
   finisheditems: []
   pass: {fileID: 0}
   axe: {fileID: 0}
@@ -47040,6 +47059,8 @@ MonoBehaviour:
   greenWireOne: {fileID: 0}
   greenWireTwo: {fileID: 0}
   greenWireThree: {fileID: 0}
+  bomb: {fileID: 0}
+  defuseTheBombObject: {fileID: 0}
 --- !u!137 &2137678809
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -48274,7 +48295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f399ae16b4ae2ce4a8ec9383cba7882c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 1790561844}
   finisheditems: []
   pass: {fileID: 1790561842}
   axe: {fileID: 7902330821474984522}
@@ -48296,6 +48316,8 @@ MonoBehaviour:
   greenWireOne: {fileID: 0}
   greenWireTwo: {fileID: 0}
   greenWireThree: {fileID: 0}
+  bomb: {fileID: 0}
+  defuseTheBombObject: {fileID: 0}
 --- !u!4 &8383507121266545736
 Transform:
   m_ObjectHideFlags: 0
@@ -48416,3 +48438,4 @@ SceneRoots:
   - {fileID: 192817368}
   - {fileID: 2050073714}
   - {fileID: 2062219241}
+  - {fileID: 545386824}
