@@ -6,9 +6,8 @@ public class TutorialProgression : MonoBehaviour
 {
     public Flashlight activateFlash;
     [SerializeField] private GameObject cameraRigPos;
-    private double vectorY = 1.50;
-    private double vectorX = 17.66;
-    private double vectorZ = -89.36;
+    [SerializeField] private List<Vector3> tutorialPoints = new List<Vector3>();
+    [SerializeField] private int pointIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,20 +18,19 @@ public class TutorialProgression : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        ToNextTask();
     }
     
-    private void ToNextTask()
+    public void ToNextTask()
     {
-        if (activateFlash.isOn == true)
-        {
-            //Deliver the line and then tp to next task
-            Invoke("ChangeCameraRigPosition", 5);
-        }
+        //Deliver the line and then tp to next task
+        Debug.Log("ToNextTask");
+            Invoke("ChangeCameraRigPosition", 1);
     }
 
     private void ChangeCameraRigPosition()
     {
-        cameraRigPos.transform.position = new Vector3((float)vectorX, (float)vectorY, (float)vectorZ);
+        cameraRigPos.transform.position = tutorialPoints[pointIndex];
+        pointIndex++;
+        Debug.Log($"Point Index: {pointIndex}");
     }
 }
