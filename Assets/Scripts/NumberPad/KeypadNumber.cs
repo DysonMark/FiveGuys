@@ -1,9 +1,9 @@
+using Oculus.Voice;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using TMPro;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,6 +17,8 @@ public class KeypadNumber : MonoBehaviour
     
     //Variables for the sequences 
     public string sequence;
+
+    [SerializeField] private UnityEvent OnSolve;
 
     public void NumberPressed(int index)
     {
@@ -74,10 +76,11 @@ public class KeypadNumber : MonoBehaviour
     
     public void SequenceChecker()
     {
+        //Win condition for the game 
         if (numberPad.CorrectSequence == sequence)
         {
             displaycurrentSequence.text = ("Access Granted");
-            //Win condition for the game 
+            OnSolved();
         }
         else
         {
@@ -88,8 +91,12 @@ public class KeypadNumber : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Function for after completion of puzzle 
+    /// </summary>
     public void OnSolved()
     {
-        //Function for after completion of puzzle 
+        if (OnSolve != null) { OnSolve?.Invoke(); }
     }
+
 }

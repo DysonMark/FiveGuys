@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Leonardo.AxeAssembly
 {
@@ -18,6 +19,8 @@ namespace Leonardo.AxeAssembly
         
         private int piecesWithinRange;
         private bool axeWasInstantiated = false;
+
+        [SerializeField] private UnityEvent onAssembled;
 
         private void Start()
         {
@@ -48,6 +51,7 @@ namespace Leonardo.AxeAssembly
                 axeWasInstantiated = true;
                 // Starts the assembling coroutine.
                 StartCoroutine(InstantiateCompleteAxePrefab());
+                if (onAssembled != null) { onAssembled?.Invoke(); }
             }
         }
 

@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using Random = UnityEngine.Random;
 
 public class NumberPad : MonoBehaviour
 {
@@ -35,8 +30,6 @@ public class NumberPad : MonoBehaviour
         CorrectSequence += Digit2;
         CorrectSequence += Digit3;
         CorrectSequence += Digit4;
-
-        print(CorrectSequence);
 
         //Displaying of digits
         Keydisplay1.text = Digit1.ToString();

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Text;
-using UnityEngine.Windows.Speech;
 using UnityEngine.Events;
 using Oculus.Voice;
 using System.ComponentModel;
@@ -15,7 +14,6 @@ namespace JW.FiveGuys.Flow
         [SerializeField] private KeyCode activateOn = KeyCode.Space;
         [SerializeField] private AppVoiceExperience voiceControll;
         [SerializeField][ReadOnly(true)] private bool isActive = false;
-        [SerializeField] private TMPro.TextMeshPro textMeshPro;
 
 
         // Start is called before the first frame update
@@ -33,7 +31,6 @@ namespace JW.FiveGuys.Flow
                 {
                     voiceControll.Activate();
                     isActive = true;
-                    textMeshPro.text = "Activated";
                 }
             }
         }
