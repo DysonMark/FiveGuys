@@ -38,7 +38,7 @@ public class FadeInOut : MonoBehaviour
     private void FadeIn() //turns the transparency off gradually
     {
 
-        if (isTransparent)
+        if (!isTransparent)
         {
 
 
@@ -51,7 +51,7 @@ public class FadeInOut : MonoBehaviour
     private void FadeOut() //turns the transparency on gradually
     {
 
-        if (!isTransparent)
+        if (isTransparent)
         {
 
             fader.CrossFadeAlpha(0f, 1.5f * Time.deltaTime, true);
