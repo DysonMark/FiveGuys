@@ -547,9 +547,10 @@ GameObject:
   - component: {fileID: 4588575833642189878}
   - component: {fileID: 2172605044327624377}
   - component: {fileID: 59592485993742925}
+  - component: {fileID: 2337753027829626906}
   m_Layer: 0
   m_Name: Metal
-  m_TagString: Untagged
+  m_TagString: Cut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,3 +641,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.07956641, y: 0.4984582, z: 0.3837142}
   m_Center: {x: -0.000000005587935, y: 0.1345612, z: 0.92590904}
+--- !u!114 &2337753027829626906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902330823150616189}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f399ae16b4ae2ce4a8ec9383cba7882c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinnedMeshRenderer: {fileID: 0}
+  finisheditems: []
+  pass: {fileID: 0}
+  axe: {fileID: 0}
+  redColliderCheck: {fileID: 0}
+  yellowColliderCheck: {fileID: 0}
+  blueColliderCheckOne: {fileID: 0}
+  blueColliderCheckTwo: {fileID: 0}
+  blueColliderCheckThree: {fileID: 0}
+  blueColliderCheckFour: {fileID: 0}
+  greenColliderCheckOne: {fileID: 0}
+  greenColliderCheckTwo: {fileID: 0}
+  greenColliderCheckThree: {fileID: 0}
+  redWire: {fileID: 0}
+  yellowWire: {fileID: 0}
+  blueWireOne: {fileID: 0}
+  blueWireTwo: {fileID: 0}
+  blueWireThree: {fileID: 0}
+  blueWireFour: {fileID: 0}
+  greenWireOne: {fileID: 0}
+  greenWireTwo: {fileID: 0}
+  greenWireThree: {fileID: 0}

@@ -8,7 +8,7 @@ namespace SAE.FiveGuys.Bomb
 {
     public class CutWires : MonoBehaviour
     {
-        [SerializeField] SkinnedMeshRenderer skinnedMeshRenderer;
+        private SkinnedMeshRenderer skinnedMeshRenderer;
         private Mesh mesh;
         [SerializeField] private List<string> finisheditems = new();
         public DefuseTheBomb pass;
@@ -31,11 +31,14 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private GameObject greenWireOne;
         [SerializeField] private GameObject greenWireTwo;
         [SerializeField] private GameObject greenWireThree;
+        [SerializeField] private GameObject bomb;
+        [SerializeField] private DefuseTheBomb defuseTheBombObject;
         
         // Start is called before the first frame update
         void Start()
         {
-            skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
+            bomb = GameObject.FindGameObjectWithTag("Bomb");
+            skinnedMeshRenderer = bomb.GetComponent<SkinnedMeshRenderer>();
         }
 
         void Update()
