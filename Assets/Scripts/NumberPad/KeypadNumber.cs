@@ -11,7 +11,9 @@ public class KeypadNumber : MonoBehaviour
 {
     //To show the Sequence when entered by the player
     [SerializeField] private TMP_Text displaycurrentSequence;
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip keypadDeniedSFX, keypadGrantedSFX;
+    
     //To access the NumberPad script
     public NumberPad numberPad;
     
