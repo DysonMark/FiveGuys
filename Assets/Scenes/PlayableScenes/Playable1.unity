@@ -1820,7 +1820,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2939,7 +2939,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7019,7 +7019,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10347,7 +10347,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -11398,7 +11398,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -13691,7 +13691,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -14044,7 +14044,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -17250,6 +17250,117 @@ Transform:
   m_Children: []
   m_Father: {fileID: 681207185}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &788586483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 788586484}
+  - component: {fileID: 788586487}
+  - component: {fileID: 788586486}
+  - component: {fileID: 788586485}
+  - component: {fileID: 788586488}
+  m_Layer: 11
+  m_Name: Fader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &788586484
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788586483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1091708539}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 5000, y: 5000}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &788586485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788586483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ce1db91bd565846871dca3c0da1529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fader: {fileID: 788586486}
+  isTransparent: 0
+--- !u!114 &788586486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788586483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &788586487
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788586483}
+  m_CullTransparentMesh: 1
+--- !u!223 &788586488
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788586483}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &796008341
 GameObject:
   m_ObjectHideFlags: 0
@@ -17908,7 +18019,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -20557,7 +20668,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -22243,7 +22354,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -22679,7 +22790,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -26005,7 +26116,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -27001,7 +27112,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -28171,6 +28282,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6762673467136955594, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1888249300}
+    - targetCorrespondingSourceObject: {fileID: 6762673467136955594, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788586484}
     - targetCorrespondingSourceObject: {fileID: 8079755630368627275, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4777607533682763}
@@ -29428,7 +29542,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -29593,54 +29707,54 @@ MonoBehaviour:
   m_SharedTextures: []
   m_Positions:
   - {x: -3.3699608, y: 0.8323562, z: 1.6777601}
-  - {x: -3.3699253, y: 0.73777366, z: 1.6777601}
+  - {x: -3.3699265, y: 0.16212499, z: 1.6777592}
   - {x: 4.137252, y: 0.8323562, z: 1.6777601}
-  - {x: 4.137287, y: 0.73777366, z: 1.6777601}
-  - {x: -3.3699253, y: 0.73777366, z: 1.6777601}
-  - {x: -3.3699253, y: 0.73777366, z: -6.5632124}
-  - {x: 4.137287, y: 0.73777366, z: 1.6777601}
-  - {x: 4.137287, y: 0.73777366, z: -6.5632124}
-  - {x: -3.3699253, y: 0.73777366, z: -6.5632124}
+  - {x: 4.137287, y: 0.16212499, z: 1.6777592}
+  - {x: -3.3699265, y: 0.16212499, z: 1.6777592}
+  - {x: -3.3699265, y: 0.16212499, z: -6.5632114}
+  - {x: 4.137287, y: 0.16212499, z: 1.6777592}
+  - {x: 4.137287, y: 0.16212499, z: -6.5632114}
+  - {x: -3.3699265, y: 0.16212499, z: -6.5632114}
   - {x: -3.3699608, y: 0.8323562, z: -6.5632124}
-  - {x: 4.137287, y: 0.73777366, z: -6.5632124}
+  - {x: 4.137287, y: 0.16212499, z: -6.5632114}
   - {x: 4.137252, y: 0.8323562, z: -6.5632124}
   - {x: -3.3699608, y: 0.8323562, z: -6.5632124}
   - {x: -3.3699608, y: 0.8323562, z: 1.6777601}
   - {x: 4.137252, y: 0.8323562, z: -6.5632124}
   - {x: 4.137252, y: 0.8323562, z: 1.6777601}
   - {x: 4.137252, y: 0.8323562, z: 1.6777601}
-  - {x: 4.137287, y: 0.73777366, z: 1.6777601}
+  - {x: 4.137287, y: 0.16212499, z: 1.6777592}
   - {x: 4.137252, y: 0.8323562, z: -6.5632124}
-  - {x: 4.137287, y: 0.73777366, z: -6.5632124}
+  - {x: 4.137287, y: 0.16212499, z: -6.5632114}
   - {x: -3.3699608, y: 0.8323562, z: -6.5632124}
-  - {x: -3.3699253, y: 0.73777366, z: -6.5632124}
+  - {x: -3.3699265, y: 0.16212499, z: -6.5632114}
   - {x: -3.3699608, y: 0.8323562, z: 1.6777601}
-  - {x: -3.3699253, y: 0.73777366, z: 1.6777601}
+  - {x: -3.3699265, y: 0.16212499, z: 1.6777592}
   m_Textures0:
-  - {x: 3.3699608, y: 0.8323562}
-  - {x: 3.3699253, y: 0.73777366}
-  - {x: -4.137252, y: 0.8323562}
-  - {x: -4.137287, y: 0.73777366}
-  - {x: 3.3699253, y: 1.6777601}
-  - {x: 3.3699253, y: -6.5632124}
-  - {x: -4.137287, y: 1.6777601}
-  - {x: -4.137287, y: -6.5632124}
-  - {x: -3.3699253, y: 0.73777366}
-  - {x: -3.3699608, y: 0.8323562}
-  - {x: 4.137287, y: 0.73777366}
-  - {x: 4.137252, y: 0.8323562}
+  - {x: 3.3699608, y: 0.8323586}
+  - {x: 3.3699265, y: 0.16212738}
+  - {x: -4.137252, y: 0.8323586}
+  - {x: -4.137287, y: 0.16212738}
+  - {x: 3.3699265, y: 1.6777592}
+  - {x: 3.3699265, y: -6.5632114}
+  - {x: -4.137287, y: 1.6777592}
+  - {x: -4.137287, y: -6.5632114}
+  - {x: -3.3699265, y: 0.16213433}
+  - {x: -3.3699608, y: 0.8323656}
+  - {x: 4.137287, y: 0.16213433}
+  - {x: 4.137252, y: 0.8323656}
   - {x: -3.3699608, y: -6.5632124}
   - {x: -3.3699608, y: 1.6777601}
   - {x: 4.137252, y: -6.5632124}
   - {x: 4.137252, y: 1.6777601}
-  - {x: 1.6777601, y: 0.8308127}
-  - {x: 1.6777601, y: 0.73623013}
-  - {x: -6.5632124, y: 0.8308127}
-  - {x: -6.5632124, y: 0.73623013}
-  - {x: 6.5632124, y: 0.8336219}
-  - {x: 6.5632124, y: 0.7390393}
-  - {x: -1.6777601, y: 0.8336219}
-  - {x: -1.6777601, y: 0.7390393}
+  - {x: 1.6777601, y: 0.8321384}
+  - {x: 1.6777592, y: 0.16190718}
+  - {x: -6.5632124, y: 0.8321384}
+  - {x: -6.5632114, y: 0.16190718}
+  - {x: 6.5632124, y: 0.8325288}
+  - {x: 6.5632114, y: 0.16229762}
+  - {x: -1.6777601, y: 0.8325288}
+  - {x: -1.6777592, y: 0.16229762}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -29677,7 +29791,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 1824582949}
-  m_VersionIndex: 29649
+  m_VersionIndex: 29747
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -33091,7 +33205,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -33907,7 +34021,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -34965,7 +35079,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -38033,7 +38147,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -40186,8 +40300,8 @@ Mesh:
     firstVertex: 0
     vertexCount: 24
     localAABB:
-      m_Center: {x: 0.38366318, y: 0.78506494, z: -2.4427261}
-      m_Extent: {x: 3.753624, y: 0.04729128, z: 4.1204863}
+      m_Center: {x: 0.38366318, y: 0.4972406, z: -2.4427261}
+      m_Extent: {x: 3.753624, y: 0.3351156, z: 4.1204863}
   m_Shapes:
     vertices: []
     shapes: []
@@ -40230,9 +40344,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -40265,8 +40379,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 70ad57c04c15553fd8c0d63f00000000000000000000803f000080bf0000000000000000000080bf70ad57404c15553fdbac57c0bcde3c3fd8c0d63f00000000000000000000803f000080bf0000000000000000000080bfdbac5740bcde3c3f5e6484404c15553fd8c0d63f00000000000000000000803f000080bf0000000000000000000080bf5e6484c04c15553fa8648440bcde3c3fd8c0d63f00000000000000000000803f000080bf0000000000000000000080bfa86484c0bcde3c3fdbac57c0bcde3c3fd8c0d63f00000000000080bf00000000000080bf0000000000000000000080bfdbac5740d8c0d63fdbac57c0bcde3c3fd605d2c000000000000080bf00000000000080bf0000000000000000000080bfdbac5740d605d2c0a8648440bcde3c3fd8c0d63f00000000000080bf00000000000080bf0000000000000000000080bfa86484c0d8c0d63fa8648440bcde3c3fd605d2c000000000000080bf00000000000080bf0000000000000000000080bfa86484c0d605d2c0dbac57c0bcde3c3fd605d2c00000000000000000000080bf0000803f0000000000000000000080bfdbac57c0bcde3c3f70ad57c04c15553fd605d2c00000000000000000000080bf0000803f0000000000000000000080bf70ad57c04c15553fa8648440bcde3c3fd605d2c00000000000000000000080bf0000803f0000000000000000000080bfa8648440bcde3c3f5e6484404c15553fd605d2c00000000000000000000080bf0000803f0000000000000000000080bf5e6484404c15553f70ad57c04c15553fd605d2c0000000000000803f000000000000803f0000000000000000000080bf70ad57c0d605d2c070ad57c04c15553fd8c0d63f000000000000803f000000000000803f0000000000000000000080bf70ad57c0d8c0d63f5e6484404c15553fd605d2c0000000000000803f000000000000803f0000000000000000000080bf5e648440d605d2c05e6484404c15553fd8c0d63f000000000000803f000000000000803f0000000000000000000080bf5e648440d8c0d63f5e6484404c15553fd8c0d63fffff7f3fa798c3390000000000000000000000000000803f000080bfd8c0d63f24b0543fa8648440bcde3c3fd8c0d63fffff7f3fa798c3390000000000000000000000000000803f000080bfd8c0d63f94793c3f5e6484404c15553fd605d2c0ffff7f3fa798c3390000000000000000000000000000803f000080bfd605d2c024b0543fa8648440bcde3c3fd605d2c0ffff7f3fa798c3390000000000000000000000000000803f000080bfd605d2c094793c3f70ad57c04c15553fd605d2c0ffff7fbffbeac4b9000000000000000000000000000080bf000080bfd605d2403f68553fdbac57c0bcde3c3fd605d2c0ffff7fbffbeac4b9000000000000000000000000000080bf000080bfd605d240ae313d3f70ad57c04c15553fd8c0d63fffff7fbffbeac4b9000000000000000000000000000080bf000080bfd8c0d6bf3f68553fdbac57c0bcde3c3fd8c0d63fffff7fbffbeac4b9000000000000000000000000000080bf000080bfd8c0d6bfae313d3f
+    m_DataSize: 1344
+    _typelessdata: 70ad57c04c15553fd8c0d63f0000000097fabeb50000803f000080bf0000000000000000000080bf70ad57407415553fb6fe023f704a333ee0ac57c01804263ed0c0d63f0000000097fabeb50000803f000080bf0000000000000000000080bfe0ac5740b804263ed7fe023fd8010c3e5e6484404c15553fd8c0d63f0000000097fabeb50000803f000080bf0000000000000000000080bf5e6484c07415553f85ff703f6e4a333ea86484401804263ed0c0d63f0000000097fabeb50000803f000080bf0000000000000000000080bfa86484c0b804263ea7ff703fd6010c3ee0ac57c01804263ed0c0d63f00000000000080bf00000000000080bf0000000000000000000080bfe0ac5740d0c0d63f0bd7a33c767cf03ee0ac57c01804263ed405d2c000000000000080bf00000000000080bf0000000000000000000080bfe0ac5740d405d2c0f7bffb3e767cf03ea86484401804263ed0c0d63f00000000000080bf00000000000080bf0000000000000000000080bfa86484c0d0c0d63f15d7a33c073f663fa86484401804263ed405d2c000000000000080bf00000000000080bf0000000000000000000080bfa86484c0d405d2c0f7bffb3e073f663fe0ac57c01804263ed405d2c00000000097fabeb5000080bf0000803f0000000000000000000080bfe0ac57c08b06263e83ff703f51c5473e70ad57c04c15553fd605d2c00000000097fabeb5000080bf0000803f0000000000000000000080bf70ad57c0e915553fa5ff703fea0d6f3ea86484401804263ed405d2c00000000097fabeb5000080bf0000803f0000000000000000000080bfa86484408b06263eb6fe023f51c5473e5e6484404c15553fd605d2c00000000097fabeb5000080bf0000803f0000000000000000000080bf5e648440e915553fd8fe023fea0d6f3e70ad57c04c15553fd605d2c0000000000000803f000000000000803f0000000000000000000080bf70ad57c0d605d2c00bd7a33c0bd7a33c70ad57c04c15553fd8c0d63f000000000000803f000000000000803f0000000000000000000080bf70ad57c0d8c0d63ffbbffb3e0bd7a33c5e6484404c15553fd605d2c0000000000000803f000000000000803f0000000000000000000080bf5e648440d605d2c015d7a33c063fe63e5e6484404c15553fd8c0d63f000000000000803f000000000000803f0000000000000000000080bf5e648440d8c0d63ffbbffb3e063fe63e5e6484404c15553fd8c0d63f0000803fbfd15c380000000000000000000000000000803f000080bfd8c0d63f0607553fb6fe023fea0def3da86484401804263ed0c0d63f0000803fbfd15c380000000000000000000000000000803f000080bfd0c0d63fffca253eb7fe023fbc7ca03d5e6484404c15553fd605d2c00000803fbfd15c380000000000000000000000000000803f000080bfd605d2c00607553ff8bf7b3fea0def3da86484401804263ed405d2c00000803fbfd15c380000000000000000000000000000803f000080bfd405d2c0ffca253ef7bf7b3fb87ca03d70ad57c04c15553fd605d2c0000080bfebd956b8000000000000000000000000000080bf000080bfd605d2409c20553fb6fe023fea0d6f3de0ac57c01804263ed405d2c0000080bfead956b8000000000000000000000000000080bf000080bfd405d2405931263eb7fe023f1cd7a33c70ad57c04c15553fd8c0d63f000080bfead956b8000000000000000000000000000080bf000080bfd8c0d6bf9c20553ff8bf7b3fea0d6f3de0ac57c01804263ed0c0d63f000080bfe9d956b8000000000000000000000000000080bf000080bfd0c0d6bf5931263ef7bf7b3f0bd7a33c
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -40320,14 +40434,14 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0.38366318, y: 0.78506494, z: -2.4427261}
-    m_Extent: {x: 3.753624, y: 0.04729128, z: 4.1204863}
+    m_Center: {x: 0.38366318, y: 0.4972406, z: -2.4427261}
+    m_Extent: {x: 3.753624, y: 0.3351156, z: 4.1204863}
   m_MeshUsageFlags: 0
   m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 122.64293
+  m_MeshMetrics[1]: 305.23
   m_MeshOptimizationFlags: 1
   m_StreamData:
     serializedVersion: 2
