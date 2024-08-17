@@ -10,7 +10,7 @@ public class FadeInOut : MonoBehaviour
 
     [SerializeField] private RawImage fader; //to access the image
     [SerializeField] private bool isTransparent; //bool check if the canvas should be transparent or not
-    private bool hasFaded; //bool value to check if the canvas has faded in/out
+
 
     
 
@@ -19,7 +19,7 @@ public class FadeInOut : MonoBehaviour
     {
         fader = GetComponent<RawImage>(); //gets the RawImage component from the inspector
         isTransparent = true; //set isTransparent to true
-        hasFaded = true; //set hasFaded to false
+
     }
 
     
@@ -38,34 +38,30 @@ public class FadeInOut : MonoBehaviour
     private void FadeIn() //turns the transparency off gradually
     {
 
-        if (isTransparent && hasFaded)
+        if (!isTransparent)
         {
 
-            int i = 0;
 
-            while (i < 255)
-            {
-                fader.color = new Color(0, 0, 0, i);
-                i++;
-            }
-            hasFaded = false;
+                fader.CrossFadeAlpha(1f, 1.5f * Time.deltaTime, true);
+            
+            
         }
     }
 
     private void FadeOut() //turns the transparency on gradually
     {
 
-        if (isTransparent && !hasFaded)
+        if (isTransparent)
         {
-            int i = 255;
 
-            while (i > 0)
-            {
-                fader.color = new Color(0, 0, 0, i);
-                i++;
-            }
-            hasFaded = true;
+            fader.CrossFadeAlpha(0f, 1.5f * Time.deltaTime, true);
+
         }
+    }
+
+    public void SetHasFadedFalse()
+    {
+        isTransparent = false;
     }
 
 }

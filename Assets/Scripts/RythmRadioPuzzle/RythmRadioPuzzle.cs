@@ -23,23 +23,24 @@ namespace Leonardo.RythmRadioPuzzle
         // Audio sound clips for states.
         [SerializeField] private AudioClip winSFX, wrongSFX;
         
-        private bool isPlaying;
+        private bool isPlayingSFX;
         
         // Visual effects
         [SerializeField] private GameObject blueButtonBase, greenButtonBase, redButtonBase, yellowButtonBase;
         private Renderer blueButtonRend, greenButtonRend, redButtonRend, yellowButtonRend;
         [SerializeField] private Material inactiveMaterial, activeMaterial;
-        [SerializeField] private GameObject winParticleFX;
         
         //----------------------------------------------------------------------------------------------------------------
-        public UnityEvent radioPuzzleCompletionEvent;
-        public bool radioPuzzleFinished;        // Activates when the puzzle is completed.
+        public UnityEvent radioPuzzleCompletionEvent; // Is called when the puzzle is finished.
+        private bool radioPuzzleFinished;
+        [SerializeField] private bool isPaused;
+        [SerializeField] private float reactivationTime = 1.0f;
             
         [SerializeField] private int buttonsTimesPressed = 0; // Counter of the times the buttons were pressed.
         //----------------------------------------------------------------------------------------------------------------
-
-        private List<string> correctSequence = new List<string> {"Blue", "Yellow", "Green", "Red"};
-        private List<string> playerSequence = new List<string>();
+        
+        private List<string> correctSequence = new List<string> {"Blue", "Yellow", "Green", "Red"}; // Correct sequence for the puzzle.
+        private List<string> playerSequence = new List<string>(); // Player current sequence.
         
         private void Start()
         {
@@ -47,9 +48,10 @@ namespace Leonardo.RythmRadioPuzzle
             greenButtonRend = greenButtonBase.GetComponent<Renderer>();
             redButtonRend = redButtonBase.GetComponent<Renderer>();
             yellowButtonRend = yellowButtonBase.GetComponent<Renderer>();
-            
+
+            isPaused = false;
             radioPuzzleFinished = false;
-            isPlaying = false;
+            isPlayingSFX = false;
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
         
@@ -57,27 +59,33 @@ namespace Leonardo.RythmRadioPuzzle
         {
             if (!radioPuzzleFinished)
             {
+                isPaused = true;
                 playerSequence.Clear();
-                buttonsTimesPressed = 0;
                 blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
                 blueButtonRend.material = greenButtonRend.material = redButtonRend.material = yellowButtonRend.material = inactiveMaterial;
-            
+                StartCoroutine(ReactivatePuzzle());
+                
                 // Play SFX
-                if (!isPlaying)
+                if (!isPlayingSFX)
                 {
-                    isPlaying = true;
+                    isPlayingSFX = true;
                     audioSource.clip = wrongSFX;
                     audioSource.Play();
-                    Debug.Log("Wrong button pressed.");
                     StartCoroutine(BoolPlayingDelay(audioSource.clip.length));
                 }
             }
         }
+
+        private IEnumerator ReactivatePuzzle()
+        {
+            yield return new WaitForSeconds(reactivationTime);
+            isPaused = false;
+        }
+        
         private void PuzzleCompleted()
         {
-            //Instantiate(winParticleFX, transform);
-            Debug.Log("PUZZLE COMPLETED.");
             radioPuzzleCompletionEvent.Invoke();
+            radioPuzzleFinished = true;
             
             // Play SFX
             audioSource.clip = winSFX;
@@ -89,7 +97,7 @@ namespace Leonardo.RythmRadioPuzzle
         private IEnumerator BoolPlayingDelay(float delayDurationSfx)
         {
             yield return new WaitForSeconds(delayDurationSfx);
-            isPlaying = false;
+            isPlayingSFX = false;
         } 
         
         
@@ -98,7 +106,7 @@ namespace Leonardo.RythmRadioPuzzle
         #region Button Related Scripts
         public void BlueButtonPressed()
         {
-            if (!blueButtonTapped & !radioPuzzleFinished)
+            if (!blueButtonTapped & !radioPuzzleFinished & !isPaused)
             {
                 // Play SFX.
                 audioSource.clip = blueButtonSFX;
@@ -119,7 +127,7 @@ namespace Leonardo.RythmRadioPuzzle
 
         public void YellowButtonPressed()
         {
-            if (!yellowButtonTapped & !radioPuzzleFinished)
+            if (!yellowButtonTapped & !radioPuzzleFinished & !isPaused)
             {
                 // Play SFX.
                 audioSource.clip = yellowButtonSFX;
@@ -139,7 +147,7 @@ namespace Leonardo.RythmRadioPuzzle
     
         public void GreenButtonPressed()
         {
-            if (!greenButtonTapped & !radioPuzzleFinished)
+            if (!greenButtonTapped & !radioPuzzleFinished & !isPaused)
             {
                 // Play SFX.
                 audioSource.clip = greenButtonSFX;
@@ -160,7 +168,7 @@ namespace Leonardo.RythmRadioPuzzle
     
         public void RedButtonPressed()
         {
-            if (!redButtonTapped & !radioPuzzleFinished)
+            if (!redButtonTapped & !radioPuzzleFinished & !isPaused)
             {
                 // Play SFX.
                 audioSource.clip = redButtonSFX;
@@ -184,13 +192,11 @@ namespace Leonardo.RythmRadioPuzzle
                 if (!radioPuzzleFinished && playerSequence.SequenceEqual(correctSequence))
                 {
                     PuzzleCompleted();
-                    radioPuzzleFinished = true;
-                    Debug.Log("Radio_Puzzle: The player inserted the correct sequence");
                 }
                 else if (!radioPuzzleFinished)
                 {
                     RestartPuzzle();
-                    Debug.Log("The player inserted the INCORRECT sequence.");
+                    ReactivatePuzzle();
                 }
             }
         }
