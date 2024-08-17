@@ -20,7 +20,6 @@ namespace JW.FiveGuys.Teleportation
         [SerializeField] private LayerMask teleportLayer;
 
         [Header("Previews")]
-        [SerializeField] private ParticleSystem preview; 
         [SerializeField] private GameEvent onAimStart;
         [SerializeField] private GameEvent onAimStop;
 
@@ -48,32 +47,26 @@ namespace JW.FiveGuys.Teleportation
                 //Debug.Log("Aim Start");
                 onAimStart.Raise();
             }
-            else if (Input.GetAxis("XRI_Left_Trigger") <= 0 && isAiming && !Input.GetKey(teleportKey))
+            else if (Input.GetAxis("XRI_Left_Trigger") <= 0 && isAiming && !Input.GetKey(teleportKey)) // Stopped aiming
             {
                 //Debug.Log("Aim Stop");
                 isAiming = false;
 
                 if (telePoint != null) // Teleport to the selected telePoint if there is one
                 {
-                    currentPoint.SetActive(true); // Activate the point we starrted on
                     TeleportationEventsHandler teleFrom = currentPoint.GetComponent<TeleportationEventsHandler>();
-                    if (teleFrom != null) { teleFrom.OnTeleportFrom.Invoke(); }
-                    //Debug.Log("TeleFrom");
+                    if (teleFrom != null) { teleFrom.OnTeleportFrom.Invoke(); } // Invoke teleport from events
+                    
                     transform.position = telePoint.transform.position; // Move our position to the new point
                     currentPoint = telePoint; // Update our point
+
                     TeleportationEventsHandler teleTo = currentPoint.GetComponent<TeleportationEventsHandler>();
-                    if (teleTo != null) { teleTo.OnTeleportTo.Invoke(); }
-                    //Debug.Log("TeleTo");
-                    currentPoint.SetActive(false); // Disable the point we are now standing on
+                    if (teleTo != null) { teleTo.OnTeleportTo.Invoke(); } // Invoke teleport to events
+
                     isPlayerTeleporting = true;
                 }
 
-                telePoint = null;
-                if (preview != null)
-                {
-                    preview.Stop();
-                    preview = null;
-                }
+                telePoint = null; // I honestly don't remember why this is in here. It might be for clearing the tellepoint after going to a new one?
 
                 onAimStop.Raise();
             }
@@ -99,39 +92,25 @@ namespace JW.FiveGuys.Teleportation
                             //Debug.Log("TelePoint is set");
                             if (hitInfo.transform.gameObject != telePoint) // We've hit a different teleport point, so update the preview and telePoint
                             {
-                                //Debug.Log("Telepoint is different from set point");
-                                if (preview != null) preview.Stop(); // Stop the previous point if it exists
-
                                 // Invoke any events on hover end
                                 TeleportationEventsHandler events = telePoint.GetComponent<TeleportationEventsHandler>();
                                 if (events != null) events.OnHoverEnd.Invoke();
-                                //Debug.Log("On Hover End");
 
                                 telePoint = hitInfo.transform.gameObject; // Update to the new hit object
 
                                 // Invoke any events on hover start
                                 events = telePoint.GetComponent<TeleportationEventsHandler>();
                                 if (events != null) events.OnHoverStart.Invoke();
-                                //Debug.Log("On Hover Start");
-
-                                preview = telePoint.GetComponentInChildren<ParticleSystem>(); // Update preview particle system
                             }
-
-                            if (!preview.isPlaying) preview.Play(); // Play the preview particle system if it isn't already
                         }
                         else // Our first teleport point
                         {
                             //Debug.Log("Telepoint is not set");
                             telePoint = hitInfo.transform.gameObject; // Update telePoint
 
-                            // Start playing the preview particle system
-                            preview = telePoint.GetComponentInChildren<ParticleSystem>();
-                            preview.Play();
-
                             // Invoke any events on hover start
                             TeleportationEventsHandler events = telePoint.GetComponent<TeleportationEventsHandler>();
                             if (events != null) events.OnHoverStart.Invoke();
-                            //Debug.Log("On Hover Start");
                         }
                     }
                     else
@@ -146,9 +125,7 @@ namespace JW.FiveGuys.Teleportation
                             telePoint = null; // Reset telePoint
                         }
 
-                        if (preview != null) preview.Stop(); // Stop playing the preview particle system if there is still one
-                        preview = null; // Reset preview particle system
-                        telePoint = null;
+                        telePoint = null; // Same reseting of tellepoints as before maybe? idk at this point XD
                     }
                 }
                 else // We hit nothing
@@ -163,9 +140,7 @@ namespace JW.FiveGuys.Teleportation
                         telePoint = null; // Reset telePoint
                     }
 
-                    if (preview != null) preview.Stop(); // Stop playing the preview particle system if there is still one
-                    preview = null; // Reset preview particle system
-                    telePoint = null;
+                    telePoint = null; // Legit do not know why these are here but not removing them cuz that might break it
                 }
             }
         }
