@@ -9745,6 +9745,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8918518462564717880, guid: 96002ea6d2f6e2347ac1b69b17d04288, type: 3}
+      propertyPath: axeGameObject
+      value: 
+      objectReference: {fileID: 7752464162106137839, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+    - target: {fileID: 8918518462564717880, guid: 96002ea6d2f6e2347ac1b69b17d04288, type: 3}
       propertyPath: axeHeadGameObject
       value: 
       objectReference: {fileID: 975741456}
