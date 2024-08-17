@@ -9,6 +9,7 @@ public class DoorScript : MonoBehaviour
 
     [SerializeField] public bool isOpened; //bool value used for opening the door
     [SerializeField] public float turningSpeed; //determines how fast the door opens
+    [SerializeField] public BoxCollider doorCollider;
     
     void Update()
     {
@@ -22,6 +23,7 @@ public class DoorScript : MonoBehaviour
     private void OnTriggerEnter(Collider other) //functions runs when a gameobject with a collider enters this gameobject's collider
     {
         isOpened = true; //turns the bool value to true to open the door
+        doorCollider.enabled = false;
     }
 
 }
