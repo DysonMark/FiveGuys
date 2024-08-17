@@ -11,7 +11,7 @@ public class TutorialProgression : MonoBehaviour
     [SerializeField] private List<Vector3> tutorialPoints = new List<Vector3>();
     [SerializeField] private int pointIndex = 0;
     public VRButton buttonState;
-
+    private bool callFunction = true;
     public int action = 0;
 
     // Start is called before the first frame update
@@ -33,7 +33,12 @@ public class TutorialProgression : MonoBehaviour
     {
         //Deliver the line and then tp to next task
         Debug.Log("ToNextTask");
-        Invoke("ChangeCameraRigPosition", 1);
+        if (callFunction)
+        {
+            Invoke("ChangeCameraRigPosition", 1);
+            StartCoroutine(CooldownFunction(2.0f));
+            callFunction = false;
+        }
     }
 
     private void ChangeCameraRigPosition()
@@ -41,6 +46,12 @@ public class TutorialProgression : MonoBehaviour
         cameraRigPos.transform.position = tutorialPoints[pointIndex];
         pointIndex++;
         Debug.Log($"Point Index: {pointIndex}");
+    }
+
+    IEnumerator CooldownFunction(float cooldown)
+    {
+        yield return new WaitForSeconds(cooldown);
+        callFunction = true;
     }
 
     public void FlashLightHasBeenPicked()
