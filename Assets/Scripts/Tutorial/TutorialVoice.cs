@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using JW.FiveGuys.Teleportation;
+using Kandooz.InteractionSystem.Interactions;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -15,6 +16,12 @@ namespace SAE.FiveGuys.Tutorial
         public TeleportationController didHeTeleported;
         public TutorialBehaviour valueOfI;
         public int y = 0;
+        public TutorialProgression checkActions;
+        [SerializeField] private AudioSource flashlight;
+        [SerializeField] private AudioSource voice;
+        [SerializeField] private AudioSource buttonVoice;
+        [SerializeField] private AudioSource teleportation;
+        public VRButton checkButtonState;
 
 
         // Start is called before the first frame update
@@ -22,11 +29,16 @@ namespace SAE.FiveGuys.Tutorial
         {
             successfulTeleportation.Pause();
             endOfTutorial.Pause();
+            flashlight.Pause();
+            voice.Pause();
+            buttonVoice.Pause();
+            teleportation.Pause();
         }
 
         // Update is called once per frame
         void Update()
         {
+            Actions();
             if (didHeTeleported.isPlayerTeleporting == true)
             {
                 successfulTeleportation.UnPause();
@@ -47,5 +59,46 @@ namespace SAE.FiveGuys.Tutorial
                 endOfTutorial.Pause();
             }
         }
+
+        private void Actions()
+        {
+            if (checkActions.action == 1)
+            {
+                stopStartSound.Pause();
+                flashlight.UnPause();
+            }
+            else
+            {
+                flashlight.Pause();
+            }
+
+            if (checkActions.action == 2)
+            {
+                voice.UnPause();
+            }
+            else
+            {
+                voice.Pause();
+            }
+
+            if (checkButtonState.isClicked == true)
+            {
+                buttonVoice.UnPause();
+            }
+            else
+            {
+                buttonVoice.Pause();
+            }
+
+            if (checkActions.action == 3)
+            {
+                teleportation.UnPause();
+            }
+            else
+            {
+                teleportation.Pause();
+            }
+
+    }
     }
 }

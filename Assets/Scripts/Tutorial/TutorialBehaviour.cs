@@ -6,7 +6,6 @@ using Kandooz.InteractionSystem.Interactions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 namespace SAE.FiveGuys.Tutorial
 {
     public class TutorialBehaviour : MonoBehaviour

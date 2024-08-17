@@ -12,7 +12,7 @@ namespace Kandooz.InteractionSystem.Interactions
         [SerializeField] private Transform button;
         [SerializeField] private Vector3 normalPosition = new Vector3(0, .5f, 0);
         [SerializeField] private Vector3 pressedPosition = new Vector3(0, .2f, 0);
-        [SerializeField] private bool isClicked;
+        [SerializeField] public bool isClicked;
         [SerializeField] private float pressSpeed = 10;
         private float t = 0;
         public IObservable<Unit> OnClick => onClick.AsObservable();
