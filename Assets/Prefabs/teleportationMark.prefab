@@ -10,23 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.713
+      value: 37.915
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.042356014
+      value: -0.407
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.89
+      value: -31.632
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalRotation.y
@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -46,6 +46,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
@@ -62,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       propertyPath: m_TagString
@@ -87,9 +91,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1716162902839265646}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 97525299975398955}
   m_SourcePrefab: {fileID: 100100000, guid: 9c0195f0dd7f4974f8ae9e794cfe3244, type: 3}
 --- !u!23 &3321356962830491026 stripped
 MeshRenderer:
@@ -203,7 +204,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.019615704, y: 0.018477593, z: 0.020000001}
   m_Center: {x: 0, y: 0, z: 0}
@@ -263,16 +264,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &97525299975398955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3825571485287169095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852b865b5bcb9af489b6b77e87213fc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 35
