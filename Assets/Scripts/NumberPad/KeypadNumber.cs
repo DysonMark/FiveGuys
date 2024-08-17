@@ -82,15 +82,18 @@ public class KeypadNumber : MonoBehaviour
         if (numberPad.CorrectSequence == sequence)
         {
             displaycurrentSequence.text = ("Access Granted");
+            audioSource.clip = keypadGrantedSFX;
+            audioSource.Play();
             OnSolved();
         }
         else
         {
             //if the sequence is wrong, it clears the numbers and the player can enter a new sequence 
             displaycurrentSequence.text = ("Access Denied");
+            audioSource.clip = keypadDeniedSFX;
+            audioSource.Play();
             sequence = string.Empty;
         }
-        
     }
 
     /// <summary>

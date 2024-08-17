@@ -35720,8 +35720,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displaycurrentSequence: {fileID: 1673149784}
   audioSource: {fileID: 0}
-  keypadDeniedSFX: {fileID: 0}
-  keypadGrantedSFX: {fileID: 0}
+  keypadDeniedSFX: {fileID: 8300000, guid: 6badc82930e38c34891f46e1f01f63d3, type: 3}
+  keypadGrantedSFX: {fileID: 8300000, guid: 54ccf978c7886364c980d9f84ff32bd3, type: 3}
   numberPad: {fileID: 891008234}
   sequence: 
   OnSolve:
