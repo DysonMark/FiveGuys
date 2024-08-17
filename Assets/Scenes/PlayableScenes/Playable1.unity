@@ -430,9 +430,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1683,9 +1695,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4881,9 +4905,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5049,9 +5085,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5111,9 +5159,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5580,9 +5640,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6418,9 +6490,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13900,9 +13984,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25948,9 +26044,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 1716162902839265646, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716162902839265646, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716162902839265646, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1467524330}
+    - target: {fileID: 1716162902839265646, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716162902839265646, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716162902839265646, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Collider, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716162902839265646, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25991,6 +26127,38 @@ PrefabInstance:
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1467524330}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Collider, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8937525377334642044, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: onRaised.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26937,9 +27105,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27352,9 +27532,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28087,9 +28279,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28938,9 +29142,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29000,9 +29216,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29062,9 +29290,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30179,6 +30419,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8430452780585648479, guid: f2d3b5d32eafe8244810f093d9753c34, type: 3}
   m_PrefabInstance: {fileID: 1466302011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1467524330 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+  m_PrefabInstance: {fileID: 1284403443}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1473946763
 GameObject:
@@ -39880,9 +40125,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39973,9 +40230,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44695,29 +44964,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7288832533383974940}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
---- !u!1 &7288832533383974939 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
-  m_PrefabInstance: {fileID: 7288832533383974938}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7288832533383974940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7288832533383974939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852b865b5bcb9af489b6b77e87213fc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 35
 --- !u!1001 &7494257318806223491
 PrefabInstance:
   m_ObjectHideFlags: 0
