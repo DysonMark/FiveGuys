@@ -9622,6 +9622,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1592058883247216352, guid: 96002ea6d2f6e2347ac1b69b17d04288, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 1655072022349111548, guid: 96002ea6d2f6e2347ac1b69b17d04288, type: 3}
       propertyPath: m_Name
       value: WorkstationGO_2
