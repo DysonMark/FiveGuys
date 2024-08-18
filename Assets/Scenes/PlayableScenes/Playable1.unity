@@ -26100,6 +26100,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
+    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_1
@@ -26143,6 +26147,10 @@ PrefabInstance:
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449182425083844092, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38534,6 +38542,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3660426010971985352, guid: b060031edc20f9f46bcb358348df5284, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690466658066072219, guid: b060031edc20f9f46bcb358348df5284, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6690466658066072219, guid: b060031edc20f9f46bcb358348df5284, type: 3}
