@@ -28968,21 +28968,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300371518}
     m_Modifications:
-    - target: {fileID: 2950137484044329653, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3321356962830491026, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_Name
       value: teleportationMark_8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3825571485287169095, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4493739567229691645, guid: 46c177dd6cc1fb54b85b41222893b4d4, type: 3}
       propertyPath: m_LocalPosition.x
