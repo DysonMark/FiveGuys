@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-
 namespace Leonardo.RythmRadioPuzzle
 {
     public class RythmRadioPuzzle : MonoBehaviour
@@ -54,7 +53,11 @@ namespace Leonardo.RythmRadioPuzzle
             isPlayingSFX = false;
             blueButtonTapped = yellowButtonTapped = greenButtonTapped = redButtonTapped = false;
         }
-        
+        private void Update()
+        {
+            CheckPlayerInput();
+            NonVRDebugMethod();
+        }
         private void RestartPuzzle()
         {
             if (!radioPuzzleFinished)
@@ -204,13 +207,7 @@ namespace Leonardo.RythmRadioPuzzle
         #endregion
 
         #region Debug Related Scripts
-
-        private void Update()
-        {
-            CheckPlayerInput();
-            NonVRDebugMethod();
-        }
-
+        
         // Debug Input keys when not using VR.
 
         private void NonVRDebugMethod()
