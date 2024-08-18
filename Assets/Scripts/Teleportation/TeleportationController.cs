@@ -124,8 +124,6 @@ namespace JW.FiveGuys.Teleportation
                             //Debug.Log("On Hover End");
                             telePoint = null; // Reset telePoint
                         }
-
-                        telePoint = null; // Same reseting of tellepoints as before maybe? idk at this point XD
                     }
                 }
                 else // We hit nothing
@@ -139,8 +137,6 @@ namespace JW.FiveGuys.Teleportation
                         //Debug.Log("On Hover End");
                         telePoint = null; // Reset telePoint
                     }
-
-                    telePoint = null; // Legit do not know why these are here but not removing them cuz that might break it
                 }
             }
         }
