@@ -25965,9 +25965,6 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6762673467136955594, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1888249300}
-    - targetCorrespondingSourceObject: {fileID: 6762673467136955594, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 788586484}
     - targetCorrespondingSourceObject: {fileID: 8079755630368627275, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       insertIndex: -1
@@ -26209,6 +26206,7 @@ Transform:
   - {fileID: 1425058356}
   - {fileID: 341639169}
   - {fileID: 1388302352}
+  - {fileID: 1888249300}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306417167
@@ -38434,7 +38432,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1091708539}
+    m_TransformParent: {fileID: 1300371518}
     m_Modifications:
     - target: {fileID: 957063214738636403, guid: b060031edc20f9f46bcb358348df5284, type: 3}
       propertyPath: m_Name
@@ -38562,6 +38560,10 @@ PrefabInstance:
       objectReference: {fileID: 1091708538}
     - target: {fileID: 7083754007735440353, guid: b060031edc20f9f46bcb358348df5284, type: 3}
       propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083754007735440353, guid: b060031edc20f9f46bcb358348df5284, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
