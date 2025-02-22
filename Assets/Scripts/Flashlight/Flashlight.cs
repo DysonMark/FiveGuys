@@ -49,13 +49,24 @@ namespace JW.FiveGuys.LightMoth
 
         private void FixedUpdate()
         {
+#if HOTKEYDEBUG
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                isOn = true;
+            }
+            else
+            {
+                isOn = false;
+            }
+#endif
+
             if (isOn)
             {
-                var lightHit = Physics.Raycast(transform.position + rayOffset, -transform.up, out RaycastHit hitInfo, rayDistance);
+                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.up, out RaycastHit hitInfo, rayDistance);
                 lightEmission.SetActive(isOn);
                 if (lightHit)
-              {
-                rayPoint.Value = hitInfo.point;
+                {
+                    rayPoint.Value = hitInfo.point;
                 }
                 
             }

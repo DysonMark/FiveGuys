@@ -17,7 +17,6 @@ namespace JW.FiveGuys.Teleportation
         [SerializeField] private Vector3 headOffset = new Vector3(0, 0.7f, 0);
         [SerializeField] private float maxDistance = 25f;
         [SerializeField] private bool isAiming = false;
-        [SerializeField] private LayerMask teleportLayer;
 
         [Header("Previews")]
         [SerializeField] private GameEvent onAimStart;
@@ -81,7 +80,7 @@ namespace JW.FiveGuys.Teleportation
                 //        el telePoint = hit object & play particle system
                 //      el telePoint = hit object & play particle system
 
-                var gazeHit = Physics.Raycast(head.transform.position - headOffset, head.transform.forward, out RaycastHit hitInfo, maxDistance, teleportLayer);
+                var gazeHit = Physics.Raycast(head.transform.position - headOffset, head.transform.forward, out RaycastHit hitInfo, maxDistance);
                 if (gazeHit) // We hit something
                 {
                     if (hitInfo.collider.tag == "Telepoint")
