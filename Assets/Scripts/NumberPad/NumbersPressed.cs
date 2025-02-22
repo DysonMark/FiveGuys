@@ -21,6 +21,7 @@ public class NumbersPressed : MonoBehaviour
     [SerializeField] private GameObject Button2;
     [SerializeField] private GameObject Button3;
     [SerializeField] private GameObject Button4;
+    [SerializeField] private GameObject EndButton;
 
     public bool flag1 = false;
     public bool flag2 = false;
@@ -47,6 +48,10 @@ public class NumbersPressed : MonoBehaviour
         {
             flag4 = true;
         }
+        else if (other.gameObject.name == "EndButton")
+        {
+            PuzzleCompletion();
+        }
     }
 
     public void PuzzleCompletion()
@@ -54,8 +59,7 @@ public class NumbersPressed : MonoBehaviour
         if (flag1 == true && flag2 == true && flag3 == true && flag4 == true)
         {
             audioSource.clip = keypadGrantedSFX;
-            audioSource.Play();
-            //OnSolved();
+            audioSource.Play();            
         }
         else
         {
