@@ -521,6 +521,8 @@ GameObject:
   - component: {fileID: 59592485993742925}
   - component: {fileID: 2337753027829626906}
   - component: {fileID: 4657301197241719120}
+  - component: {fileID: 7601489784375646002}
+  - component: {fileID: 3976695880626219794}
   m_Layer: 0
   m_Name: Metal
   m_TagString: Cut
@@ -661,9 +663,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e556a0cb41ce0b4cb49815945c714fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodParticleEffectPrefab: {fileID: 0}
-  plankLayer:
+  woodParticleEffectPrefab: {fileID: 4848595189571929381, guid: 574cfaaddfd69f74dbe78ba2061808a1, type: 3}
+--- !u!54 &7601489784375646002
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902330823150616189}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 67108864
-  axeBladeTag: Cut
-  minimumImpactForce: 0.1
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!138 &3976695880626219794
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902330823150616189}
+  m_ConnectedBody: {fileID: 6006047425577003436}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1

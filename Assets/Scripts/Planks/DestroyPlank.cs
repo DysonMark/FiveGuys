@@ -7,17 +7,21 @@ namespace Leonardo.Planks
     {
         [SerializeField] private GameObject woodParticleEffectPrefab;
         
-        private GameObject currentWoodParticles;
         private void OnCollisionEnter(Collision col)
         {
-            if (col.gameObject.tag == "Plank")
+            if (col.gameObject.CompareTag("Plank"))
             {
-                GameObject particleEffect =
-                    Instantiate(woodParticleEffectPrefab, transform.position, Quaternion.identity);
+                Vector3 impactPoint = col.contacts[0].point;
+                GameObject particleEffect = Instantiate(
+                    woodParticleEffectPrefab, 
+                    impactPoint, 
+                    Quaternion.LookRotation(col.contacts[0].normal)
+                );
+
                 Destroy(col.gameObject);
+                
                 Destroy(particleEffect, 0.5f);
             }
-            
         }
     }
 }
