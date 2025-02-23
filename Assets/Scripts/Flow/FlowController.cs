@@ -43,11 +43,6 @@ namespace JW.FiveGuys.Flow
             return !endConditions.Contains(true); // Check if any of the tiles are still pathable, ie. not visited yet
         }
 
-        public void TilePressed()
-        {
-            // 
-        }
-
         /// <summary>
         /// Moves the "cursor" by the given amount
         /// </summary>
