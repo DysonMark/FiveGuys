@@ -9,19 +9,8 @@ using UnityEngine.Events;
 
 public class NumbersPressed : MonoBehaviour
 {
-    public TMP_Text Digit1;
-    public TMP_Text Digit2;
-    public TMP_Text Digit3;
-    public TMP_Text Digit4;
-
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip keypadDeniedSFX, keypadGrantedSFX;
-
-    [SerializeField] private GameObject Button1;
-    [SerializeField] private GameObject Button2;
-    [SerializeField] private GameObject Button3;
-    [SerializeField] private GameObject Button4;
-    [SerializeField] private GameObject EndButton;
 
     public bool flag1 = false;
     public bool flag2 = false;
@@ -30,28 +19,22 @@ public class NumbersPressed : MonoBehaviour
 
     [SerializeField] private UnityEvent OnSolve;
 
-    public void OnTriggerEnter(Collider other)
+    public void Button1()
     {
-        if (other.gameObject.name == "Button1")
-        {
-            flag1 = true;
-        }
-        else if (other.gameObject.name == "Button2")
-        {
-            flag2 = true;
-        }
-        else if (other.gameObject.name == "Button3")
-        {
-            flag3 = true;
-        }
-        else if (other.gameObject.name == "Button4")
-        {
-            flag4 = true;
-        }
-        else if (other.gameObject.name == "EndButton")
-        {
-            PuzzleCompletion();
-        }
+        flag1 = true;
+    }
+
+    public void Button2()
+    {
+        flag2 = true;
+    }
+    public void Button3()
+    {
+        flag3 = true;
+    }
+    public void Button4()
+    {
+        flag4 = true;
     }
 
     public void PuzzleCompletion()

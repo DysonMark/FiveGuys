@@ -1149,17 +1149,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
---- !u!114 &32403030 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1957344769292594046, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
-  m_PrefabInstance: {fileID: 32403029}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &32403031 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9022897809005945690, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
@@ -1720,7 +1709,7 @@ Transform:
   m_GameObject: {fileID: 76433424}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -3.034, y: 0.237, z: 2.777}
+  m_LocalPosition: {x: -3.065, y: -0.011, z: 2.777}
   m_LocalScale: {x: 0.1276825, y: 0.12768255, z: 0.1276825}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1742,9 +1731,9 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1764727060}
-        m_TargetAssemblyTypeName: JW.FiveGuys.Flow.FlowSpeechController, Assembly-CSharp
-        m_MethodName: DoVoice
+      - m_Target: {fileID: 1764727061}
+        m_TargetAssemblyTypeName: NumbersPressed, Assembly-CSharp
+        m_MethodName: Button4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1753,7 +1742,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
   button: {fileID: 2105573216}
   normalPosition: {x: 0, y: 0.5, z: 0}
   pressedPosition: {x: 0, y: 0.2, z: 0}
@@ -5446,9 +5435,9 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1764727060}
-        m_TargetAssemblyTypeName: JW.FiveGuys.Flow.FlowSpeechController, Assembly-CSharp
-        m_MethodName: DoVoice
+      - m_Target: {fileID: 1764727061}
+        m_TargetAssemblyTypeName: NumbersPressed, Assembly-CSharp
+        m_MethodName: PuzzleCompletion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8477,9 +8466,9 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1764727060}
-        m_TargetAssemblyTypeName: JW.FiveGuys.Flow.FlowSpeechController, Assembly-CSharp
-        m_MethodName: DoVoice
+      - m_Target: {fileID: 1764727061}
+        m_TargetAssemblyTypeName: NumbersPressed, Assembly-CSharp
+        m_MethodName: Button1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8964,9 +8953,9 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1764727060}
-        m_TargetAssemblyTypeName: JW.FiveGuys.Flow.FlowSpeechController, Assembly-CSharp
-        m_MethodName: DoVoice
+      - m_Target: {fileID: 1764727061}
+        m_TargetAssemblyTypeName: NumbersPressed, Assembly-CSharp
+        m_MethodName: Button2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13583,17 +13572,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
---- !u!114 &617197320 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1957344769292594046, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
-  m_PrefabInstance: {fileID: 617197319}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &617197321 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9022897809005945690, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
@@ -15246,11 +15224,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9022897809005945690, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.345
+      value: -2.376
       objectReference: {fileID: 0}
     - target: {fileID: 9022897809005945690, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.029
+      value: -0.219
       objectReference: {fileID: 0}
     - target: {fileID: 9022897809005945690, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15272,17 +15250,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
---- !u!114 &695607085 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1957344769292594046, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
-  m_PrefabInstance: {fileID: 695607084}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &695607086 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9022897809005945690, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
@@ -18924,6 +18891,10 @@ PrefabInstance:
     - target: {fileID: 2303921292967740188, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303921294396319332, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319332, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -24915,17 +24886,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
---- !u!114 &1236423957 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1957344769292594046, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
-  m_PrefabInstance: {fileID: 1236423956}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1236423958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9022897809005945690, guid: cf1b3c53bc20dc74b926862210b3b752, type: 3}
@@ -27069,7 +27029,7 @@ PrefabInstance:
     - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: onSolve.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1764727060}
+      objectReference: {fileID: 0}
     - target: {fileID: 2393063893162441912, guid: 1c97cf37d3ae77c45adc9d551c60915a, type: 3}
       propertyPath: onSolve.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -29495,9 +29455,9 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1764727060}
-        m_TargetAssemblyTypeName: JW.FiveGuys.Flow.FlowSpeechController, Assembly-CSharp
-        m_MethodName: DoVoice
+      - m_Target: {fileID: 1764727061}
+        m_TargetAssemblyTypeName: NumbersPressed, Assembly-CSharp
+        m_MethodName: Button3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36506,8 +36466,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1764727058}
-  - component: {fileID: 1764727060}
   - component: {fileID: 1764727061}
+  - component: {fileID: 1764727062}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -36530,21 +36490,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 891008232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1764727060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764727057}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05c5c54e6bc2c7c4ba5faf4f54cd8385, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateOn: 32
-  voiceControll: {fileID: 446978629}
-  isActive: 0
 --- !u!114 &1764727061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36557,18 +36502,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172a799ca367fdf4a8841ad1b2729cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Digit1: {fileID: 1236423957}
-  Digit2: {fileID: 617197320}
-  Digit3: {fileID: 32403030}
-  Digit4: {fileID: 695607085}
-  audioSource: {fileID: 0}
-  keypadDeniedSFX: {fileID: 0}
-  keypadGrantedSFX: {fileID: 0}
-  Button1: {fileID: 429392613}
-  Button2: {fileID: 446372693}
-  Button3: {fileID: 1406278086}
-  Button4: {fileID: 76433424}
-  EndButton: {fileID: 256685633}
+  audioSource: {fileID: 1764727062}
+  keypadDeniedSFX: {fileID: 8300000, guid: 7e13fc8bc0c59c84eb4e77f4ec31d365, type: 3}
+  keypadGrantedSFX: {fileID: 8300000, guid: 5458c9f505b1eb44b9e239c282d36183, type: 3}
   flag1: 0
   flag2: 0
   flag3: 0
@@ -36576,6 +36512,102 @@ MonoBehaviour:
   OnSolve:
     m_PersistentCalls:
       m_Calls: []
+--- !u!82 &1764727062
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764727057}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c49fa62077263c74b90f0362ee5b1bab, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1780321930
 GameObject:
   m_ObjectHideFlags: 0
