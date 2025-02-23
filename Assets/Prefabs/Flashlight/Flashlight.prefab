@@ -250,11 +250,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 20
-  rayDirection: {x: 0, y: 0, z: 1}
   rayOffset: {x: 0, y: 0, z: 0}
   rayPoint: {fileID: 11400000, guid: 901d91e22127a1846a10722172478e91, type: 2}
   isOn: 0
-  lineRenderer: {fileID: 0}
+  rayCastLayer:
+    serializedVersion: 2
+    m_Bits: 1
   lightEmission: {fileID: 2081623000568210730}
 --- !u!114 &2805545719133528263
 MonoBehaviour:

@@ -14,10 +14,10 @@ namespace JW.FiveGuys.LightMoth
     {
         [Header("Flashlight")]
         [SerializeField] private float rayDistance = 20f;
-        [SerializeField] private Vector3 rayDirection = Vector3.forward;
         [SerializeField] private Vector3 rayOffset = Vector3.zero;
         [SerializeField] private AdvancedVector3 rayPoint;
         [SerializeField] public bool isOn = false;
+        [SerializeField] private LayerMask rayCastLayer;
         
         // Actual light Game Object.
         [SerializeField] private GameObject lightEmission;
@@ -62,7 +62,7 @@ namespace JW.FiveGuys.LightMoth
 
             if (isOn)
             {
-                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.up, out RaycastHit hitInfo, rayDistance);
+                var lightHit = Physics.Raycast(transform.position + rayOffset, transform.up, out RaycastHit hitInfo, rayDistance, rayCastLayer);
                 lightEmission.SetActive(isOn);
                 if (lightHit)
                 {
