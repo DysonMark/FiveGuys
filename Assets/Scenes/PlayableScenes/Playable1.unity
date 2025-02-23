@@ -45331,6 +45331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flashlight
       objectReference: {fileID: 0}
+    - target: {fileID: 592805417353870428, guid: 5dac4e91385d61247b8f64c2d15946cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 952530209188738795, guid: 5dac4e91385d61247b8f64c2d15946cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4685
@@ -45371,9 +45375,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
-    - target: {fileID: 7409379854694252366, guid: 5dac4e91385d61247b8f64c2d15946cc, type: 3}
-      propertyPath: lineRenderer
-      value: 
+    - target: {fileID: 7974570790356742803, guid: 5dac4e91385d61247b8f64c2d15946cc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
