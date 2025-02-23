@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 namespace Leonardo.AxeAssembly
 {
@@ -30,6 +31,10 @@ namespace Leonardo.AxeAssembly
         private void Update()
         {
             CheckPiecesInRange();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartAxeAssembly();
+            }
             //Debug.Log("Pieces within range:" + piecesWithinRange);
         }
 
