@@ -1,4 +1,4 @@
-    using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -16,14 +16,24 @@ namespace SAE.FiveGuys.Bomb
         public float radius = 1.0f;
         public LayerMask layerMask;
         public Color capsuleColor = Color.red;
+
+        // Cooldown
+        float timer = 0f;
+        [SerializeField] float checkEvery = 1f;
+
         private void Update()
         {
-            CutOverlapCapsule();
+            timer += Time.deltaTime;
+            if (timer >= checkEvery)
+            {
+                CutOverlapCapsule();
+                timer = 0f;
+            }
         }
 
         public void CutOverlapCapsule()
         {
-            Collider[] hitColliders = Physics.OverlapCapsule(point0, point1, radius);
+            Collider[] hitColliders = Physics.OverlapCapsule(point0, point1, radius, layerMask);
 
             foreach (Collider hitCollider in hitColliders)
             {

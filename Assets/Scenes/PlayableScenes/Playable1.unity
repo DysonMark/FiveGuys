@@ -818,8 +818,9 @@ MonoBehaviour:
   radius: 0.01
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0, g: 0.011764706, b: 1, a: 1}
+  checkEvery: 1
 --- !u!1 &27403646
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,6 +4313,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   capsuleColor: {r: 1, g: 0, b: 0, a: 1}
+  checkEvery: 1
 --- !u!43 &193532105
 Mesh:
   m_ObjectHideFlags: 0
@@ -6422,6 +6424,63 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &308479291
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 31.672161
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2623825
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.475195
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686709048244803947, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752464162106137839, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_Name
+      value: AxeV3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
 --- !u!1 &310920843
 GameObject:
   m_ObjectHideFlags: 0
@@ -7766,8 +7825,9 @@ MonoBehaviour:
   radius: 0.015
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0.15294118, g: 0.6313726, b: 0.08235294, a: 1}
+  checkEvery: 1
 --- !u!1 &396954988
 GameObject:
   m_ObjectHideFlags: 0
@@ -14404,8 +14464,9 @@ MonoBehaviour:
   radius: 0.02
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0, g: 0.011764706, b: 1, a: 1}
+  checkEvery: 1
 --- !u!1 &638545162
 GameObject:
   m_ObjectHideFlags: 0
@@ -16635,8 +16696,9 @@ MonoBehaviour:
   radius: 0.02
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0.93610734, g: 0.9622642, b: 0, a: 1}
+  checkEvery: 1
 --- !u!1 &782231261
 GameObject:
   m_ObjectHideFlags: 0
@@ -18115,8 +18177,9 @@ MonoBehaviour:
   radius: 0.02
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0, g: 0.012152433, b: 1, a: 1}
+  checkEvery: 1
 --- !u!1001 &855928900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19293,8 +19356,9 @@ MonoBehaviour:
   radius: 0.02
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0.15129356, g: 0.6320754, b: 0.08050018, a: 1}
+  checkEvery: 1
 --- !u!1001 &915478313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20773,8 +20837,9 @@ MonoBehaviour:
   radius: 0.01
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0, g: 0.011764706, b: 1, a: 1}
+  checkEvery: 1
 --- !u!1001 &997175543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26387,7 +26452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.185
+      value: 32.24
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26395,7 +26460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.076
+      value: -25.99
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33023,8 +33088,9 @@ MonoBehaviour:
   radius: 0.15
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 1, g: 0, b: 0, a: 1}
+  checkEvery: 1
 --- !u!43 &1549115443
 Mesh:
   m_ObjectHideFlags: 0
@@ -35159,8 +35225,9 @@ MonoBehaviour:
   radius: 0.02
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   capsuleColor: {r: 0.15294118, g: 0.6313726, b: 0.08235294, a: 1}
+  checkEvery: 1
 --- !u!1 &1697879822
 GameObject:
   m_ObjectHideFlags: 0
@@ -36968,7 +37035,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finisheditems: []
   pass: {fileID: 1790561842}
-  axe: {fileID: 0}
   redColliderCheck: {fileID: 1548107124}
   yellowColliderCheck: {fileID: 777137609}
   blueColliderCheckOne: {fileID: 636464508}
@@ -36988,7 +37054,7 @@ MonoBehaviour:
   greenWireTwo: {fileID: 395326104}
   greenWireThree: {fileID: 1692683695}
   bomb: {fileID: 0}
-  defuseTheBombObject: {fileID: 0}
+  frequency: 0.1
 --- !u!137 &1790561844
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -44680,7 +44746,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finisheditems: []
   pass: {fileID: 0}
-  axe: {fileID: 0}
   redColliderCheck: {fileID: 0}
   yellowColliderCheck: {fileID: 0}
   blueColliderCheckOne: {fileID: 0}
@@ -44700,7 +44765,7 @@ MonoBehaviour:
   greenWireTwo: {fileID: 0}
   greenWireThree: {fileID: 0}
   bomb: {fileID: 0}
-  defuseTheBombObject: {fileID: 0}
+  frequency: 0.1
 --- !u!137 &2137678809
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -45495,3 +45560,4 @@ SceneRoots:
   - {fileID: 5551742604086619390}
   - {fileID: 806580449}
   - {fileID: 855928900}
+  - {fileID: 308479291}

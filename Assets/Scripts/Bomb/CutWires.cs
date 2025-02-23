@@ -1,4 +1,4 @@
-    using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +12,7 @@ namespace SAE.FiveGuys.Bomb
         private Mesh mesh;
         [SerializeField] private List<string> finisheditems = new();
         public DefuseTheBomb pass;
-        [SerializeField] private GameObject axe;
+        //[SerializeField] private GameObject axe;
         public CheckColliders redColliderCheck;
         public CheckColliders yellowColliderCheck;
         public CheckColliders blueColliderCheckOne;
@@ -32,34 +32,48 @@ namespace SAE.FiveGuys.Bomb
         [SerializeField] private GameObject greenWireTwo;
         [SerializeField] private GameObject greenWireThree;
         [SerializeField] private GameObject bomb;
-        [SerializeField] private DefuseTheBomb defuseTheBombObject;
-        
+
+        // Timer 
+        float timer = 0f;
+        [SerializeField] float frequency = 0.1f;
+
         // Start is called before the first frame update
         void Start()
         {
-            bomb = GameObject.FindGameObjectWithTag("Bomb");
+            bomb = gameObject;
             skinnedMeshRenderer = bomb.GetComponent<SkinnedMeshRenderer>();
         }
 
         void Update()
         {
-           CutEachWires();
+            timer += Time.deltaTime;
+            if (timer >= frequency)
+            {
+                CutEachWires();
+                timer = 0f;
+            }
         }
 
         public void CutEachWires()
         {
             if (redColliderCheck.cutThisWire == true && redColliderCheck.gameObject.name == "Red_Wire_1")
             {
-                finisheditems.Add("RedWire");
-                pass.RedWire();
-                skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
+                if (!finisheditems.Contains("RedWire"))
+                {
+                    finisheditems.Add("RedWire");
+                    pass.RedWire();
+                    skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
+                }
             }
 
             if (yellowColliderCheck.cutThisWire == true && yellowColliderCheck.gameObject.name == "Yellow_Wire_1")
             {
-                finisheditems.Add("YellowWire");
-                pass.YellowWire();
-                skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
+                if (!finisheditems.Contains("YellowWire"))
+                {
+                    finisheditems.Add("YellowWire");
+                    pass.YellowWire();
+                    skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
+                }
             }
 
             if (blueColliderCheckOne.cutThisWire == true && blueColliderCheckOne.gameObject.name == "Blue_Wire_1" ||
@@ -67,9 +81,13 @@ namespace SAE.FiveGuys.Bomb
                 blueColliderCheckThree.cutThisWire == true && blueColliderCheckThree.gameObject.name == "Blue_Wire_3" ||
                 blueColliderCheckFour.cutThisWire == true && blueColliderCheckFour.gameObject.name == "Blue_Wire_4")
             {
-                finisheditems.Add("BlueWire");
-                pass.BlueWire();
-                skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
+                if (!finisheditems.Contains("BlueWire"))
+                {
+                    finisheditems.Add("BlueWire");
+                    pass.BlueWire();
+                    skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
+                }
+
             }
 
             if (greenColliderCheckOne.cutThisWire == true && greenColliderCheckOne.gameObject.name == "Green_Wire" ||
@@ -77,9 +95,12 @@ namespace SAE.FiveGuys.Bomb
                 greenColliderCheckThree.cutThisWire == true &&
                 greenColliderCheckThree.gameObject.name == "Green_Wire_4")
             {
-                finisheditems.Add("GreenWire");
-                pass.GreenWire();
-                skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
+                if (!finisheditems.Contains("GreenWire"))
+                {
+                    finisheditems.Add("GreenWire");
+                    pass.GreenWire();
+                    skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
+                }
             }
         }
     }

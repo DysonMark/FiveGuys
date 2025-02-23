@@ -1,4 +1,4 @@
-    using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -20,7 +20,7 @@ namespace SAE.FiveGuys.Bomb
 
         public bool greenPass = false;
 
-        public bool bombHasBeenDefused = false; 
+        public bool bombHasBeenDefused = false;
         [SerializeField] private UnityEvent onDiffused;
         public bool bombHasExploded;
         public BombCountdown timeIsUp;
@@ -28,7 +28,7 @@ namespace SAE.FiveGuys.Bomb
         public int redCounter = 0;
         public int yellowCounter = 0;
         public int greenCounter = 0;
-        
+
         // Update is called once per frame
         void Update()
         {
@@ -45,7 +45,7 @@ namespace SAE.FiveGuys.Bomb
                 {
                     bombHasExploded = true;
                 }
-                else if (whichWire[0] != 1)
+                else if (whichWire[0] != 1) // Cut the blue wire first
                 {
                     bombHasExploded = true;
                 }
@@ -67,12 +67,16 @@ namespace SAE.FiveGuys.Bomb
                 {
                     bombHasExploded = true;
                 }
+                else if (whichWire[1] != 2)
+                {
+                    bombHasExploded = true;
+                }
                 else
                 {
                     redPass = true;
                 }
 
-                redCounter++;   
+                redCounter++;
             }
         }
         public void YellowWire()
@@ -113,10 +117,10 @@ namespace SAE.FiveGuys.Bomb
                 {
                     greenPass = true;
                 }
-                greenCounter++;   
+                greenCounter++;
             }
         }
-        
+
         private void DefuseOrNot()
         {
             if (bluePass == true && redPass == true && yellowPass == true && greenPass == true)
@@ -129,7 +133,7 @@ namespace SAE.FiveGuys.Bomb
             {
                 bombHasExploded = true;
             }
-            
+
         }
 
     }
