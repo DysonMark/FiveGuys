@@ -336,9 +336,7 @@ GameObject:
   - component: {fileID: 6401255844160720502}
   - component: {fileID: 5084030421475952375}
   - component: {fileID: 6036184417537322743}
-  - component: {fileID: 8767397603360185710}
   - component: {fileID: 6006047425577003436}
-  - component: {fileID: 8789305681514549402}
   m_Layer: 0
   m_Name: AxeV3
   m_TagString: Untagged
@@ -482,19 +480,6 @@ MonoBehaviour:
     m_Bits: 8388608
   notSocketable: 0
   socket: {fileID: 0}
---- !u!114 &8767397603360185710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752464162106137839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e556a0cb41ce0b4cb49815945c714fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  woodParticleEffectPrefab: {fileID: 4848595189571929381, guid: 574cfaaddfd69f74dbe78ba2061808a1, type: 3}
 --- !u!54 &6006047425577003436
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -522,19 +507,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8789305681514549402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752464162106137839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e556a0cb41ce0b4cb49815945c714fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  woodParticleEffectPrefab: {fileID: 0}
 --- !u!1 &7902330823150616189
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +520,7 @@ GameObject:
   - component: {fileID: 2172605044327624377}
   - component: {fileID: 59592485993742925}
   - component: {fileID: 2337753027829626906}
+  - component: {fileID: 4657301197241719120}
   m_Layer: 0
   m_Name: Metal
   m_TagString: Cut
@@ -653,7 +626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f399ae16b4ae2ce4a8ec9383cba7882c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinnedMeshRenderer: {fileID: 0}
   finisheditems: []
   pass: {fileID: 0}
   axe: {fileID: 0}
@@ -675,3 +647,23 @@ MonoBehaviour:
   greenWireOne: {fileID: 0}
   greenWireTwo: {fileID: 0}
   greenWireThree: {fileID: 0}
+  bomb: {fileID: 0}
+  defuseTheBombObject: {fileID: 0}
+--- !u!114 &4657301197241719120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7902330823150616189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e556a0cb41ce0b4cb49815945c714fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodParticleEffectPrefab: {fileID: 0}
+  plankLayer:
+    serializedVersion: 2
+    m_Bits: 67108864
+  axeBladeTag: Cut
+  minimumImpactForce: 0.1
