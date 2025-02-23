@@ -4721,7 +4721,6 @@ GameObject:
   - component: {fileID: 752169216}
   - component: {fileID: 752169215}
   - component: {fileID: 752169214}
-  - component: {fileID: 752169213}
   - component: {fileID: 752169218}
   - component: {fileID: 752169217}
   - component: {fileID: 752169219}
@@ -4733,29 +4732,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &752169213
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 752169212}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &752169214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4844,7 +4820,7 @@ MonoBehaviour:
         m_MethodName: OnTriggerEnter
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 752169213}
+          m_ObjectArgument: {fileID: 752169220}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5711,20 +5687,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821089827}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0.32}
-  m_LocalScale: {x: 0.05212383, y: 0.08151355, z: 0.02165581}
+  m_LocalRotation: {x: 0, y: -0.70710677, z: 0.70710677, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6900005}
+  m_LocalScale: {x: 0.05212384, y: 0.08151355, z: 0.02165581}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 417147699}
   - {fileID: 1606093745}
   - {fileID: 1020985803}
   - {fileID: 2003351451}
-  m_Father: {fileID: 999826798}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+  m_Father: {fileID: 1881020136}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.69, y: 0.92}
+  m_AnchoredPosition: {x: -0.27, y: 0.15672874}
   m_SizeDelta: {x: 105.37499, y: 101.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &846395948
@@ -7050,8 +7026,7 @@ Transform:
   m_LocalPosition: {x: 52.5, y: 47.797, z: -5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 821089832}
+  m_Children: []
   m_Father: {fileID: 2032246329}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
 --- !u!1 &1020985802
@@ -7067,7 +7042,7 @@ GameObject:
   - component: {fileID: 1020985805}
   - component: {fileID: 1020985804}
   m_Layer: 5
-  m_Name: TimeToGoHome_TXT
+  m_Name: Failure_TXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7081,7 +7056,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020985802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00005853614}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 0.60643953, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7089,7 +7064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 40.3, y: -67.2}
+  m_AnchoredPosition: {x: 10.4, y: -51.3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020985804
@@ -7126,7 +7101,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Time to go home'
+    FAILURE IS NOT AN OPTION'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13d3787489cb4db4aaca0b9cc7205050, type: 2}
   m_sharedMaterial: {fileID: -8823479813219844888, guid: 13d3787489cb4db4aaca0b9cc7205050, type: 2}
@@ -7153,8 +7128,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8836,7 +8811,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6a3db68b3d5e9e489d0271ee79f7fd2, type: 2}
+  - {fileID: 2100000, guid: 9a350561734d113439c9392d72268180, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11319,7 +11294,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606093744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00005853614}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.60643953, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11327,7 +11302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.7, y: -19.7}
+  m_AnchoredPosition: {x: -9.700001, y: 0.79999924}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606093746
@@ -11350,15 +11325,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You were led to the rooftop of a building by a mysterious phone call 
-    \n
-
-    Now that you''ve arrived, you found nothing \n
-
-'
+  m_text: "TRAINING ROOM N\xB0602 \nX FLOORS HOTEL EXPERIENCE ABOUT TO BEGIN \\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 13d3787489cb4db4aaca0b9cc7205050, type: 2}
-  m_sharedMaterial: {fileID: -8823479813219844888, guid: 13d3787489cb4db4aaca0b9cc7205050, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bdc2eefa904dbd8498da03b6ccb9379e, type: 2}
+  m_sharedMaterial: {fileID: 5608202080528317625, guid: bdc2eefa904dbd8498da03b6ccb9379e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11382,8 +11352,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12703,7 +12673,8 @@ Transform:
   m_LocalPosition: {x: -46.8, y: 47.797, z: -5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 821089832}
   m_Father: {fileID: 2032246329}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
 --- !u!1 &1900324004
@@ -12991,7 +12962,7 @@ PrefabInstance:
     - target: {fileID: -3771351611711041372, guid: 6fac31cc795882345895ec4995e829e5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 695d6dd792ace244cadd34de1223b8e3, type: 2}
+      objectReference: {fileID: 2100000, guid: f0504680fef9d874eb047e5423624cd9, type: 2}
     - target: {fileID: 919132149155446097, guid: 6fac31cc795882345895ec4995e829e5, type: 3}
       propertyPath: m_Name
       value: Table_TPRoom
