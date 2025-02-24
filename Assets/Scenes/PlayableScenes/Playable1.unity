@@ -5360,6 +5360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AxeV3
       objectReference: {fileID: 0}
+    - target: {fileID: 7752464162106137839, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14072,6 +14076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: debugging_axe_is_back
       objectReference: {fileID: 0}
+    - target: {fileID: 7752464162106137839, guid: 648f932a74d1c994fac394fa801f8ab8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20020,7 +20028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3821241596974632866, guid: a7d718446ec6a0744acc9c49b2b33193, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7518538335755750718, guid: a7d718446ec6a0744acc9c49b2b33193, type: 3}
       propertyPath: mask.m_Bits
@@ -21037,7 +21045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.24
+      value: 38.003
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21045,7 +21053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.99
+      value: -18.355
       objectReference: {fileID: 0}
     - target: {fileID: 2236229118349471020, guid: a35e69285ca52714fbb4fd32c901a9e3, type: 3}
       propertyPath: m_LocalRotation.w
