@@ -15,7 +15,7 @@ namespace SAE.FiveGuys.GameOver
         public void Retry()
         {
             Debug.Log("Player has retry");
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
 
     }
