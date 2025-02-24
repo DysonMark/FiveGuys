@@ -18,8 +18,6 @@ namespace SAE.FiveGuys.Tutorial
         public int y = 0;
         public TutorialProgression checkActions;
         [SerializeField] private AudioSource flashlight;
-        [SerializeField] private AudioSource voice;
-        [SerializeField] private AudioSource buttonVoice;
         [SerializeField] private AudioSource teleportation;
         public VRButton checkButtonState;
 
@@ -30,8 +28,6 @@ namespace SAE.FiveGuys.Tutorial
             successfulTeleportation.Pause();
             endOfTutorial.Pause();
             flashlight.Pause();
-            voice.Pause();
-            buttonVoice.Pause();
             teleportation.Pause();
         }
 
@@ -73,24 +69,6 @@ namespace SAE.FiveGuys.Tutorial
             }
 
             if (checkActions.action == 2)
-            {
-                voice.UnPause();
-            }
-            else
-            {
-                voice.Pause();
-            }
-
-            if (checkButtonState.isClicked == true)
-            {
-                buttonVoice.UnPause();
-            }
-            else
-            {
-                buttonVoice.Pause();
-            }
-
-            if (checkActions.action == 3)
             {
                 teleportation.UnPause();
             }
