@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace SAE.FiveGuys.Bomb
 {
@@ -34,8 +35,21 @@ namespace SAE.FiveGuys.Bomb
         {
             // check diffuse if not diffused, not exploded
             if (!bombHasExploded && !bombHasBeenDefused) { DefuseOrNot(); }
+            if (bombHasExploded)
+            {
+                StartCoroutine(Transitioning());
+            }
 
         }
+
+        private IEnumerator Transitioning()
+        {
+
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(3);
+
+        }
+
         public void BlueWire()
         {
             if (blueCounter < 1)
