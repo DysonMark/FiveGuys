@@ -11,6 +11,7 @@ public class NumbersPressed : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip keypadDeniedSFX, keypadGrantedSFX;
+    [SerializeField] private GameObject door;
 
     public bool flag1 = false;
     public bool flag2 = false;
@@ -42,7 +43,8 @@ public class NumbersPressed : MonoBehaviour
         if (flag1 == true && flag2 == true && flag3 == true && flag4 == true)
         {
             audioSource.clip = keypadGrantedSFX;
-            audioSource.Play();            
+            audioSource.Play();
+            door.SetActive(false);
         }
         else
         {
