@@ -61,7 +61,7 @@ namespace SAE.FiveGuys.Bomb
                 if (!finisheditems.Contains("RedWire"))
                 {
                     finisheditems.Add("RedWire");
-                    pass.RedWire();
+                    pass.CutRedWire();
                     skinnedMeshRenderer.SetBlendShapeWeight(0, 100);
                 }
             }
@@ -71,7 +71,7 @@ namespace SAE.FiveGuys.Bomb
                 if (!finisheditems.Contains("YellowWire"))
                 {
                     finisheditems.Add("YellowWire");
-                    pass.YellowWire();
+                    pass.CutYellowWire();
                     skinnedMeshRenderer.SetBlendShapeWeight(3, 100);
                 }
             }
@@ -84,7 +84,7 @@ namespace SAE.FiveGuys.Bomb
                 if (!finisheditems.Contains("BlueWire"))
                 {
                     finisheditems.Add("BlueWire");
-                    pass.BlueWire();
+                    pass.CutBlueWire();
                     skinnedMeshRenderer.SetBlendShapeWeight(1, 100);
                 }
 
@@ -98,7 +98,7 @@ namespace SAE.FiveGuys.Bomb
                 if (!finisheditems.Contains("GreenWire"))
                 {
                     finisheditems.Add("GreenWire");
-                    pass.GreenWire();
+                    pass.CutGreenWire();
                     skinnedMeshRenderer.SetBlendShapeWeight(2, 100);
                 }
             }

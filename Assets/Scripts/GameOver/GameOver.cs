@@ -16,7 +16,7 @@ public class GameOver : MonoBehaviour
 
     public void GameIsOver()
     {
-        if (dead.bombHasExploded == true)
+        if (dead.hasExploded== true)
         {
             //Load GameOver scene
             SceneManager.LoadScene(2);

@@ -5,67 +5,95 @@ using TMPro;
 
 namespace SAE.FiveGuys.Bomb
 {
+    /// <summary>
+    /// Handles the bomb countdown timer, display, and bomb state UI.
+    /// </summary>
     public class BombCountdown : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI countdown;
-        private GameObject bombObject;
+        [Header("UI Components")]
+        [SerializeField] private TextMeshProUGUI countdownText;
 
-        private int counting;
-        public float holdCounting = 900;
-        private float subtract = 1;
-        public int bombChecker = 0;
+        [Header("Bomb Logic")]
+        [Tooltip("Reference to the DefuseTheBomb script controlling bomb state.")]
+        [SerializeField] private DefuseTheBomb bombLogic;
 
-        public DefuseTheBomb bombOff;
+        [Header("Timer Settings")]
+        [Tooltip("Initial countdown time in seconds.")]
+        [SerializeField] private float initialTime = 900f; // 15 minutes by default
 
-        // Start is called before the first frame update
-        void Start()
+        public float TimeRemaining { get; private set; }
+        public bool IsCountingDown => TimeRemaining > 0 && !IsBombStopped;
+
+        public bool IsBombStopped => bombLogic != null && (bombLogic.isDefused || bombLogic.hasExploded);
+
+        private void Awake()
         {
-            bombObject = GameObject.Find("TimerBomb1");
-            countdown = GetComponent<TextMeshProUGUI>();
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            TextToInt();
-            NumbersGoingDown();
-            DeleteTextOnBomb();
-        }
-
-        private void TextToInt()
-        {
-            countdown.text = "10";
-            int.TryParse(countdown.text, out counting);
-        }
-
-        private void NumbersGoingDown()
-        {
-            holdCounting -= subtract * Time.deltaTime;
-            counting = (int)holdCounting;
-            int minutes = Mathf.FloorToInt(holdCounting / 60);
-            int seconds = Mathf.FloorToInt((holdCounting % 60));
-            countdown.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        }
-
-        private void DeleteTextOnBomb()
-        {
-            if (bombOff.bombHasBeenDefused == true)
+            if (countdownText == null)
             {
-                bombChecker = 1;
-                countdown.text = "OFF";
-                counting = 0;
-                holdCounting = 0;
+                countdownText = GetComponent<TextMeshProUGUI>();
+                if (countdownText == null)
+                {
+                    Debug.LogError("BombCountdown: No TextMeshProUGUI assigned or found on GameObject.");
+                }
             }
-            else if (bombOff.bombHasExploded == true)
+            if (bombLogic == null)
             {
-                bombChecker = 2;
-                countdown.text = "WRONG";
+                Debug.LogWarning("BombCountdown: DefuseTheBomb reference not set in inspector.");
             }
-            else
+        }
+
+        private void Start()
+        {
+            TimeRemaining = initialTime;
+            UpdateCountdownDisplay();
+        }
+
+        private void Update()
+        {
+            if (!IsBombStopped)
             {
-                bombChecker = 0;
+                UpdateTimer();
             }
+            UpdateCountdownDisplay();
+        }
+
+        /// <summary>
+        /// Decreases the timer if the bomb is active.
+        /// </summary>
+        private void UpdateTimer()
+        {
+            if (TimeRemaining > 0)
+            {
+                TimeRemaining -= Time.deltaTime;
+                if (TimeRemaining < 0)
+                {
+                    TimeRemaining = 0;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Updates the countdown text based on bomb state.
+        /// </summary>
+        private void UpdateCountdownDisplay()
+        {
+            if (bombLogic != null)
+            {
+                if (bombLogic.isDefused)
+                {
+                    countdownText.text = "OFF";
+                    return;
+                }
+                if (bombLogic.hasExploded)
+                {
+                    countdownText.text = "WRONG";
+                    return;
+                }
+            }
+
+            int minutes = Mathf.FloorToInt(TimeRemaining / 60f);
+            int seconds = Mathf.FloorToInt(TimeRemaining % 60f);
+            countdownText.text = $"{minutes:00}:{seconds:00}";
         }
     }
 }

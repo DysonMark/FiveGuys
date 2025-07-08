@@ -20,7 +20,7 @@ namespace SAE.FiveGuys.Bomb
         private void ChangeBombColor()
         {
             var bombRenderer = bomb.GetComponent<Renderer>();
-            if (colorBomb.bombHasExploded == true)
+            if (colorBomb.hasExploded == true)
             {
                 bombRenderer.material.SetColor("_BaseColor", Color.red);   
             }
@@ -28,7 +28,7 @@ namespace SAE.FiveGuys.Bomb
 
         private void TurnBombGreen()
         {
-            if (verifyBomb.bombChecker == 1)
+            if (verifyBomb.IsBombStopped)
             { 
                 var bombRenderer = bomb.GetComponent<Renderer>();
                 bombRenderer.material.SetColor("_BaseColor", Color.green);

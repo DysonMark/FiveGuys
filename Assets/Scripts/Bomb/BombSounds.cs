@@ -27,22 +27,22 @@ namespace SAE.FiveGuys.Bomb
 
         public void PauseAndPlay()
         {
-            if (bombDefusedCheck.bombHasBeenDefused == false)
+            if (bombDefusedCheck.isDefused == false)
             {
                 bombDefused.Pause();
             }
-            else if (bombDefusedCheck.bombHasBeenDefused == true)
+            else if (bombDefusedCheck.isDefused == true)
             {
                 bombTicking.Pause();
                 Invoke("PlayBombDefusedSound", 1);
             }
 
-            if (bombDefusedCheck.bombHasExploded == false)
+            if (bombDefusedCheck.hasExploded == false)
             {
                 bombExplosion.Pause();
             }
             
-           if (bombDefusedCheck.bombHasExploded == true)
+           if (bombDefusedCheck.hasExploded == true)
             {
                 bombTicking.Pause();
                 Invoke("PlayBombExplodedSound", 1);
